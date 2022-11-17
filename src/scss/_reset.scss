@@ -1,0 +1,54 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+button {
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+label,
+input {
+  cursor: pointer;
+}
+
+dd {
+  margin: 0;
+}
+
+fieldset{
+  padding: 0;
+  margin: 0;
+  border: none;
+}
