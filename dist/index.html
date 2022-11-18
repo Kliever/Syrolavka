@@ -1,19 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- подключение отдельных частей HTML -->
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.min.css">
-  <!-- вставка параметра в title -->
   <title>Главная страница</title> 
 </head>
 
 <body>
-  <header></header>
+  <header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-inner">
+        <form action="#" class="header__select-sity select-sity js-custom-select">
+            <button type="button" class="select-sity__btn js-custom-select__button">
+              <svg class="select-sity__btn-icon" viewBox="0 0 14 18">
+                <use xlink:href="img/icons/icons.svg#map-marker"></use>
+              </svg>
+              <span class="select-sity__btn-info">Ваш город:</span>
+              <span class="select-sity__btn-text">Москва</span>
+            </button>
+          <ul class="select-sity__options js-custom-select__options">
+            <li class="select-sity__option js-custom-select__option" data-value="Kyiv">Київ</li>
+            <li class="select-sity__option js-custom-select__option" data-value="Kharkiv" active>Харків</li>
+            <li class="select-sity__option js-custom-select__option" data-value="Dnipro">Дніпро</li>
+            <li class="select-sity__option js-custom-select__option" data-value="Zaporizhzhia">Запоріжжя</li>
+            <li class="select-sity__option js-custom-select__option" data-value="Konotop">Конотоп</li>
+          </ul>
+          <input type="text" class="select-sity__input js-custom-select__input">
+        </form>
+        <div class="header__working-hours">
+          <svg class="header__working-hours-icon" viewBox="0 0 18 18">
+            <use xlink:href="img/icons/icons.svg#watch"></use>
+          </svg>
+          <div class="header__working-hours-text">Пн-Пт 9:00 - 19:00</div>
+        </div>
+        <nav class="header__top-nav top-nav">
+          <ul class="top-nav__list">
+            <li class="top-nav__item">
+              <a href="" class="top-nav__link">О компании</a>
+            </li>
+            <li class="top-nav__item">
+              <a href="" class="top-nav__link">Преимущества</a>
+            </li>
+            <li class="top-nav__item">
+              <a href="" class="top-nav__link">Акционные товары</a>
+            </li>
+            <li class="top-nav__item">
+              <a href="" class="top-nav__link">
+                <svg class="top-nav__link-icon" viewBox="0 0 18 18">
+                  <use xlink:href="img/icons/icons.svg#user"></use>
+                </svg>
+                <span class="top-nav__link-text">Войти в аккаунт</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="header__middle">
+    <div class="container">
+      <div class="header__middle-inner">
+        <a href="" class="header__logo logo">
+          <img src="img/logo.png" alt="Логотип" class="logo__img">
+        </a>
+        <div class="header__middle-info">
+          <img src="img/icons/index/header-icon-delivery.png" alt="" class="header__middle-info-icon" aria-hidden="true">
+          <span class="header__middle-info-text"></span>
+        </div>
+        <div class="header__middle-info">
+          <img src="img/icons/index/header-icon-discounts.png" alt="" class="header__middle-info-icon" aria-hidden="true">
+          <span class="header__middle-info-text"></span>
+        </div>
+        <div class="header__middle-info">
+          <img src="img/icons/index/header-icon-def.png" alt="" class="header__middle-info-icon" aria-hidden="true">
+          <span class="header__middle-info-text"></span>
+        </div>
+        <ul class="header__social-list">
+          <li class="header__social-item">
+            <a href="" class="header__social-link" aria-label="Телеграм">
+              <img src="img/icons/social/tg.png" alt="" class="header__social-icon" aria-hidden="true">
+            </a>
+          </li>
+          <li class="header__social-item">
+            <a href="img/icons/social/wu.png" class="header__social-link" aria-label="Вотсап">
+              <img src="" alt="" class="header__social-icon" aria-hidden="true">
+            </a>
+          </li>
+          <li class="header__social-item">
+            <a href="img/icons/social/fb.png" class="header__social-link" aria-label="Мессенджер Фейсбук">
+              <img src="" alt="" class="header__social-icon" aria-hidden="true">
+            </a>
+          </li>
+        </ul>
+        <div class="header__call-back">
+          <span class="header__call-back-num"></span>
+          <button class="header__call-back-btn icon-btn">
+            <svg class="icon-btn__icon icon-btn__icon--phone" viewBox="0 0 14 14">
+              <use xlink:href="img/icons/icons.svg#phone"></use>
+            </svg>
+            <span class="icon-btn__text"></span>
+          </button>
+        </div>
+        <div class="header__basket">
+          <div class="header__basket-info">
+            <div class="header__basket-text"></div>
+            <div class="header__basket-sum"></div>
+          </div>
+          <a href="" class="header__basket-link" aria-label="Корзина">
+            <svg class="header__basket-icon" viewBox="0 0 40 36">
+              <use xlink:href="img/icons/icons.svg#basket"></use>
+            </svg>
+            <div class="header__basket-num"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom-inner">
+        <nav class="header__bottom-nav bottom-nav">
+          <ul class="bottom-nav__list">
+            <li class="bottom-nav__item bottom-nav__drop drop">
+              <ul class="bottom-nav__drop-list drop__list">
+                <li class="bottom-nav__drop-item drop__list-item">
+                  <a href="" class="bottom-nav__drop-link drop__list-link"></a>
+                </li>
+                <li class="bottom-nav__drop-item drop__list-item">
+                  <a href="" class="bottom-nav__drop-link drop__list-link"></a>
+                </li>
+                <li class="bottom-nav__drop-item drop__list-item">
+                  <a href="" class="bottom-nav__drop-link drop__list-link"></a>
+                </li>
+                <li class="bottom-nav__drop-item drop__list-item">
+                  <a href="" class="bottom-nav__drop-link drop__list-link"></a>
+                </li>
+                <li class="bottom-nav__drop-item drop__list-item">
+                  <a href="" class="bottom-nav__drop-link drop__list-link"></a>
+                </li>
+                <li class="bottom-nav__drop-item drop__list-item">
+                  <a href="" class="bottom-nav__drop-link drop__list-link"></a>
+                </li>
+                <li class="bottom-nav__drop-item drop__list-item">
+                  <a href="" class="bottom-nav__drop-link drop__list-link"></a>
+                </li>
+                <li class="bottom-nav__drop-item drop__list-item">
+                  <a href="" class="bottom-nav__drop-link drop__list-link"></a>
+                </li>
+                <li class="bottom-nav__drop-item drop__list-item">
+                  <a href="" class="bottom-nav__drop-link drop__list-link"></a>
+                </li>
+              </ul>
+            </li>
+            <li class="bottom-nav__item">
+              <a href="" class="bottom-nav__link"></a>
+            </li>
+            <li class="bottom-nav__item">
+              <a href="" class="bottom-nav__link"></a>
+            </li>
+            <li class="bottom-nav__item">
+              <a href="" class="bottom-nav__link"></a>
+            </li>
+            <li class="bottom-nav__item">
+              <a href="" class="bottom-nav__link"></a>
+            </li>
+            <li class="bottom-nav__item">
+              <a href="" class="bottom-nav__link"></a>
+            </li>
+          </ul>
+        </nav>
+        <form class="header__search">
+          <button class="header__search-btn" type="submit" aria-label="Найти">
+            <svg class="header__search-btn-icon" viewBox="0 0 24 24">
+              <use xlink:href="img/icons/icons.svg#search"></use>
+            </svg>
+          </button>
+          <input type="text" class="header__search-input" placeholder="">
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
   <main>
-    <!-- Основной код -->
   </main>
   <footer></footer>
   <script src="js/app.min.js"></script>

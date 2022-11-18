@@ -1,0 +1,37 @@
+body {
+  background: var(--main-bg-color);
+  color: var(--main-text);
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+//custom select
+.js-custom-select {
+  position: relative;
+}
+
+.js-custom-select__button {}
+
+.js-custom-select__options {
+  display: none;
+}
+
+.js-custom-select__option {}
+
+.js-custom-select__input {
+  height: 1px;
+  width: 1px;
+  opacity: 0;
+  visibility: hidden;
+  appearance: none;
+  position: absolute;
+}
