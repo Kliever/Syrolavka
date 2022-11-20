@@ -49,6 +49,141 @@ body {
 
 //btns
 
+.main-btn {
+  background: var(--orange);
+  border-radius: 5px;
+  display: block;
+  font-family: 'Circe Rounded';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  padding: 16px;
+  border: 1px solid var(--orange);
+  transition: color .3s, background .3s;
+  &:hover{
+    background: var(--dark-orange);
+  }
+}
+
 .icon-btn {}
 
 .icon-btn__icon {}
+
+//prompt
+
+.main-prompt {
+  width: 245px;
+  margin: 10px;
+  padding: 8px 12px;
+  font-family: 'Circe Rounded';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  color: #FFFFFF;
+  background: rgba(41, 41, 41, 0.97);
+  border-radius: 4px;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+  z-index: 2000;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-right-width: 6px;
+    border-left-width: 6px;
+    border-bottom: 6px solid rgba(41, 41, 41, 0.97);
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+//custom num input
+
+.num-input {
+  height: 36px;
+  width: 108px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.num-input__area {
+  height: 36px;
+  width: 36px;
+  border: none;
+  background: #fff;
+  font-family: 'Circe Rounded';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.num-input__btn-up,
+.num-input__btn-down {
+  height: 36px;
+  width: 36px;
+  background: #fff;
+  border: none;
+  border-right: 1px solid rgba(128, 128, 128, 0.2);
+  position: relative;
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--main-text);
+    width: 12px;
+    height: 1px;
+  }
+
+  &::before {
+    display: none;
+  }
+}
+
+.num-input__btn-up {
+  border-left: 1px solid rgba(128, 128, 128, 0.2);
+
+  &::before {
+    display: block;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}
+
+//drop
+
+.drop{
+  position: relative;
+  &:hover{
+    .drop__item{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.drop__item{
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+}

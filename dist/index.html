@@ -70,15 +70,24 @@
           <img src="img/icons/index/header-icon-delivery.png" alt="" class="header__middle-info-icon"
             aria-hidden="true">
           <span class="header__middle-info-text">Бесплатная доставка</span>
+          <div class="header__middle-info-prompt main-prompt">
+            Дарим бесплатную доставку в пределах России при заказе товара на сумму от 2500 руб.
+          </div>
         </div>
         <div class="header__middle-info">
           <img src="img/icons/index/header-icon-discounts.png" alt="" class="header__middle-info-icon"
             aria-hidden="true">
           <span class="header__middle-info-text">Скидка при оплате на сайте</span>
+          <div class="header__middle-info-prompt main-prompt">
+            Дарим бесплатную доставку в пределах России при заказе товара на сумму от 2500 руб.
+          </div>
         </div>
         <div class="header__middle-info">
           <img src="img/icons/index/header-icon-def.png" alt="" class="header__middle-info-icon" aria-hidden="true">
           <span class="header__middle-info-text">Защита покупателей</span>
+          <div class="header__middle-info-prompt main-prompt">
+            Дарим бесплатную доставку в пределах России при заказе товара на сумму от 2500 руб.
+          </div>
         </div>
         <ul class="header__social-list">
           <li class="header__social-item">
@@ -106,19 +115,96 @@
             <span class="icon-btn__text">Заказать звонок</span>
           </button>
         </div>
-        <div class="header-basket">
-          <a href="#" class="header__basket-link" aria-label="Корзина">
-            <div class="header__basket-info">
-              <div class="header__basket-text">Ваша корзина</div>
-              <div class="header__basket-sum">16800 руб.</div>
+        <div class="header-basket js-drop-box">
+          <button class="header-basket__btn js-drop-box__btn" aria-label="Корзина">
+            <div class="header-basket__btn-info">
+              <div class="header-basket__btn-text">Ваша корзина</div>
+              <div class="header-basket__btn-sum">16800 руб.</div>
             </div>
-            <div class="header__basket-picture">
-              <svg class="header__basket-icon" viewBox="0 0 40 36">
+            <div class="header-basket__btn-picture">
+              <svg class="header-basket__btn-icon" viewBox="0 0 40 36">
                 <use xlink:href="img/icons/icons.svg#basket"></use>
               </svg>
-              <div class="header__basket-num">5</div>
+              <div class="header-basket__btn-num">5</div>
             </div>
-          </a>
+          </button>
+          <div class="header-basket__block js-drop-box__open-block">
+            <h3 class="header-basket__block-title">
+              корзина (5)
+            </h3>
+            <ul class="header-basket__list">
+              <li class="header-basket__item header-basket-item">
+                <div class="header-basket-item__img-block">
+                  <img src="img/temp/header/product-1.jpg" alt="" class="header-basket-item__img">
+                </div>
+                <a href="#" class="header-basket-item__link">
+                  <h4 class="header-basket-item__title">
+                    Форма для твердого сыра 1 кг - 40 отверстий
+                  </h4>
+                </a>
+                <button type="button" class="header-basket-item__delete-btn"></button>
+                <div class="header-basket-item__quantity num-input">
+                  <button class="num-input__btn-down"></button>
+                  <input type="text" class="num-input__area">
+                  <button class="num-input__btn-up"></button>
+                </div>
+                <div class="header-basket-item__total-price">
+                  440 руб.
+                </div>
+              </li>
+              <li class="header-basket__item header-basket-item">
+                <div class="header-basket-item__img-block">
+                  <img src="img/temp/header/product-1.jpg" alt="" class="header-basket-item__img">
+                </div>
+                <a href="#" class="header-basket-item__link">
+                  <h4 class="header-basket-item__title">
+                    Форма для твердого сыра 1 кг - 40 отверстий
+                  </h4>
+                </a>
+                <button type="button" class="header-basket-item__delete-btn"></button>
+                <div class="header-basket-item__quantity num-input">
+                  <button class="num-input__btn-down"></button>
+                  <input type="text" class="num-input__area">
+                  <button class="num-input__btn-up"></button>
+                </div>
+                <div class="header-basket-item__total-price">
+                  440 руб.
+                </div>
+              </li>
+              <li class="header-basket__item header-basket-item">
+                <div class="header-basket-item__img-block">
+                  <img src="img/temp/header/product-1.jpg" alt="" class="header-basket-item__img">
+                </div>
+                <a href="#" class="header-basket-item__link">
+                  <h4 class="header-basket-item__title">
+                    Форма для твердого сыра 1 кг - 40 отверстий
+                  </h4>
+                </a>
+                <button type="button" class="header-basket-item__delete-btn"></button>
+                <div class="header-basket-item__quantity num-input">
+                  <button class="num-input__btn-down"></button>
+                  <input type="text" class="num-input__area">
+                  <button class="num-input__btn-up"></button>
+                </div>
+                <div class="header-basket-item__total-price">
+                  440 руб.
+                </div>
+              </li>
+            </ul>
+            <dl class="header-basket__list-info">
+              <div class="header-basket__list-row">
+                <dt class="header-basket__list-title">Товаров в корзине:</dt>
+                <dd class="header-basket__list-descr">5 шт.</dd>
+              </div>
+              <div class="header-basket__list-row">
+                <dt class="header-basket__list-title">Общая стоимость:</dt>
+                <dd class="header-basket__list-descr">1680 руб.</dd>
+              </div>
+            </dl>
+            <a href="#" class="header-basket__link main-btn">
+              Оформить заказ
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -130,53 +216,55 @@
           <ul class="bottom-nav__list">
             <li class="bottom-nav__item bottom-nav__drop drop">
               Рецепты
-              <ul class="bottom-nav__drop-list drop__list">
-                <li class="bottom-nav__drop-item drop__list-item">
-                  <a href="#" class="bottom-nav__drop-link drop__list-link">
-                    Молодые сыры
-                  </a>
-                </li>
-                <li class="bottom-nav__drop-item drop__list-item">
-                  <a href="#" class="bottom-nav__drop-link drop__list-link">
-                    Полутвердые сыры
-                  </a>
-                </li>
-                <li class="bottom-nav__drop-item drop__list-item">
-                  <a href="#" class="bottom-nav__drop-link drop__list-link">
-                    Паста Филата
-                  </a>
-                </li>
-                <li class="bottom-nav__drop-item drop__list-item">
-                  <a href="#" class="bottom-nav__drop-link drop__list-link">
-                    Сывороточные сыры
-                  </a>
-                </li>
-                <li class="bottom-nav__drop-item drop__list-item">
-                  <a href="#" class="bottom-nav__drop-link drop__list-link">
-                    Сыры с плесенью
-                  </a>
-                </li>
-                <li class="bottom-nav__drop-item drop__list-item">
-                  <a href="#" class="bottom-nav__drop-link drop__list-link">
-                    Твердые сыры
-                  </a>
-                </li>
-                <li class="bottom-nav__drop-item drop__list-item">
-                  <a href="#" class="bottom-nav__drop-link drop__list-link">
-                    Творожные сыры
-                  </a>
-                </li>
-                <li class="bottom-nav__drop-item drop__list-item">
-                  <a href="#" class="bottom-nav__drop-link drop__list-link">
-                    Кисломолочные продукты
-                  </a>
-                </li>
-                <li class="bottom-nav__drop-item drop__list-item">
-                  <a href="#" class="bottom-nav__drop-link drop__list-link">
-                    Все рецепты
-                  </a>
-                </li>
-              </ul>
+              <div class="bottom-nav__drop-box drop__item">
+                <ul class="bottom-nav__drop-list">
+                  <li class="bottom-nav__drop-item">
+                    <a href="#" class="bottom-nav__drop-link">
+                      Молодые сыры
+                    </a>
+                  </li>
+                  <li class="bottom-nav__drop-item">
+                    <a href="#" class="bottom-nav__drop-link">
+                      Полутвердые сыры
+                    </a>
+                  </li>
+                  <li class="bottom-nav__drop-item">
+                    <a href="#" class="bottom-nav__drop-link">
+                      Паста Филата
+                    </a>
+                  </li>
+                  <li class="bottom-nav__drop-item">
+                    <a href="#" class="bottom-nav__drop-link">
+                      Сывороточные сыры
+                    </a>
+                  </li>
+                  <li class="bottom-nav__drop-item">
+                    <a href="#" class="bottom-nav__drop-link">
+                      Сыры с плесенью
+                    </a>
+                  </li>
+                  <li class="bottom-nav__drop-item">
+                    <a href="#" class="bottom-nav__drop-link">
+                      Твердые сыры
+                    </a>
+                  </li>
+                  <li class="bottom-nav__drop-item">
+                    <a href="#" class="bottom-nav__drop-link">
+                      Творожные сыры
+                    </a>
+                  </li>
+                  <li class="bottom-nav__drop-item">
+                    <a href="#" class="bottom-nav__drop-link">
+                      Кисломолочные продукты
+                    </a>
+                  </li>
+                  <li class="bottom-nav__drop-item">
+                    <a href="#" class="bottom-nav__drop-link">
+                      Все рецепты
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="bottom-nav__item">
               <a href="#" class="bottom-nav__link">
