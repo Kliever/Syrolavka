@@ -21,17 +21,34 @@ body {
 
 .js-custom-select__button {}
 
+.js-custom-select__btn-text {}
+
 .js-custom-select__options {
   display: none;
+  position: absolute;
+
+  &._active {
+    display: block;
+  }
 }
 
 .js-custom-select__option {}
 
 .js-custom-select__input {
+  visibility: hidden;
+  opacity: 0;
+  appearance: none;
   height: 1px;
   width: 1px;
-  opacity: 0;
-  visibility: hidden;
-  appearance: none;
+  font-size: 1px;
+  line-height: 1px;
   position: absolute;
+  z-index: -1;
 }
+
+
+//btns
+
+.icon-btn {}
+
+.icon-btn__icon {}
