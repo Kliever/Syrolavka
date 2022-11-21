@@ -974,8 +974,19 @@ body {
   overflow: auto;
 }
 
+.header-basket__item {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.header-basket__item._delete {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .header-basket-item {
-  padding: 24px 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
   margin: 0 30px;
   display: grid;
   grid-template-columns: 90px 110px auto 50px;

@@ -409,10 +409,19 @@
   overflow: auto;
 }
 
-.header-basket__item {}
+.header-basket__item {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .3s, visibility .3s;
+  &._delete {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 
 .header-basket-item {
-  padding: 24px 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
   margin: 0 30px;
   display: grid;
   grid-template-columns: 90px 110px auto 50px;
@@ -608,7 +617,7 @@
   }
 }
 
-.bottom-nav__drop-box{
+.bottom-nav__drop-box {
   padding-top: 15px;
   width: 220px;
   left: 50%;
@@ -667,8 +676,9 @@
   border: none;
   background: transparent;
   margin-right: 8px;
-  &:hover{
-    .header__search-btn-icon{
+
+  &:hover {
+    .header__search-btn-icon {
       transform: scale(1.1);
     }
   }

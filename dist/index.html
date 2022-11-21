@@ -132,7 +132,7 @@
               <div class="header-basket__btn-num js-header-basket__quantity"></div>
             </div>
           </button>
-          <div class="header-basket__block js-drop-box__open-block js-header-basket _active">
+          <form class="header-basket__block js-drop-box__open-block js-header-basket _active">
             <h3 class="header-basket__block-title">
               кошик (<span class="js-header-basket__quantity"></span>)
             </h3>
@@ -146,34 +146,34 @@
                     Форма для твердого сиру 1 кг - 40 отворів
                   </h4>
                 </a>
-                <button type="button" class="header-basket-item__delete-btn"></button>
+                <button type="button" class="header-basket-item__delete-btn js-header-basket__item-del-btn"></button>
                 <div class="header-basket-item__quantity num-input">
-                  <button class="num-input__btn-down js-header-basket__item-btn-down"></button>
-                  <input type="text" class="num-input__area js-header-basket__item-amount" min="2" max="99" value="2">
-                  <button class="num-input__btn-up js-header-basket__item-btn-up"></button>
+                  <button type="button" class="num-input__btn-down js-header-basket__item-btn-down"></button>
+                  <input type="text" class="num-input__area js-header-basket__item-amount" min="1" max="99" value="1">
+                  <button type="button" class="num-input__btn-up js-header-basket__item-btn-up"></button>
                 </div>
                 <div class="header-basket-item__total-price">
-                  <span class="header-basket-item__total-price-num js-header-basket__item-price" data-price="120"></span>
+                  <span class="header-basket-item__total-price-num js-header-basket__item-price" data-price="440"></span>
                   <span>грн.</span>
                 </div>
               </li>
               <li class="header-basket__item header-basket-item js-header-basket__item">
                 <div class="header-basket-item__img-block">
-                  <img src="img/temp/header/product-1.jpg" alt="" class="header-basket-item__img">
+                  <img src="img/temp/header/product-2.jpg" alt="" class="header-basket-item__img">
                 </div>
                 <a href="#" class="header-basket-item__link">
                   <h4 class="header-basket-item__title">
-                    Форма для твердого сиру 1 кг - 40 отворів
+                    Універсальний папір, 10 шт
                   </h4>
                 </a>
-                <button type="button" class="header-basket-item__delete-btn"></button>
+                <button type="button" class="header-basket-item__delete-btn js-header-basket__item-del-btn"></button>
                 <div class="header-basket-item__quantity num-input">
-                  <button class="num-input__btn-down js-header-basket__item-btn-down"></button>
-                  <input type="text" class="num-input__area js-header-basket__item-amount" min="2" max="99" value="2">
-                  <button class="num-input__btn-up js-header-basket__item-btn-up"></button>
+                  <button type="button" class="num-input__btn-down js-header-basket__item-btn-down"></button>
+                  <input type="text" class="num-input__area js-header-basket__item-amount" min="1" max="99" value="4">
+                  <button type="button" class="num-input__btn-up js-header-basket__item-btn-up"></button>
                 </div>
                 <div class="header-basket-item__total-price">
-                  <span class="header-basket-item__total-price-num js-header-basket__item-price" data-price="120"></span>
+                  <span class="header-basket-item__total-price-num js-header-basket__item-price" data-price="310"></span>
                   <span>грн.</span>
                 </div>
               </li>
@@ -198,7 +198,7 @@
             <button type="submit" class="header-basket__link main-btn js-header-basket__submit">
               Оформити замовлення
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </div>

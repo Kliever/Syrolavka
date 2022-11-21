@@ -26,14 +26,15 @@ export function isScript() {
     let totalPriceValue = 0;
     let productPrices = headerBasket.querySelectorAll('.js-header-basket__item-price');
     const totalProductQuantitys = document.querySelectorAll('.js-header-basket__quantity');
-  
-    emptyTotalQuantity(calcTotalQuantity ());
 
-    headerBasket.querySelectorAll('.js-header-basket__item').forEach((baskeItem) => {
-      const btnUp = baskeItem.querySelector('.js-header-basket__item-btn-up');
-      const btnDown = baskeItem.querySelector('.js-header-basket__item-btn-down');
-      const inputAmount = baskeItem.querySelector('.js-header-basket__item-amount');
-      const productTotalPrice = baskeItem.querySelector('.js-header-basket__item-price');
+    emptyTotalQuantity(calcTotalQuantity());
+
+    headerBasket.querySelectorAll('.js-header-basket__item').forEach((basketItem) => {
+      const btnUp = basketItem.querySelector('.js-header-basket__item-btn-up');
+      const btnDown = basketItem.querySelector('.js-header-basket__item-btn-down');
+      const inputAmount = basketItem.querySelector('.js-header-basket__item-amount');
+      const basketItemDeleteBtn = basketItem.querySelector('.js-header-basket__item-del-btn');
+      const productTotalPrice = basketItem.querySelector('.js-header-basket__item-price');
       const productPrice = +productTotalPrice.getAttribute('data-price');
 
       let inputAmountVal = +inputAmount.getAttribute('value');
@@ -49,13 +50,14 @@ export function isScript() {
 
       inputAmount.innerText = inputAmountVal;
       productTotalPrice.innerText = inputAmountVal * productPrice;
-      calcTotalPrice();
+      calcTotalPrice(productPrices);
 
       btnUp.addEventListener('click', () => {
         if (inputAmountVal < inputAmountMax) {
           inputAmountVal += 1;
           inputAmount.value = inputAmountVal;
           productTotalPrice.innerText = inputAmountVal * productPrice;
+          calcTotalPrice(productPrices);
         }
       })
 
@@ -64,6 +66,7 @@ export function isScript() {
           inputAmountVal -= 1;
           inputAmount.value = inputAmountVal;
           productTotalPrice.innerText = inputAmountVal * productPrice;
+          calcTotalPrice(productPrices);
         }
       })
 
@@ -98,22 +101,25 @@ export function isScript() {
         }
       })
 
+      basketItemDeleteBtn.addEventListener('click', () => {
+        basketItem.classList.add('_delete');
+        setTimeout(() => {
+          basketItem.remove();
+          emptyTotalQuantity(calcTotalQuantity());
+          productPrices = headerBasket.querySelectorAll('.js-header-basket__item-price');
+          calcTotalPrice(productPrices); 
+        }, 300)
+      })
+
     })
 
     headerBasket.addEventListener('input', () => {
-      console.log('Изменение');
-      calcTotalPrice();
-
+      calcTotalPrice(productPrices);
     })
 
-    headerBasket.addEventListener('click', (event) => {
-      if (!event.target.classList.contains('header-basket__link')) {
-        calcTotalPrice();
 
-      }
-    })
 
-    function calcTotalPrice() {
+    function calcTotalPrice(productPrices) {
       for (let i = 0; i < productPrices.length; i++) {
         totalPriceValue += +productPrices[i].innerText;
       }
@@ -124,11 +130,11 @@ export function isScript() {
       totalPriceValue = 0;
     }
 
-    function calcTotalQuantity () {
+    function calcTotalQuantity() {
       return headerBasket.querySelectorAll('.js-header-basket__item').length;
     }
 
-    function emptyTotalQuantity (totalQuantity) {
+    function emptyTotalQuantity(totalQuantity) {
       for (let i = 0; i < totalProductQuantitys.length; i++) {
         totalProductQuantitys[i].innerText = totalQuantity;
       }
