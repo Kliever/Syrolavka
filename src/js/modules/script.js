@@ -22,7 +22,7 @@ export function isScript() {
   //header basket counter
 
   document.querySelectorAll('.js-header-basket').forEach((headerBasket) => {
-    const totalPrice = headerBasket.querySelector('.js-header-basket__total-price');
+    const totalPrices = document.querySelectorAll('.js-header-basket__total-price');
     let totalPriceValue = 0;
     let productPrices = headerBasket.querySelectorAll('.js-header-basket__item-price');
     const totalProductQuantitys = document.querySelectorAll('.js-header-basket__quantity');
@@ -117,7 +117,10 @@ export function isScript() {
       for (let i = 0; i < productPrices.length; i++) {
         totalPriceValue += +productPrices[i].innerText;
       }
-      totalPrice.innerText = totalPriceValue;
+
+      for (let i = 0; i < totalPrices.length; i++) {
+        totalPrices[i].innerText = totalPriceValue;
+      }
       totalPriceValue = 0;
     }
 
