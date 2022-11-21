@@ -561,6 +561,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   text-align: center;
+  color: var(--main-text);
 }
 
 .num-input__btn-up,
@@ -1091,6 +1092,7 @@ body {
 
 .header-basket__link {
   margin: 0 30px;
+  width: calc(100% - 60px);
 }
 
 .header__bottom {

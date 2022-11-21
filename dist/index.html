@@ -125,15 +125,15 @@
               <svg class="header-basket__btn-icon" viewBox="0 0 40 36">
                 <use xlink:href="img/icons/icons.svg#basket"></use>
               </svg>
-              <div class="header-basket__btn-num">5</div>
+              <div class="header-basket__btn-num js-header-basket__quantity"></div>
             </div>
           </button>
-          <div class="header-basket__block js-drop-box__open-block">
+          <div class="header-basket__block js-drop-box__open-block js-header-basket _active">
             <h3 class="header-basket__block-title">
-              кошик (5)
+              кошик (<span class="js-header-basket__quantity"></span>)
             </h3>
             <ul class="header-basket__list">
-              <li class="header-basket__item header-basket-item">
+              <li class="header-basket__item header-basket-item js-header-basket__item">
                 <div class="header-basket-item__img-block">
                   <img src="img/temp/header/product-1.jpg" alt="" class="header-basket-item__img">
                 </div>
@@ -144,15 +144,16 @@
                 </a>
                 <button type="button" class="header-basket-item__delete-btn"></button>
                 <div class="header-basket-item__quantity num-input">
-                  <button class="num-input__btn-down"></button>
-                  <input type="text" class="num-input__area">
-                  <button class="num-input__btn-up"></button>
+                  <button class="num-input__btn-down js-header-basket__item-btn-down"></button>
+                  <input type="text" class="num-input__area js-header-basket__item-amount" min="2" max="99" value="2">
+                  <button class="num-input__btn-up js-header-basket__item-btn-up"></button>
                 </div>
                 <div class="header-basket-item__total-price">
-                  120 грн.
+                  <span class="header-basket-item__total-price-num js-header-basket__item-price" data-price="120"></span>
+                  <span>грн.</span>
                 </div>
               </li>
-              <li class="header-basket__item header-basket-item">
+              <li class="header-basket__item header-basket-item js-header-basket__item">
                 <div class="header-basket-item__img-block">
                   <img src="img/temp/header/product-1.jpg" alt="" class="header-basket-item__img">
                 </div>
@@ -163,47 +164,36 @@
                 </a>
                 <button type="button" class="header-basket-item__delete-btn"></button>
                 <div class="header-basket-item__quantity num-input">
-                  <button class="num-input__btn-down"></button>
-                  <input type="text" class="num-input__area">
-                  <button class="num-input__btn-up"></button>
+                  <button class="num-input__btn-down js-header-basket__item-btn-down"></button>
+                  <input type="text" class="num-input__area js-header-basket__item-amount" min="2" max="99" value="2">
+                  <button class="num-input__btn-up js-header-basket__item-btn-up"></button>
                 </div>
                 <div class="header-basket-item__total-price">
-                  120 грн.
-                </div>
-              </li>
-              <li class="header-basket__item header-basket-item">
-                <div class="header-basket-item__img-block">
-                  <img src="img/temp/header/product-1.jpg" alt="" class="header-basket-item__img">
-                </div>
-                <a href="#" class="header-basket-item__link">
-                  <h4 class="header-basket-item__title">
-                    Форма для твердого сиру 1 кг - 40 отворів
-                  </h4>
-                </a>
-                <button type="button" class="header-basket-item__delete-btn"></button>
-                <div class="header-basket-item__quantity num-input">
-                  <button class="num-input__btn-down"></button>
-                  <input type="text" class="num-input__area">
-                  <button class="num-input__btn-up"></button>
-                </div>
-                <div class="header-basket-item__total-price">
-                  120 грн.
+                  <span class="header-basket-item__total-price-num js-header-basket__item-price" data-price="120"></span>
+                  <span>грн.</span>
                 </div>
               </li>
             </ul>
             <dl class="header-basket__list-info">
               <div class="header-basket__list-row">
                 <dt class="header-basket__list-title">Товарів у кошику:</dt>
-                <dd class="header-basket__list-descr">5 шт.</dd>
+                <dd class="header-basket__list-descr">
+                  <span class="js-header-basket__quantity">
+                    5
+                  </span>
+                   шт.</dd>
               </div>
               <div class="header-basket__list-row">
                 <dt class="header-basket__list-title">Загальна вартість:</dt>
-                <dd class="header-basket__list-descr">1680 грн.</dd>
+                <dd class="header-basket__list-descr">
+                  <span class="header-basket__list-descr-num js-header-basket__total-price"></span>
+                  <span> грн.</span>
+                </dd>
               </div>
             </dl>
-            <a href="#" class="header-basket__link main-btn">
+            <button type="submit" class="header-basket__link main-btn js-header-basket__submit">
               Оформити замовлення
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -301,6 +291,9 @@
   </div>
 </header>
   <main>
+
+    
+
   </main>
   <footer></footer>
   <script src="js/app.min.js"></script>
