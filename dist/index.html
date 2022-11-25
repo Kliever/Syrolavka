@@ -77,14 +77,14 @@
         <div class="header__middle-info">
           <img src="img/icons/index/header-icon-discounts.png" alt="" class="header__middle-info-icon"
             aria-hidden="true">
-          <span class="header__middle-info-text">Скидка при оплате на сайте</span>
+          <span class="header__middle-info-text">Оплата на сайті зі знижкою</span>
           <div class="header__middle-info-prompt main-prompt">
             Даруємо безкоштовну доставку в межах України при замовленні на суму від 1000 грн.
           </div>
         </div>
         <div class="header__middle-info">
           <img src="img/icons/index/header-icon-def.png" alt="" class="header__middle-info-icon" aria-hidden="true">
-          <span class="header__middle-info-text">Защита покупателей</span>
+          <span class="header__middle-info-text">Захист покупців</span>
           <div class="header__middle-info-prompt main-prompt">
             Даруємо безкоштовну доставку в межах України при замовленні на суму від 1000 грн.
           </div>
@@ -132,12 +132,12 @@
               <div class="header-basket__btn-num js-header-basket__quantity"></div>
             </div>
           </button>
-          <form class="header-basket__block js-drop-box__open-block js-header-basket _active">
+          <form class="header-basket__block js-drop-box__open-block js-header-basket">
             <h3 class="header-basket__block-title">
               кошик (<span class="js-header-basket__quantity"></span>)
             </h3>
-            <ul class="header-basket__list">
-              <li class="header-basket__item header-basket-item js-header-basket__item">
+            <div class="header-basket__list">
+              <article class="header-basket__item header-basket-item js-header-basket__item">
                 <div class="header-basket-item__img-block">
                   <img src="img/temp/header/product-1.jpg" alt="" class="header-basket-item__img">
                 </div>
@@ -156,8 +156,8 @@
                   <span class="header-basket-item__total-price-num js-header-basket__item-price" data-price="440"></span>
                   <span>грн.</span>
                 </div>
-              </li>
-              <li class="header-basket__item header-basket-item js-header-basket__item">
+              </article>
+              <article class="header-basket__item header-basket-item js-header-basket__item">
                 <div class="header-basket-item__img-block">
                   <img src="img/temp/header/product-2.jpg" alt="" class="header-basket-item__img">
                 </div>
@@ -176,8 +176,8 @@
                   <span class="header-basket-item__total-price-num js-header-basket__item-price" data-price="310"></span>
                   <span>грн.</span>
                 </div>
-              </li>
-            </ul>
+              </article>
+            </div>
             <dl class="header-basket__list-info">
               <div class="header-basket__list-row">
                 <dt class="header-basket__list-title">Товарів у кошику:</dt>
@@ -294,12 +294,172 @@
     </div>
   </div>
 </header>
-  <main>
+  <main style="height: 1000px;">
 
     
 
   </main>
-  <footer></footer>
+  <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__column">
+        <div class="footer__logo">
+          <a href="#" class="footer__logo-link">
+            <img src="img/footer-logo.png" alt="logo" class="footer__logo-img">
+          </a>
+        </div>
+        <p class="footer__column-text">
+          Всі матеріали цього сайту є об'єктами авторського права.
+        </p>
+        <p class="footer__developer-info">
+          Разработка сайту: ЕйЕйчКомпані
+        </p>
+      </div>
+      <div class="footer__column">
+        <h5 class="footer__column-title">
+          Компанія
+        </h5>
+        <ul class="footer__column-list">
+          <li class="footer__column-item">
+            <a href="#" class="footer__column-link">
+              Про компанію
+            </a>
+          </li>
+          <li class="footer__column-item">
+            <a href="#" class="footer__column-link">
+              Акції та знижки
+            </a>
+          </li>
+          <li class="footer__column-item">
+            <a href="#" class="footer__column-link">
+              Доставка та оплата
+            </a>
+          </li>
+          <li class="footer__column-item">
+            <a href="#" class="footer__column-link">
+              Відгуки
+            </a>
+          </li>
+          <li class="footer__column-item">
+            <a href="#" class="footer__column-link">
+              Гарантія та повернення
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <h5 class="footer__column-title">
+          Підтримка
+        </h5>
+        <ul class="footer__column-list">
+          <li class="footer__column-item">
+            <a href="#" class="footer__column-link">
+              Питання-відповідь
+            </a>
+          </li>
+          <li class="footer__column-item">
+            <a href="#" class="footer__column-link">
+              Бонусна програма
+            </a>
+          </li>
+          <li class="footer__column-item">
+            <a href="#" class="footer__column-link">
+              Політика конфіденційности
+            </a>
+          </li>
+          <li class="footer__column-item">
+            <a href="#" class="footer__column-link">
+              персональні дані
+            </a>
+          </li>
+      </div>
+      <div class="footer__column">
+        <h5 class="footer__column-title">
+          Способи оплати
+        </h5>
+        <ul class="footer__payments-list">
+          <li class="footer__payments-item">
+            <a href="#" class="footer__payments-link">
+              <img src="img/icons/payments/grn.png" alt="Гривня" class="footer__payments-img">
+            </a>
+          </li>
+          <li class="footer__payments-item">
+            <a href="#" class="footer__payments-link">
+              <img src="img/icons/payments/skrill.png" alt="Skrill" class="footer__payments-img">
+            </a>
+          </li>
+          <li class="footer__payments-item">
+            <a href="#" class="footer__payments-link">
+              <img src="img/icons/payments/pp.png" alt="PayPal" class="footer__payments-img">
+            </a>
+          </li>
+          <li class="footer__payments-item">
+            <a href="#" class="footer__payments-link">
+              <img src="img/icons/payments/wm.png" alt="WebMoney" class="footer__payments-img">
+            </a>
+          </li>
+          <li class="footer__payments-item">
+            <a href="#" class="footer__payments-link">
+              <img src="img/icons/payments/mastercard.png" alt="Mastercard" class="footer__payments-img">
+            </a>
+          </li>
+          <li class="footer__payments-item">
+            <a href="#" class="footer__payments-link">
+              <img src="img/icons/payments/visa.png" alt="Visa" class="footer__payments-img">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <a href="tel:80664601960" class="footer__phone-num">
+          8 (066) 460-19-60
+        </a>
+        <p class="footer__work-info">
+          <svg class="footer__work-info-icon footer__work-info-icon--watch" viewBox="0 0 18 18">
+            <use xlink:href="img/icons/icons.svg#watch"></use>
+          </svg>
+          <span class="footer__work-info-text">
+            Пн-пт 9:00 - 19:00
+          </span>
+        </p>
+        <address class="footer__work-info">
+          <svg class="footer__work-info-icon footer__work-info-icon--map-marker" viewBox="0 0 14 18">
+            <use xlink:href="img/icons/icons.svg#map-marker"></use>
+          </svg>
+          <span class="footer__work-info-text">
+            м. Дніпро, вул. Свободи 1/7
+          </span>
+        </address>
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+
+          </li>
+          <li class="footer__social-item">
+            <a href="#" target="_blank" class="footer__social-link">
+              <img src="img/icons/social/instagram.png" alt="instagram" class="footer__social-img">
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a href="#" target="_blank" class="footer__social-link">
+              <img src="img/icons/social/twitter.png" alt="twitter" class="footer__social-img">
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a href="#" target="_blank" class="footer__social-link">
+              <img src="img/icons/social/facebook.png" alt="facebook" class="footer__social-img">
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a href="#" target="_blank" class="footer__social-link">
+              <img src="img/icons/social/youtube.png" alt="youtube" class="footer__social-img">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</footer>
   <script src="js/app.min.js"></script>
 </body>
 

@@ -365,7 +365,7 @@
   position: absolute;
   top: 55px;
   right: -55px;
-  z-index: 2000;
+  z-index: -1;
   box-shadow: 0px 2px 18px rgba(102, 79, 0, 0.1);
   border-radius: 6px;
   visibility: hidden;
@@ -388,6 +388,7 @@
   &._active {
     visibility: visible;
     opacity: 1;
+    z-index: 2000;
   }
 }
 
@@ -655,6 +656,9 @@
   color: var(--main-text);
   font-size: 14px;
   line-height: 22px;
+  &:hover{
+    text-decoration: underline;
+  }
 }
 
 .header__search {
