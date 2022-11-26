@@ -6,9 +6,318 @@
 
 <body>
   @@include('html/header.html', {})
-  <main style="height: 1000px;">
+  <main class="main-block">
 
-    
+    <section class="hero">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__main">
+            <img src="@img/index/hero-1.jpg" alt="" class="hero__img">
+            <h3 class="hero__main-title">
+              Набори для сироробства
+            </h3>
+            <p class="hero__main-descr">
+              Все, що вам потрібно для приготування сиру в домашніх умовах
+            </p>
+            <div class="hero__main-btn-block">
+              <a href="#" class="hero__main-btn main-btn">Дивитись набір</a>
+            </div>
+          </div>
+          <a href="#" class="hero__secondary-link">
+            <img src="@img/index/hero-2.jpg" alt="" class="hero__img">
+            <p class="hero__secondary-pre-title">
+              Рецепти
+            </p>
+            <h3 class="hero__secondary-title">
+              Сири з пліснявою
+            </h3>
+          </a>
+          <a href="#" class="hero__secondary-link">
+            <img src="@img/index/hero-3.jpg" alt="" class="hero__img">
+            <p class="hero__secondary-pre-title">
+              Акції
+            </p>
+            <h3 class="hero__secondary-title">
+              Закуваски для сиру
+            </h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-section">
+      <div class="container">
+        <div class="main-section__inner">
+          @@include('html/main-menu.html', {
+          "class": "main-section__menu"
+          })
+          <div class="main-section__block product-tabs tabs js-tabs">
+            <div class="product-tabs__btns">
+              <button class="product-tabs__btn tabs__btn js-tabs__btn" data-tab-name="first">Популярні товари</button>
+              <button class="product-tabs__btn tabs__btn js-tabs__btn" data-tab-name="second">Акції</button>
+            </div>
+            <div class="product-tabs__tabs-items tabs__items">
+              <div class="product-tabs__tab-block tabs__item js-tabs__item" data-tab-name="first">
+                <div class="product-tabs__block">
+                  <h4 class="product-tabs__block-title title">
+                    Інгредієнти
+                  </h4>
+                  <div class="product-tabs__block-inner">
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-2.jpg",
+                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                    "total-price": "900",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-4.jpg",
+                    "name": "Запашний перець горошком (100гр)",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-1.jpg",
+                    "name": "Червоний перець молотий (100гр)",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-6.jpg",
+                    "name": "Мускатний горіх молотий (100гр)",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-8.jpg",
+                    "name": "Форма для твердого сиру",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-5.jpg",
+                    "name": "Запашний перець горошком (100гр)",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-3.jpg",
+                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-7.jpg",
+                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                  </div>
+                </div>
+                <div class="product-tabs__block">
+                  <h4 class="product-tabs__block-title title">
+                    Обладнання
+                  </h4>
+                  <div class="product-tabs__block-inner">
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-1.jpg",
+                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                    "total-price": "900",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-2.jpg",
+                    "name": "Запашний перець горошком (100гр)",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-3.jpg",
+                    "name": "Червоний перець молотий (100гр)",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-4.jpg",
+                    "name": "Мускатний горіх молотий (100гр)",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-5.jpg",
+                    "name": "Форма для твердого сиру",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-6.jpg",
+                    "name": "Запашний перець горошком (100гр)",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-7.jpg",
+                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-8.jpg",
+                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                  </div>
+                </div>
+              </div>
+              <div class="product-tabs__tab-block tabs__item js-tabs__item" data-tab-name="second">
+                <div class="product-tabs__block">
+                  <h4 class="product-tabs__block-title title">
+                    Інгредієнти
+                  </h4>
+                  <div class="product-tabs__block-inner">
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-1.jpg",
+                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                    "total-price": "900",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-2.jpg",
+                    "name": "Запашний перець горошком (100гр)",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-3.jpg",
+                    "name": "Червоний перець молотий (100гр)",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-4.jpg",
+                    "name": "Мускатний горіх молотий (100гр)",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-5.jpg",
+                    "name": "Форма для твердого сиру",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-6.jpg",
+                    "name": "Запашний перець горошком (100гр)",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-7.jpg",
+                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-8.jpg",
+                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                  </div>
+                </div>
+                <div class="product-tabs__block">
+                  <h4 class="product-tabs__block-title title">
+                    Обладнання
+                  </h4>
+                  <div class="product-tabs__block-inner">
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-1.jpg",
+                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                    "total-price": "900",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-2.jpg",
+                    "name": "Запашний перець горошком (100гр)",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-3.jpg",
+                    "name": "Червоний перець молотий (100гр)",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-4.jpg",
+                    "name": "Мускатний горіх молотий (100гр)",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-5.jpg",
+                    "name": "Форма для твердого сиру",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-6.jpg",
+                    "name": "Запашний перець горошком (100гр)",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-7.jpg",
+                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                    @@include('html/product-card.html', {
+                    "class": "product-tabs__product",
+                    "img": "@img/temp/product-card/product-8.jpg",
+                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                    "total-price": "700",
+                    "last-price": "900"
+                    })
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
   @@include('html/footer.html', {})

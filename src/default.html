@@ -6,8 +6,28 @@
 
 <body>
   @@include('html/header.html', {})
-  <main>
+  
+  
+
+  <main class="main-block">
+    
+
+    <section class="main-section">
+      <div class="container">
+        <div class="main-section__inner">
+          @@include('html/main-menu.html', {
+          "class": "main-section__menu"
+          })
+          <div class="main-section__block product-tabs">
+
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+
   @@include('html/footer.html', {})
   <script src="js/app.min.js"></script>
 </body>

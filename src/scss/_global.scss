@@ -55,16 +55,16 @@ body {
   display: block;
   font-family: 'Circe Rounded';
   font-style: normal;
-  font-weight: 700;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
   color: #fff;
-  padding: 16px;
   border: 1px solid var(--orange);
-  transition: color .3s, background .3s;
-  &:hover{
+  transition: color .3s, background .3s, border .3s;
+
+  &:hover {
     background: var(--dark-orange);
+    border: 1px solid var(--dark-orange);
   }
 }
 
@@ -172,19 +172,74 @@ body {
 
 //drop
 
-.drop{
+.drop {
   position: relative;
-  &:hover{
-    .drop__item{
+
+  &:hover {
+    .drop__item {
       opacity: 1;
       visibility: visible;
     }
   }
 }
 
-.drop__item{
+.drop__item {
   position: absolute;
   opacity: 0;
   visibility: hidden;
   transition: opacity .3s, visibility .3s;
+  z-index: 2000;
+}
+
+//main-section
+
+.main-section {}
+
+.main-section__inner {
+  display: grid;
+  grid-template-columns: 280px auto;
+  column-gap: 20px;
+}
+
+.main-section__block {}
+
+//title
+
+.title {
+  font-family: 'Circe Rounded';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 24px;
+  color: var(--brown);
+}
+
+//tabs
+
+.tabs{
+
+}
+
+.tabs__btn{
+
+}
+
+.tabs__items{
+  position: relative;
+}
+
+.tabs__item{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.3s, opacity 0.3s;
+  &._active{
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+  }
 }

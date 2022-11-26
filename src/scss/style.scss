@@ -7,8 +7,12 @@
 
 
 @import "modules/-header";
-@import "_main";
 @import "modules/-footer";
+@import "modules/-main-menu";
+@import "modules/-product-card";
+
+
+@import "pages/index";
 
 
 

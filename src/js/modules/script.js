@@ -26,7 +26,7 @@ export function isScript() {
     let totalPriceValue = 0;
     let productPrices = headerBasket.querySelectorAll('.js-header-basket__item-price');
     const totalProductQuantitys = document.querySelectorAll('.js-header-basket__quantity');
-
+    
     emptyTotalQuantity(calcTotalQuantity());
 
     headerBasket.querySelectorAll('.js-header-basket__item').forEach((basketItem) => {
@@ -38,7 +38,7 @@ export function isScript() {
       const productPrice = +productTotalPrice.getAttribute('data-price');
 
       let inputAmountVal = +inputAmount.getAttribute('value');
-      let inputAmountMax = 9999;
+      let inputAmountMax = 999999999;
       if (inputAmount.hasAttribute('max')) {
         inputAmountMax = +inputAmount.getAttribute('max');
       }
@@ -47,7 +47,6 @@ export function isScript() {
       if (inputAmount.hasAttribute('min')) {
         inputAmountMin = +inputAmount.getAttribute('min');
       }
-
       inputAmount.innerText = inputAmountVal;
       productTotalPrice.innerText = inputAmountVal * productPrice;
       calcTotalPrice(productPrices);
@@ -107,7 +106,7 @@ export function isScript() {
           basketItem.remove();
           emptyTotalQuantity(calcTotalQuantity());
           productPrices = headerBasket.querySelectorAll('.js-header-basket__item-price');
-          calcTotalPrice(productPrices); 
+          calcTotalPrice(productPrices);
         }, 300)
       })
 
@@ -141,6 +140,50 @@ export function isScript() {
     }
 
   })
+
+
+  //tabs=================================================================
+
+  if (document.querySelectorAll('.js-tabs').length > 0) {
+    document.querySelectorAll('.js-tabs').forEach((tab) => {
+      let tabBtn = tab.querySelectorAll('.js-tabs__btn');
+      let tabItem = tab.querySelectorAll('.js-tabs__item');
+
+      //first active tab
+      tabBtn[0].classList.add('_active');
+      tabItem[0].classList.add('_active');
+
+      for (let i = 0; i < tabBtn.length; i++) {
+        if (tabBtn[i].classList.contains('_active')) {
+          tabBtn[0].classList.remove('_active');
+          tabItem[0].classList.remove('_active');
+          tabBtn[i].classList.add('_active')
+          tabItem[i].classList.add('_active')
+        }
+      }
+      for (let i = 0; i < tabBtn.length; i++) {
+        //default active tab
+        if (tabBtn[i].classList.contains('_active')) {
+          tabItem[i].classList.add('_active');
+        }
+
+        //switch js-tabs on click
+        tabBtn[i].addEventListener('click', () => {
+          for (let i = 0; i < tabBtn.length; i++) {
+            tabBtn[i].classList.remove('_active');
+          }
+          tabBtn[i].classList.add('_active');
+          let tabName = tabBtn[i].getAttribute('data-tab-name');
+          for (let k = 0; k < tabItem.length; k++) {
+            tabItem[k].classList.remove('_active');
+            if (tabItem[k].getAttribute('data-tab-name') === tabName) {
+              tabItem[k].classList.add('_active');
+            }
+          }
+        })
+      }
+    });
+  }
 
 
 
