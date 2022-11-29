@@ -18,130 +18,6 @@ export function isScript() {
 
   })
 
-
-  //header basket counter
-
-  document.querySelectorAll('.js-header-basket').forEach((headerBasket) => {
-    const totalPrices = document.querySelectorAll('.js-header-basket__total-price');
-    let totalPriceValue = 0;
-    let productPrices = headerBasket.querySelectorAll('.js-header-basket__item-price');
-    const totalProductQuantitys = document.querySelectorAll('.js-header-basket__quantity');
-    
-    emptyTotalQuantity(calcTotalQuantity());
-
-    headerBasket.querySelectorAll('.js-header-basket__item').forEach((basketItem) => {
-      const btnUp = basketItem.querySelector('.js-header-basket__item-btn-up');
-      const btnDown = basketItem.querySelector('.js-header-basket__item-btn-down');
-      const inputAmount = basketItem.querySelector('.js-header-basket__item-amount');
-      const basketItemDeleteBtn = basketItem.querySelector('.js-header-basket__item-del-btn');
-      const productTotalPrice = basketItem.querySelector('.js-header-basket__item-price');
-      const productPrice = +productTotalPrice.getAttribute('data-price');
-
-      let inputAmountVal = +inputAmount.getAttribute('value');
-      let inputAmountMax = 999999999;
-      if (inputAmount.hasAttribute('max')) {
-        inputAmountMax = +inputAmount.getAttribute('max');
-      }
-
-      let inputAmountMin = 1;
-      if (inputAmount.hasAttribute('min')) {
-        inputAmountMin = +inputAmount.getAttribute('min');
-      }
-      inputAmount.innerText = inputAmountVal;
-      productTotalPrice.innerText = inputAmountVal * productPrice;
-      calcTotalPrice(productPrices);
-
-      btnUp.addEventListener('click', () => {
-        if (inputAmountVal < inputAmountMax) {
-          inputAmountVal += 1;
-          inputAmount.value = inputAmountVal;
-          productTotalPrice.innerText = inputAmountVal * productPrice;
-          calcTotalPrice(productPrices);
-        }
-      })
-
-      btnDown.addEventListener('click', () => {
-        if (inputAmountVal > inputAmountMin) {
-          inputAmountVal -= 1;
-          inputAmount.value = inputAmountVal;
-          productTotalPrice.innerText = inputAmountVal * productPrice;
-          calcTotalPrice(productPrices);
-        }
-      })
-
-      inputAmount.addEventListener('input', (event) => {
-        if (!isNaN(inputAmount.value)) {
-          if (+inputAmount.value > inputAmountMax) {
-            inputAmount.value = inputAmountMax;
-            inputAmountVal = inputAmount.value;
-            productTotalPrice.innerText = inputAmountVal * productPrice;
-          } else if (+inputAmount.value < inputAmountMin && +inputAmount.value.length !== 0) {
-            inputAmountVal = inputAmountMin;
-            productTotalPrice.innerText = inputAmountMin * productPrice;
-          } else if (+inputAmount.value.length === 0) {
-            productTotalPrice.innerText = inputAmountMin * productPrice;
-          } else {
-            inputAmountVal = +inputAmount.value;
-            productTotalPrice.innerText = inputAmountVal * productPrice;
-          }
-        } else if (isNaN(+inputAmount.value) && event.data !== null) {
-          inputAmount.value = inputAmount.value.replace(/\D/g, '');
-        }
-      })
-
-      inputAmount.addEventListener('change', () => {
-        if (inputAmount.value === '') {
-          inputAmountVal = inputAmount.value = inputAmountMin;
-          productTotalPrice.innerText = inputAmountVal * productPrice;
-        }
-        else if (+inputAmount.value < inputAmountMin) {
-          inputAmountVal = inputAmount.value = inputAmountMin;
-          productTotalPrice.innerText = inputAmountVal * productPrice;
-        }
-      })
-
-      basketItemDeleteBtn.addEventListener('click', () => {
-        basketItem.classList.add('_delete');
-        setTimeout(() => {
-          basketItem.remove();
-          emptyTotalQuantity(calcTotalQuantity());
-          productPrices = headerBasket.querySelectorAll('.js-header-basket__item-price');
-          calcTotalPrice(productPrices);
-        }, 300)
-      })
-
-    })
-
-    headerBasket.addEventListener('input', () => {
-      calcTotalPrice(productPrices);
-    })
-
-
-
-    function calcTotalPrice(productPrices) {
-      for (let i = 0; i < productPrices.length; i++) {
-        totalPriceValue += +productPrices[i].innerText;
-      }
-
-      for (let i = 0; i < totalPrices.length; i++) {
-        totalPrices[i].innerText = totalPriceValue;
-      }
-      totalPriceValue = 0;
-    }
-
-    function calcTotalQuantity() {
-      return headerBasket.querySelectorAll('.js-header-basket__item').length;
-    }
-
-    function emptyTotalQuantity(totalQuantity) {
-      for (let i = 0; i < totalProductQuantitys.length; i++) {
-        totalProductQuantitys[i].innerText = totalQuantity;
-      }
-    }
-
-  })
-
-
   //tabs=================================================================
 
   if (document.querySelectorAll('.js-tabs').length > 0) {
@@ -184,6 +60,246 @@ export function isScript() {
       }
     });
   }
+
+
+
+
+
+  //Корзина
+
+  document.querySelectorAll('.js-header-basket').forEach((basket) => {
+    let productList = basket.querySelector('.js-header-basket__products');
+    let totalNums = document.querySelectorAll('.js-header-basket__quantity');
+    let totalPrices = document.querySelectorAll('.js-header-basket__total-price');
+    let allProductsInput = basket.querySelectorAll('.js-header-basket__item-amount');
+    let allProductsPrice = basket.querySelectorAll('.js-header-basket__item-price');
+    let totalNumCount = 0;
+    let totalPriceCount = 0;
+    let productHeight = 0;
+
+    let buttonUp;
+    let buttonDown;
+    let product;
+    let input;
+    let price;
+    let singlePrice;
+    let removeBtn;
+    let min;
+    let max;
+
+    //Стартовые настройки для каждого товара
+    basket.querySelectorAll('.js-header-basket__item').forEach((oneProduct) => {
+
+      input = oneProduct.querySelector('.js-header-basket__item-amount');
+      price = oneProduct.querySelector('.js-header-basket__item-price');
+      singlePrice = +price.getAttribute('data-price');
+
+      price.innerText = singlePrice * +input.value;
+    })
+
+    countAndAddTotalNum(min); //Стартовая настройка количества товаров
+    countAndAddTotalPrice(); //Стартовая настройка суммарной стоимости товаров
+
+    //события при клике на Кнопки
+    basket.addEventListener('click', (event) => {
+
+      if (event.target.classList.contains('js-header-basket__item-btn-up')) {
+        buttonUp = event.target;
+        product = buttonUp.closest('.js-header-basket__item');
+        input = product.querySelector('.js-header-basket__item-amount');
+        price = product.querySelector('.js-header-basket__item-price');
+        singlePrice = +price.getAttribute('data-price');
+        min = +input.getAttribute('min');
+        max = +input.getAttribute('max');
+
+        if (+input.value < max) {
+          input.value = +input.value + 1;
+          price.innerText = singlePrice * +input.value;
+        }
+        countAndAddTotalNum(min);
+        countAndAddTotalPrice();
+      }
+
+      if (event.target.classList.contains('js-header-basket__item-btn-down')) {
+        buttonDown = event.target;
+        product = buttonDown.closest('.js-header-basket__item');
+        input = product.querySelector('.js-header-basket__item-amount');
+        price = product.querySelector('.js-header-basket__item-price');
+        singlePrice = +price.getAttribute('data-price');
+        min = +input.getAttribute('min');
+        max = +input.getAttribute('max');
+
+        if (+input.value > min) {
+          input.value = +input.value - 1;
+          price.innerText = singlePrice * +input.value;
+        }
+        countAndAddTotalNum(min);
+        countAndAddTotalPrice();
+      }
+
+      if (event.target.classList.contains('js-header-basket__item-del-btn')) {
+        removeBtn = event.target;
+        product = removeBtn.closest('.js-header-basket__item');
+
+        productHeight = product.offsetHeight;//высота блока
+        let replaceBlock = document.createElement('div');
+        replaceBlock.classList.add('js-replace-header-basket-product');
+        replaceBlock.style.height = `${productHeight}px`;
+        product.classList.add('_remove');
+
+
+        setTimeout(() => {
+          product.replaceWith(replaceBlock);
+          
+          setTimeout(() => {
+            replaceBlock.style.height = `${0}px`;
+          }, 0);
+
+        }, 300);
+      }
+
+    })
+
+
+    //События при нипуте на поле ввода
+
+    basket.addEventListener('input', (event) => {
+      if (event.target.classList.contains('js-header-basket__item-amount')) {
+        input = event.target;
+        product = input.closest('.js-header-basket__item');
+        price = product.querySelector('.js-header-basket__item-price');
+        singlePrice = +price.getAttribute('data-price');
+        min = +input.getAttribute('min');
+        max = +input.getAttribute('max');
+
+        //Все проверки для ручного ввода инпут
+        if (!isNaN(+input.value) && input.value.length > 0) {
+          if (+input.value > max) {
+            input.value = max;
+            price.innerText = singlePrice * input.value;
+            countAndAddTotalNum(min);
+            countAndAddTotalPrice();
+
+          } else if (+input.value <= 0) {
+            input.value = min;
+            price.innerText = singlePrice * input.value;
+            countAndAddTotalNum(min);
+            countAndAddTotalPrice();
+
+          } else if (+input.value < min) {
+            price.innerText = singlePrice * min;
+            countAndAddTotalNum(min);
+            countAndAddTotalPrice();
+          }
+          else {
+            price.innerText = singlePrice * input.value;
+            countAndAddTotalNum(min);
+            countAndAddTotalPrice();
+          }
+        } else if (input.value.length === 0) {
+          price.innerText = singlePrice * min;
+          countAndAddTotalNum(min);
+          countAndAddTotalPrice();
+
+        }
+        else if (isNaN(+input.value)) {
+          input.value = input.value.replace(/\D/g, '');
+        }
+      }
+    })
+
+    basket.addEventListener('change', (event) => {
+      if (event.target.classList.contains('js-header-basket__item-amount')) {
+        input = event.target;
+        product = input.closest('.js-header-basket__item');
+        price = product.querySelector('.js-header-basket__item-price');
+        singlePrice = +price.getAttribute('data-price');
+        min = +input.getAttribute('min');
+        max = +input.getAttribute('max');
+
+        if (input.value.length === 0) {
+          input.value = min;
+          price.innerText = singlePrice * input.value;
+          countAndAddTotalNum(min);
+          countAndAddTotalPrice();
+        } else if (input.value < min) {
+          input.value = min;
+          countAndAddTotalNum(min);
+          countAndAddTotalPrice();
+        }
+
+      }
+    })
+
+    function countAndAddTotalNum(min) {
+      for (let i = 0; i < allProductsInput.length; i++) {
+
+        if (+allProductsInput[i].value.length === 0) {
+          totalNumCount += min;
+        } else {
+          totalNumCount += Number(allProductsInput[i].value);
+        }
+
+      }
+
+      for (let i = 0; i < totalNums.length; i++) {
+        totalNums[i].innerText = totalNumCount;
+      }
+      totalNumCount = 0;
+    }
+
+    function countAndAddTotalPrice() {
+      for (let i = 0; i < allProductsPrice.length; i++) {
+        totalPriceCount += Number(allProductsPrice[i].innerText)
+      }
+
+      for (let i = 0; i < totalPrices.length; i++) {
+        totalPrices[i].innerText = totalPriceCount;
+      }
+
+      totalPriceCount = 0;
+    }
+
+
+    // Отслеживание изменений 
+    let observer = new MutationObserver(function (mutations) {
+      mutations.forEach(function (mutation) {
+
+        if (mutation.type === 'childList') {
+          allProductsInput = basket.querySelectorAll('.js-header-basket__item-amount');
+          allProductsPrice = basket.querySelectorAll('.js-header-basket__item-price');
+
+          countAndAddTotalPrice();
+          countAndAddTotalNum(1);
+        }
+
+
+      });
+    });
+
+    observer.observe(productList, { childList: true });
+
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

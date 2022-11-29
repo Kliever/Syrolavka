@@ -991,6 +991,7 @@ body {
   visibility: visible;
   opacity: 1;
 }
+
 .header-basket__block-title {
   color: var(--brown);
   font-family: "Circe Rounded";
@@ -1009,6 +1010,14 @@ body {
   overflow: auto;
 }
 
+.header-basket__item {
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.header-basket__item._delete {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .header-basket-item {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -1019,6 +1028,15 @@ body {
   column-gap: 20px;
   row-gap: 14px;
   border-bottom: 1px solid #E7E7E7;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.header-basket-item._remove {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.js-replace-header-basket-product {
+  transition: all 0.3s;
 }
 
 .header-basket-item__img-block {

@@ -48,6 +48,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "clamp-js": "^0.7.0"
+    "clamp-js": "^0.7.0",
+    "stream-browserify": "^3.0.0"
   }
 }
