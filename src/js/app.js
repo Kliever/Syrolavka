@@ -6,9 +6,15 @@ import * as flsCustomSelect from "./modules/custom-select.js";
 
 flsCustomSelect.isCustomSelect();
 
+import * as flsSwiper from "./modules/swiper-bundle.js";
+
+flsSwiper.isSwiper();
+
 import * as flsScript from "./modules/script.js";
 
 flsScript.isScript();
+
+
 
 //clamp js=======================================================
 

@@ -61,11 +61,7 @@ export function isScript() {
     });
   }
 
-
-
-
-
-  //Корзина
+  //Header - basket
 
   document.querySelectorAll('.js-header-basket').forEach((basket) => {
     let productList = basket.querySelector('.js-header-basket__products');
@@ -94,7 +90,7 @@ export function isScript() {
       price = oneProduct.querySelector('.js-header-basket__item-price');
       singlePrice = +price.getAttribute('data-price');
 
-      price.innerText = singlePrice * +input.value;
+      price.textContent = singlePrice * +input.value;
     })
 
     countAndAddTotalNum(min); //Стартовая настройка количества товаров
@@ -114,7 +110,7 @@ export function isScript() {
 
         if (+input.value < max) {
           input.value = +input.value + 1;
-          price.innerText = singlePrice * +input.value;
+          price.textContent = singlePrice * +input.value;
         }
         countAndAddTotalNum(min);
         countAndAddTotalPrice();
@@ -131,7 +127,7 @@ export function isScript() {
 
         if (+input.value > min) {
           input.value = +input.value - 1;
-          price.innerText = singlePrice * +input.value;
+          price.textContent = singlePrice * +input.value;
         }
         countAndAddTotalNum(min);
         countAndAddTotalPrice();
@@ -176,28 +172,28 @@ export function isScript() {
         if (!isNaN(+input.value) && input.value.length > 0) {
           if (+input.value > max) {
             input.value = max;
-            price.innerText = singlePrice * input.value;
+            price.textContent = singlePrice * input.value;
             countAndAddTotalNum(min);
             countAndAddTotalPrice();
 
           } else if (+input.value <= 0) {
             input.value = min;
-            price.innerText = singlePrice * input.value;
+            price.textContent = singlePrice * input.value;
             countAndAddTotalNum(min);
             countAndAddTotalPrice();
 
           } else if (+input.value < min) {
-            price.innerText = singlePrice * min;
+            price.textContent = singlePrice * min;
             countAndAddTotalNum(min);
             countAndAddTotalPrice();
           }
           else {
-            price.innerText = singlePrice * input.value;
+            price.textContent = singlePrice * input.value;
             countAndAddTotalNum(min);
             countAndAddTotalPrice();
           }
         } else if (input.value.length === 0) {
-          price.innerText = singlePrice * min;
+          price.textContent = singlePrice * min;
           countAndAddTotalNum(min);
           countAndAddTotalPrice();
 
@@ -219,7 +215,7 @@ export function isScript() {
 
         if (input.value.length === 0) {
           input.value = min;
-          price.innerText = singlePrice * input.value;
+          price.textContent = singlePrice * input.value;
           countAndAddTotalNum(min);
           countAndAddTotalPrice();
         } else if (input.value < min) {
@@ -243,18 +239,18 @@ export function isScript() {
       }
 
       for (let i = 0; i < totalNums.length; i++) {
-        totalNums[i].innerText = totalNumCount;
+        totalNums[i].textContent = totalNumCount;
       }
       totalNumCount = 0;
     }
 
     function countAndAddTotalPrice() {
       for (let i = 0; i < allProductsPrice.length; i++) {
-        totalPriceCount += Number(allProductsPrice[i].innerText)
+        totalPriceCount += Number(allProductsPrice[i].textContent)
       }
 
       for (let i = 0; i < totalPrices.length; i++) {
-        totalPrices[i].innerText = totalPriceCount;
+        totalPrices[i].textContent = totalPriceCount;
       }
 
       totalPriceCount = 0;
@@ -280,6 +276,46 @@ export function isScript() {
     observer.observe(productList, { childList: true });
 
   });
+
+  //proposition-slider (index)
+
+  let propositionSlider = new Swiper('.proposition-slider', {
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+    navigation: {
+      nextEl: '.proposition-slider__arrow-next',
+      prevEl: '.proposition-slider__arrow-prev',
+    },
+    pagination: {
+      el: '.proposition-slider__progressbar',
+      type: 'progressbar',
+    },
+  });
+
+  let currentSlidePropositionSlider = document.querySelector('.proposition-slider__fraction-current');
+  let totalSlidePropositionSlider = document.querySelector('.proposition-slider__fraction-total');
+  let totalSlides = propositionSlider.slides.length;
+  totalSlidePropositionSlider.textContent = addZero(totalSlides);
+  let currentSlide = ++propositionSlider.realIndex;
+  currentSlidePropositionSlider.textContent = addZero(currentSlide);
+
+  propositionSlider.on('slideChange', () => {
+    currentSlide = ++propositionSlider.realIndex;
+    currentSlidePropositionSlider.textContent = addZero(currentSlide);
+  })
+
+  function addZero (item) {
+    if (item <= 9) {
+      return `0${item}`;
+    } else {
+      return item;
+    }
+  }
+
+  
+
 
 
 
