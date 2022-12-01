@@ -501,6 +501,131 @@
       </div>
     </section>
 
+    <section class="article-announces">
+      <div class="container">
+        <div class="article-announces__inner">
+          <div class="article-announces__item article-announces__info">
+            <h4 class="article-announces__info-title addit-title">
+              Статті про сироробство
+            </h4>
+            <p class="article-announces__info-text">
+              Ми зібрали найцікавіші та найкорисніші новини про акції, скидки у світі сироробства
+            </p>
+            <div class="article-announces__info-btn-block">
+              <a href="#" class="article-announces__info-btn main-btn">
+                Читати всі статті
+              </a>
+            </div>
+          </div>
+          @@include('html/article-announce.html', {
+          "class": "article-announces__item",
+          "img": "@img/temp/article-announces/article-announces-1.jpg",
+          "title": "Сирна тарілка",
+          "text": "Так називається страва, яка складається з різних сортів сиру",
+          })
+          @@include('html/article-announce.html', {
+          "class": "article-announces__item",
+          "img": "@img/temp/article-announces/article-announces-2.jpg",
+          "title": "Звідки в сирі дірки?",
+          "text": "Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів",
+          })
+          @@include('html/article-announce.html', {
+          "class": "article-announces__item",
+          "img": "@img/temp/article-announces/article-announces-3.jpg",
+          "title": "Сирна дієта",
+          "text": "Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів",
+          })
+          @@include('html/article-announce.html', {
+          "class": "article-announces__item",
+          "img": "@img/temp/article-announces/article-announces-4.jpg",
+          "title": "Посіл сирної головки в домашніх умовах при наявності мінімального обладнання",
+          "text": "Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів",
+          })
+        </div>
+      </div>
+    </section>
+
+    <section class="recommendations">
+      <div class="container">
+        <h3 class="recommendations__title title-bold">
+          Переглянуті товари
+        </h3>
+      </div>
+      <div class="recommendations__container">
+        <div class="recommendations__slider recommendations-slider swiper-container">
+          <div class="recommendations-slider__wrapper swiper-wrapper">
+            <div class="recommendations-slider__item swiper-slide">
+              @@include('html/product-card.html', {
+              "class": "recommendations-slider__product",
+              "img": "@img/temp/product-card/product-2.jpg",
+              "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+              "total-price": "900",
+              "last-price": "900"
+              })
+            </div>
+            <div class="recommendations-slider__item swiper-slide">
+              @@include('html/product-card.html', {
+              "class": "recommendations-slider__product",
+              "img": "@img/temp/product-card/product-2.jpg",
+              "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+              "total-price": "900",
+              "last-price": "900"
+              })
+            </div>
+            <div class="recommendations-slider__item swiper-slide">
+              @@include('html/product-card.html', {
+              "class": "recommendations-slider__product",
+              "img": "@img/temp/product-card/product-2.jpg",
+              "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+              "total-price": "900",
+              "last-price": "900"
+              })
+            </div>
+            <div class="recommendations-slider__item swiper-slide">
+              @@include('html/product-card.html', {
+              "class": "recommendations-slider__product",
+              "img": "@img/temp/product-card/product-2.jpg",
+              "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+              "total-price": "900",
+              "last-price": "900"
+              })
+            </div>
+            <div class="recommendations-slider__item swiper-slide">
+              @@include('html/product-card.html', {
+              "class": "recommendations-slider__product",
+              "img": "@img/temp/product-card/product-2.jpg",
+              "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+              "total-price": "900",
+              "last-price": "900"
+              })
+            </div>
+            <div class="recommendations-slider__item swiper-slide">
+              @@include('html/product-card.html', {
+              "class": "recommendations-slider__product",
+              "img": "@img/temp/product-card/product-2.jpg",
+              "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+              "total-price": "900",
+              "last-price": "900"
+              })
+            </div>
+            <div class="recommendations-slider__item swiper-slide">
+              @@include('html/product-card.html', {
+              "class": "recommendations-slider__product",
+              "img": "@img/temp/product-card/product-2.jpg",
+              "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+              "total-price": "900",
+              "last-price": "900"
+              })
+            </div>
+          </div>
+        </div>
+        <div class="recommendations-slider__arrows slider-arrows">
+          <button class="recommendations-slider__arrow-prev slider-arrow-prev"></button>
+          <button class="recommendations-slider__arrow-next slider-arrow-next"></button>
+        </div>
+      </div>
+    </section>
+
   </main>
   @@include('html/footer.html', {})
   <script src="js/app.min.js"></script>

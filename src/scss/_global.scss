@@ -270,6 +270,8 @@ body {
 
 //slider
 .slider-arrows {
+  display: grid;
+  grid-template-columns: 30px 10px 30px;
   &:hover {
 
     .slider-arrow-prev,
@@ -288,7 +290,7 @@ body {
   border: 1px solid transparent;
   transition: border .3s, border-radius .3s;
   border-radius: 0;
-
+  grid-column: 1 / 2;
   &::after,
   &::before {
     content: '';
@@ -308,6 +310,7 @@ body {
 }
 
 .slider-arrow-next {
+  grid-column: 3 / 4;
   &::after {
 
     transform: translate(-8px, -5px) rotate(45deg);

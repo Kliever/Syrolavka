@@ -146,7 +146,7 @@ export function isScript() {
 
         setTimeout(() => {
           product.replaceWith(replaceBlock);
-          
+
           setTimeout(() => {
             replaceBlock.style.height = `${0}px`;
           }, 0);
@@ -277,7 +277,7 @@ export function isScript() {
 
   });
 
-  //proposition-slider (index)
+  //proposition-slider (index)========================================================
 
   let propositionSlider = new Swiper('.proposition-slider', {
     effect: 'fade',
@@ -306,7 +306,7 @@ export function isScript() {
     currentSlidePropositionSlider.textContent = addZero(currentSlide);
   })
 
-  function addZero (item) {
+  function addZero(item) {
     if (item <= 9) {
       return `0${item}`;
     } else {
@@ -314,7 +314,20 @@ export function isScript() {
     }
   }
 
-  
+  //recommendations-slider (index)===========================================================
+
+  new Swiper('.recommendations-slider', {
+    slidesPerView: 5.2,
+    spaceBetween: 16,
+    navigation: {
+      nextEl: '.recommendations-slider__arrow-next',
+      prevEl: '.recommendations-slider__arrow-prev',
+    },
+  });
+
+
+
+
 
 
 

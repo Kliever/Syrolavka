@@ -34,16 +34,22 @@ flsScript.isScript();
   }
 })();
 
-if (document.querySelector('.product-card__name')) {
-  let clampClasses = document.querySelectorAll('.product-card__name');
 
-  for (let item of clampClasses) {
-    $clamp(item, {
-      clamp: 2,
-      useNativeClamp: true,
-    });
+
+  if (document.querySelector('.js-two-lines')) {
+    let twoLines = document.querySelectorAll('.js-two-lines');
+    
+    for (let item of twoLines) {
+      $clamp(item, {
+        clamp: 2,
+        useNativeClamp: true,
+      });
+    }
   }
 
 
-}
+
+
+
+
 
