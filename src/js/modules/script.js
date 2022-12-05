@@ -293,44 +293,148 @@ export function isScript() {
       type: 'progressbar',
     },
   });
-
-  let currentSlidePropositionSlider = document.querySelector('.proposition-slider__fraction-current');
-  let totalSlidePropositionSlider = document.querySelector('.proposition-slider__fraction-total');
-  let totalSlides = propositionSlider.slides.length;
-  totalSlidePropositionSlider.textContent = addZero(totalSlides);
-  let currentSlide = ++propositionSlider.realIndex;
-  currentSlidePropositionSlider.textContent = addZero(currentSlide);
-
-  propositionSlider.on('slideChange', () => {
-    currentSlide = ++propositionSlider.realIndex;
+  if (document.querySelector('.proposition-slider')) {
+    let currentSlidePropositionSlider = document.querySelector('.proposition-slider__fraction-current');
+    let totalSlidePropositionSlider = document.querySelector('.proposition-slider__fraction-total');
+    let totalSlides = propositionSlider.slides.length;
+    totalSlidePropositionSlider.textContent = addZero(totalSlides);
+    let currentSlide = ++propositionSlider.realIndex;
     currentSlidePropositionSlider.textContent = addZero(currentSlide);
-  })
 
-  function addZero(item) {
-    if (item <= 9) {
-      return `0${item}`;
-    } else {
-      return item;
+    propositionSlider.on('slideChange', () => {
+      currentSlide = ++propositionSlider.realIndex;
+      currentSlidePropositionSlider.textContent = addZero(currentSlide);
+    })
+
+    function addZero(item) {
+      if (item <= 9) {
+        return `0${item}`;
+      } else {
+        return item;
+      }
     }
   }
+
 
   //recommendations-slider (index)===========================================================
 
   new Swiper('.recommendations-slider', {
-    slidesPerView: 5.2,
+    slidesPerView: 1.2,
     spaceBetween: 16,
     navigation: {
       nextEl: '.recommendations-slider__arrow-next',
       prevEl: '.recommendations-slider__arrow-prev',
     },
+    breakpoints: {
+      1240: {
+        slidesPerView: 5.2,
+      },
+      1010: {
+        slidesPerView: 4.2,
+      },
+      800: {
+        slidesPerView: 3.2,
+      },
+      600: {
+        slidesPerView: 2.2,
+      },
+    },
   });
 
+  // add margin for main-block
+
+  const mainBlock = document.querySelector('.js-main-block');
+  const header = document.querySelector('.js-header');
+
+  let headerHeight = header.offsetHeight;
+  mainBlock.style.marginTop = `${headerHeight}px`;
+
+  window.addEventListener('resize', () => {
+    headerHeight = header.offsetHeight;
+    mainBlock.style.marginTop = `${headerHeight}px`;
+  })
 
 
 
+  //RESIZE WINDOW===========================================================
+  const headerCallbackIcon = document.querySelector('.js-header-call-back-icon');
+  const headerCallbackBtn = document.querySelector('.js-header-call-back-btn');
+  const headerCallbackNum = document.querySelector('.js-header-call-back-num');
+
+  const headerAccountText = document.querySelector('.js-header-account-text');
+
+  const headerLogo = document.querySelector('.js-header-logo');
+  const headerSearch = document.querySelector('.js-header-search');
+  const bottomNav = document.querySelector('.js-header-bottom-nav');
+
+  const callBackBlock = document.querySelector('.js-header__call-back');
+  const openSearchBtn = document.querySelector('.js-header-search-open');
+  const headerBottomInner = document.querySelector('.js-header__bottom-inner');
+  const headerSearcInput = document.querySelector('.header__search-input');
+
+  function rebuildAdaptation() {
+    if (window.innerWidth <= 1200) {
+      headerCallbackIcon.remove();
+      headerCallbackNum.prepend(headerCallbackIcon);
+
+      headerAccountText.innerText = 'Акаунт';
+
+      headerSearch.remove();
+      headerLogo.after(headerSearch);
+    } else if (window.innerWidth > 1200) {
+      headerCallbackIcon.remove();
+      headerCallbackBtn.prepend(headerCallbackIcon);
+
+      headerAccountText.innerText = 'Увійти до облікового запису';
+
+      headerSearch.remove();
+      bottomNav.after(headerSearch);
+    }
+
+    if(window.innerWidth <= 850) {
+      callBackBlock.remove();
+      headerBottomInner.append(callBackBlock);
+      headerSearcInput.placeholder = 'Пошук по сайту';
+      
+      buildMobileMenu();
+    } else if (window.innerWidth > 850) {
+      callBackBlock.remove();
+      openSearchBtn.before(callBackBlock);
+
+      buildDesctopMenu()
+    }
+  }
+
+  function buildMobileMenu() {
+    
+  }
+
+  function buildDesctopMenu() {
+    
+  }
+  
+
+  rebuildAdaptation();
+  window.addEventListener('resize', rebuildAdaptation);
+
+  //work mobile menu
+
+  const menuBtn = document.querySelector('.js-menu-btn')
+
+  menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('_active');
+  })
+
+  //open mobile search
 
 
+  openSearchBtn.addEventListener('click', () => {
+    openSearchBtn.classList.toggle('_active');
+    headerSearch.classList.toggle('_active');
+  })
 
+
+  console.log();
 
 
 

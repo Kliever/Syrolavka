@@ -9,7 +9,8 @@
 </head>
 
 <body>
-  <header class="header">
+  <div class="main-wrapper">
+    <header class="header js-header">
   <div class="header__top">
     <div class="container">
       <div class="header__top-inner">
@@ -47,24 +48,27 @@
             <li class="top-nav__item">
               <a href="#" class="top-nav__link">Акційні товари</a>
             </li>
-            <li class="top-nav__item">
-              <a href="#" class="top-nav__link">
-                <svg class="top-nav__link-icon" viewBox="0 0 18 18">
-                  <use xlink:href="img/icons/icons.svg#user"></use>
-                </svg>
-                <span class="top-nav__link-text">Увійти до облікового запису</span>
-              </a>
-            </li>
           </ul>
         </nav>
+        <div class="header__account">
+          <button type="button" class="header__account-link header__account-link--btn">
+            <svg class="top-nav__link-icon" viewBox="0 0 18 18">
+              <use xlink:href="img/icons/icons.svg#user"></use>
+            </svg>
+            <span class="header__account-text js-header-account-text">Увійти до облікового запису</span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
   <div class="header__middle">
     <div class="container">
-      <div class="header__middle-inner">
-        <a href="#" class="header__logo logo">
-          <img src="img/logo.png" alt="Логотип" class="logo__img">
+      <div class="header__middle-inner js-header-middle-inner">
+        <a href="#" class="header__logo logo js-header-logo">
+          <picture>
+            <source srcset="img/logo-mobile.png" media="(max-width: 850px)">
+            <img src="img/logo.png" alt="Логотип" class="logo__img">
+          </picture>
         </a>
         <div class="header__middle-info">
           <img src="img/icons/header/header-icon-delivery.png" alt="" class="header__middle-info-icon"
@@ -106,15 +110,21 @@
             </a>
           </li>
         </ul>
-        <div class="header__call-back">
-          <span class="header__call-back-num">8 (066) 460-19-60</span>
-          <button class="header__call-back-btn icon-btn">
-            <svg class="icon-btn__icon icon-btn__icon--phone" viewBox="0 0 14 14">
+        <div class="header__call-back js-header__call-back">
+          <span class="header__call-back-num js-header-call-back-num">  
+            +38 (066) 460-19-60</span>
+          <button class="header__call-back-btn icon-btn js-header-call-back-btn" type="button">
+            <svg class="icon-btn__icon icon-btn__icon--phone js-header-call-back-icon" viewBox="0 0 14 14">
               <use xlink:href="img/icons/icons.svg#phone"></use>
             </svg>
             <span class="icon-btn__text">Замовити дзвінок</span>
           </button>
         </div>
+        <button class="header__search-open js-header-search-open" type="button" aria-label="Открыть строку поиска">
+          <svg class="header__search-btn-icon" viewBox="0 0 24 24">
+            <use xlink:href="img/icons/icons.svg#search"></use>
+          </svg>
+        </button>
         <div class="header-basket js-drop-box">
           <button class="header-basket__btn js-drop-box__btn" aria-label="Корзина">
             <div class="header-basket__btn-info">
@@ -200,13 +210,18 @@
             </button>
           </form>
         </div>
+        <button class="header__menu-btn menu-btn js-menu-btn" type="bytton">
+          <div class="menu-btn__line"></div>
+          <div class="menu-btn__line"></div>
+          <div class="menu-btn__line"></div>
+        </button>
       </div>
     </div>
   </div>
   <div class="header__bottom">
     <div class="container">
-      <div class="header__bottom-inner">
-        <nav class="header__bottom-nav bottom-nav">
+      <div class="header__bottom-inner js-header__bottom-inner">
+        <nav class="header__bottom-nav bottom-nav js-header-bottom-nav">
           <ul class="bottom-nav__list">
             <li class="bottom-nav__item bottom-nav__drop drop">
               Рецепти
@@ -282,61 +297,61 @@
             </li>
           </ul>
         </nav>
-        <form class="header__search">
+        <form class="header__search js-header-search">
           <button class="header__search-btn" type="submit" aria-label="Найти">
             <svg class="header__search-btn-icon" viewBox="0 0 24 24">
               <use xlink:href="img/icons/icons.svg#search"></use>
             </svg>
           </button>
-          <input type="text" class="header__search-input" placeholder="Введите название товара или артикул">
+          <input type="text" class="header__search-input" placeholder="Введіть назву товару або артикул">
         </form>
       </div>
     </div>
   </div>
 </header>
-  <main class="main-block">
+    <main class="main-block js-main-block">
 
-    <section class="hero">
-      <div class="container">
-        <div class="hero__inner">
-          <div class="hero__main">
-            <img src="img/index/hero-1.jpg" alt="" class="hero__img">
-            <h3 class="hero__main-title">
-              Набори для сироробства
-            </h3>
-            <p class="hero__main-descr">
-              Все, що вам потрібно для приготування сиру в домашніх умовах
-            </p>
-            <div class="hero__main-btn-block">
-              <a href="#" class="hero__main-btn main-btn">Дивитись набір</a>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__inner">
+            <div class="hero__main">
+              <img src="img/index/hero-1.jpg" alt="" class="hero__img">
+              <h3 class="hero__main-title">
+                Набори для сироробства
+              </h3>
+              <p class="hero__main-descr">
+                Все, що вам потрібно для приготування сиру в домашніх умовах
+              </p>
+              <div class="hero__main-btn-block">
+                <a href="#" class="hero__main-btn main-btn">Дивитись набір</a>
+              </div>
             </div>
+            <a href="#" class="hero__secondary-link">
+              <img src="img/index/hero-2.jpg" alt="" class="hero__img">
+              <p class="hero__secondary-pre-title">
+                Рецепти
+              </p>
+              <h3 class="hero__secondary-title">
+                Сири з пліснявою
+              </h3>
+            </a>
+            <a href="#" class="hero__secondary-link">
+              <img src="img/index/hero-3.jpg" alt="" class="hero__img">
+              <p class="hero__secondary-pre-title">
+                Акції
+              </p>
+              <h3 class="hero__secondary-title">
+                Закваски для сиру
+              </h3>
+            </a>
           </div>
-          <a href="#" class="hero__secondary-link">
-            <img src="img/index/hero-2.jpg" alt="" class="hero__img">
-            <p class="hero__secondary-pre-title">
-              Рецепти
-            </p>
-            <h3 class="hero__secondary-title">
-              Сири з пліснявою
-            </h3>
-          </a>
-          <a href="#" class="hero__secondary-link">
-            <img src="img/index/hero-3.jpg" alt="" class="hero__img">
-            <p class="hero__secondary-pre-title">
-              Акції
-            </p>
-            <h3 class="hero__secondary-title">
-              Закуваски для сиру
-            </h3>
-          </a>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="main-section">
-      <div class="container">
-        <div class="main-section__inner">
-          <nav class="main-section__menu product-menu">
+      <section class="main-section">
+        <div class="container">
+          <div class="main-section__inner">
+            <nav class="main-section__menu product-menu">
   <div class="product-menu__block">
     <h5 class="product-menu__title">
       <svg class="product-menu__title-icon" viewBox="0 0 22 22">
@@ -652,19 +667,19 @@
     </ul>
   </div>
 </nav>
-          <section class="main-section__block product-tabs tabs js-tabs">
-            <div class="product-tabs__btns">
-              <button class="product-tabs__btn tabs__btn js-tabs__btn" data-tab-name="first">Популярні товари</button>
-              <button class="product-tabs__btn tabs__btn js-tabs__btn" data-tab-name="second">Акції</button>
-            </div>
-            <div class="product-tabs__tabs-items tabs__items">
-              <div class="product-tabs__tab-block tabs__item js-tabs__item" data-tab-name="first">
-                <div class="product-tabs__block">
-                  <h4 class="product-tabs__block-title title">
-                    Інгредієнти
-                  </h4>
-                  <div class="product-tabs__block-inner">
-                    <article class="product-tabs__product product-card">
+            <section class="main-section__block product-tabs tabs js-tabs">
+              <div class="product-tabs__btns">
+                <button class="product-tabs__btn tabs__btn js-tabs__btn" data-tab-name="first">Популярні товари</button>
+                <button class="product-tabs__btn tabs__btn js-tabs__btn" data-tab-name="second">Акції</button>
+              </div>
+              <div class="product-tabs__tabs-items tabs__items">
+                <div class="product-tabs__tab-block tabs__item js-tabs__item" data-tab-name="first">
+                  <div class="product-tabs__block">
+                    <h4 class="product-tabs__block-title title">
+                      Інгредієнти
+                    </h4>
+                    <div class="product-tabs__block-inner">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-2.jpg" alt="" class="product-card__img">
   </div>
@@ -693,7 +708,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-4.jpg" alt="" class="product-card__img">
   </div>
@@ -722,7 +737,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-1.jpg" alt="" class="product-card__img">
   </div>
@@ -751,7 +766,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-6.jpg" alt="" class="product-card__img">
   </div>
@@ -780,7 +795,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-8.jpg" alt="" class="product-card__img">
   </div>
@@ -809,7 +824,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-5.jpg" alt="" class="product-card__img">
   </div>
@@ -838,7 +853,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-3.jpg" alt="" class="product-card__img">
   </div>
@@ -867,7 +882,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-7.jpg" alt="" class="product-card__img">
   </div>
@@ -896,255 +911,14 @@
     </buttom>
   </div>
 </article>
+                    </div>
                   </div>
-                </div>
-                <div class="product-tabs__block">
-                  <h4 class="product-tabs__block-title title">
-                    Обладнання
-                  </h4>
-                  <div class="product-tabs__block-inner">
-                    <article class="product-tabs__product product-card">
-  <div class="product-card__img-block">
-    <img src="img/temp/product-card/product-1.jpg" alt="" class="product-card__img">
-  </div>
-  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
-    Мезофільна закваска Danisco CHOOZIT MM 101
-  </a>
-  <div class="product-card__bottom-row">
-    <div class="product-card__price">
-      <p class="product-card__actual-price">
-        <span class="product-card__actual-price-num">
-          900₴
-        </span>
-        <span class="product-card__actual-price-info">
-          / 1 шт.
-        </span>
-      </p>
-      <p class="product-card__last-price">
-        <span class="product-card__last-price-num">
-          900
-        </span>
-        ₴
-      </p>
-    </div>
-    <buttom class="product-card__add-button main-btn">
-      Додати
-    </buttom>
-  </div>
-</article>
-                    <article class="product-tabs__product product-card">
-  <div class="product-card__img-block">
-    <img src="img/temp/product-card/product-2.jpg" alt="" class="product-card__img">
-  </div>
-  <a href="#" class="product-card__name js-two-lines" title="Запашний перець горошком (100гр)">
-    Запашний перець горошком (100гр)
-  </a>
-  <div class="product-card__bottom-row">
-    <div class="product-card__price">
-      <p class="product-card__actual-price">
-        <span class="product-card__actual-price-num">
-          700₴
-        </span>
-        <span class="product-card__actual-price-info">
-          / 1 шт.
-        </span>
-      </p>
-      <p class="product-card__last-price">
-        <span class="product-card__last-price-num">
-          900
-        </span>
-        ₴
-      </p>
-    </div>
-    <buttom class="product-card__add-button main-btn">
-      Додати
-    </buttom>
-  </div>
-</article>
-                    <article class="product-tabs__product product-card">
-  <div class="product-card__img-block">
-    <img src="img/temp/product-card/product-3.jpg" alt="" class="product-card__img">
-  </div>
-  <a href="#" class="product-card__name js-two-lines" title="Червоний перець молотий (100гр)">
-    Червоний перець молотий (100гр)
-  </a>
-  <div class="product-card__bottom-row">
-    <div class="product-card__price">
-      <p class="product-card__actual-price">
-        <span class="product-card__actual-price-num">
-          700₴
-        </span>
-        <span class="product-card__actual-price-info">
-          / 1 шт.
-        </span>
-      </p>
-      <p class="product-card__last-price">
-        <span class="product-card__last-price-num">
-          900
-        </span>
-        ₴
-      </p>
-    </div>
-    <buttom class="product-card__add-button main-btn">
-      Додати
-    </buttom>
-  </div>
-</article>
-                    <article class="product-tabs__product product-card">
-  <div class="product-card__img-block">
-    <img src="img/temp/product-card/product-4.jpg" alt="" class="product-card__img">
-  </div>
-  <a href="#" class="product-card__name js-two-lines" title="Мускатний горіх молотий (100гр)">
-    Мускатний горіх молотий (100гр)
-  </a>
-  <div class="product-card__bottom-row">
-    <div class="product-card__price">
-      <p class="product-card__actual-price">
-        <span class="product-card__actual-price-num">
-          700₴
-        </span>
-        <span class="product-card__actual-price-info">
-          / 1 шт.
-        </span>
-      </p>
-      <p class="product-card__last-price">
-        <span class="product-card__last-price-num">
-          900
-        </span>
-        ₴
-      </p>
-    </div>
-    <buttom class="product-card__add-button main-btn">
-      Додати
-    </buttom>
-  </div>
-</article>
-                    <article class="product-tabs__product product-card">
-  <div class="product-card__img-block">
-    <img src="img/temp/product-card/product-5.jpg" alt="" class="product-card__img">
-  </div>
-  <a href="#" class="product-card__name js-two-lines" title="Форма для твердого сиру">
-    Форма для твердого сиру
-  </a>
-  <div class="product-card__bottom-row">
-    <div class="product-card__price">
-      <p class="product-card__actual-price">
-        <span class="product-card__actual-price-num">
-          700₴
-        </span>
-        <span class="product-card__actual-price-info">
-          / 1 шт.
-        </span>
-      </p>
-      <p class="product-card__last-price">
-        <span class="product-card__last-price-num">
-          900
-        </span>
-        ₴
-      </p>
-    </div>
-    <buttom class="product-card__add-button main-btn">
-      Додати
-    </buttom>
-  </div>
-</article>
-                    <article class="product-tabs__product product-card">
-  <div class="product-card__img-block">
-    <img src="img/temp/product-card/product-6.jpg" alt="" class="product-card__img">
-  </div>
-  <a href="#" class="product-card__name js-two-lines" title="Запашний перець горошком (100гр)">
-    Запашний перець горошком (100гр)
-  </a>
-  <div class="product-card__bottom-row">
-    <div class="product-card__price">
-      <p class="product-card__actual-price">
-        <span class="product-card__actual-price-num">
-          700₴
-        </span>
-        <span class="product-card__actual-price-info">
-          / 1 шт.
-        </span>
-      </p>
-      <p class="product-card__last-price">
-        <span class="product-card__last-price-num">
-          900
-        </span>
-        ₴
-      </p>
-    </div>
-    <buttom class="product-card__add-button main-btn">
-      Додати
-    </buttom>
-  </div>
-</article>
-                    <article class="product-tabs__product product-card">
-  <div class="product-card__img-block">
-    <img src="img/temp/product-card/product-7.jpg" alt="" class="product-card__img">
-  </div>
-  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
-    Мезофільна закваска Danisco CHOOZIT MM 101
-  </a>
-  <div class="product-card__bottom-row">
-    <div class="product-card__price">
-      <p class="product-card__actual-price">
-        <span class="product-card__actual-price-num">
-          700₴
-        </span>
-        <span class="product-card__actual-price-info">
-          / 1 шт.
-        </span>
-      </p>
-      <p class="product-card__last-price">
-        <span class="product-card__last-price-num">
-          900
-        </span>
-        ₴
-      </p>
-    </div>
-    <buttom class="product-card__add-button main-btn">
-      Додати
-    </buttom>
-  </div>
-</article>
-                    <article class="product-tabs__product product-card">
-  <div class="product-card__img-block">
-    <img src="img/temp/product-card/product-8.jpg" alt="" class="product-card__img">
-  </div>
-  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
-    Мезофільна закваска Danisco CHOOZIT MM 101
-  </a>
-  <div class="product-card__bottom-row">
-    <div class="product-card__price">
-      <p class="product-card__actual-price">
-        <span class="product-card__actual-price-num">
-          700₴
-        </span>
-        <span class="product-card__actual-price-info">
-          / 1 шт.
-        </span>
-      </p>
-      <p class="product-card__last-price">
-        <span class="product-card__last-price-num">
-          900
-        </span>
-        ₴
-      </p>
-    </div>
-    <buttom class="product-card__add-button main-btn">
-      Додати
-    </buttom>
-  </div>
-</article>
-                  </div>
-                </div>
-              </div>
-              <div class="product-tabs__tab-block tabs__item js-tabs__item" data-tab-name="second">
-                <div class="product-tabs__block">
-                  <h4 class="product-tabs__block-title title">
-                    Інгредієнти
-                  </h4>
-                  <div class="product-tabs__block-inner">
-                    <article class="product-tabs__product product-card">
+                  <div class="product-tabs__block">
+                    <h4 class="product-tabs__block-title title">
+                      Обладнання
+                    </h4>
+                    <div class="product-tabs__block-inner">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-1.jpg" alt="" class="product-card__img">
   </div>
@@ -1173,7 +947,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-2.jpg" alt="" class="product-card__img">
   </div>
@@ -1202,7 +976,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-3.jpg" alt="" class="product-card__img">
   </div>
@@ -1231,7 +1005,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-4.jpg" alt="" class="product-card__img">
   </div>
@@ -1260,7 +1034,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-5.jpg" alt="" class="product-card__img">
   </div>
@@ -1289,7 +1063,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-6.jpg" alt="" class="product-card__img">
   </div>
@@ -1318,7 +1092,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-7.jpg" alt="" class="product-card__img">
   </div>
@@ -1347,7 +1121,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-8.jpg" alt="" class="product-card__img">
   </div>
@@ -1376,14 +1150,16 @@
     </buttom>
   </div>
 </article>
+                    </div>
                   </div>
                 </div>
-                <div class="product-tabs__block">
-                  <h4 class="product-tabs__block-title title">
-                    Обладнання
-                  </h4>
-                  <div class="product-tabs__block-inner">
-                    <article class="product-tabs__product product-card">
+                <div class="product-tabs__tab-block tabs__item js-tabs__item" data-tab-name="second">
+                  <div class="product-tabs__block">
+                    <h4 class="product-tabs__block-title title">
+                      Інгредієнти
+                    </h4>
+                    <div class="product-tabs__block-inner">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-1.jpg" alt="" class="product-card__img">
   </div>
@@ -1412,7 +1188,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-2.jpg" alt="" class="product-card__img">
   </div>
@@ -1441,7 +1217,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-3.jpg" alt="" class="product-card__img">
   </div>
@@ -1470,7 +1246,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-4.jpg" alt="" class="product-card__img">
   </div>
@@ -1499,7 +1275,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-5.jpg" alt="" class="product-card__img">
   </div>
@@ -1528,7 +1304,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-6.jpg" alt="" class="product-card__img">
   </div>
@@ -1557,7 +1333,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-7.jpg" alt="" class="product-card__img">
   </div>
@@ -1586,7 +1362,7 @@
     </buttom>
   </div>
 </article>
-                    <article class="product-tabs__product product-card">
+                      <article class="product-tabs__product product-card">
   <div class="product-card__img-block">
     <img src="img/temp/product-card/product-8.jpg" alt="" class="product-card__img">
   </div>
@@ -1615,214 +1391,454 @@
     </buttom>
   </div>
 </article>
+                    </div>
+                  </div>
+                  <div class="product-tabs__block">
+                    <h4 class="product-tabs__block-title title">
+                      Обладнання
+                    </h4>
+                    <div class="product-tabs__block-inner">
+                      <article class="product-tabs__product product-card">
+  <div class="product-card__img-block">
+    <img src="img/temp/product-card/product-1.jpg" alt="" class="product-card__img">
+  </div>
+  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
+    Мезофільна закваска Danisco CHOOZIT MM 101
+  </a>
+  <div class="product-card__bottom-row">
+    <div class="product-card__price">
+      <p class="product-card__actual-price">
+        <span class="product-card__actual-price-num">
+          900₴
+        </span>
+        <span class="product-card__actual-price-info">
+          / 1 шт.
+        </span>
+      </p>
+      <p class="product-card__last-price">
+        <span class="product-card__last-price-num">
+          900
+        </span>
+        ₴
+      </p>
+    </div>
+    <buttom class="product-card__add-button main-btn">
+      Додати
+    </buttom>
+  </div>
+</article>
+                      <article class="product-tabs__product product-card">
+  <div class="product-card__img-block">
+    <img src="img/temp/product-card/product-2.jpg" alt="" class="product-card__img">
+  </div>
+  <a href="#" class="product-card__name js-two-lines" title="Запашний перець горошком (100гр)">
+    Запашний перець горошком (100гр)
+  </a>
+  <div class="product-card__bottom-row">
+    <div class="product-card__price">
+      <p class="product-card__actual-price">
+        <span class="product-card__actual-price-num">
+          700₴
+        </span>
+        <span class="product-card__actual-price-info">
+          / 1 шт.
+        </span>
+      </p>
+      <p class="product-card__last-price">
+        <span class="product-card__last-price-num">
+          900
+        </span>
+        ₴
+      </p>
+    </div>
+    <buttom class="product-card__add-button main-btn">
+      Додати
+    </buttom>
+  </div>
+</article>
+                      <article class="product-tabs__product product-card">
+  <div class="product-card__img-block">
+    <img src="img/temp/product-card/product-3.jpg" alt="" class="product-card__img">
+  </div>
+  <a href="#" class="product-card__name js-two-lines" title="Червоний перець молотий (100гр)">
+    Червоний перець молотий (100гр)
+  </a>
+  <div class="product-card__bottom-row">
+    <div class="product-card__price">
+      <p class="product-card__actual-price">
+        <span class="product-card__actual-price-num">
+          700₴
+        </span>
+        <span class="product-card__actual-price-info">
+          / 1 шт.
+        </span>
+      </p>
+      <p class="product-card__last-price">
+        <span class="product-card__last-price-num">
+          900
+        </span>
+        ₴
+      </p>
+    </div>
+    <buttom class="product-card__add-button main-btn">
+      Додати
+    </buttom>
+  </div>
+</article>
+                      <article class="product-tabs__product product-card">
+  <div class="product-card__img-block">
+    <img src="img/temp/product-card/product-4.jpg" alt="" class="product-card__img">
+  </div>
+  <a href="#" class="product-card__name js-two-lines" title="Мускатний горіх молотий (100гр)">
+    Мускатний горіх молотий (100гр)
+  </a>
+  <div class="product-card__bottom-row">
+    <div class="product-card__price">
+      <p class="product-card__actual-price">
+        <span class="product-card__actual-price-num">
+          700₴
+        </span>
+        <span class="product-card__actual-price-info">
+          / 1 шт.
+        </span>
+      </p>
+      <p class="product-card__last-price">
+        <span class="product-card__last-price-num">
+          900
+        </span>
+        ₴
+      </p>
+    </div>
+    <buttom class="product-card__add-button main-btn">
+      Додати
+    </buttom>
+  </div>
+</article>
+                      <article class="product-tabs__product product-card">
+  <div class="product-card__img-block">
+    <img src="img/temp/product-card/product-5.jpg" alt="" class="product-card__img">
+  </div>
+  <a href="#" class="product-card__name js-two-lines" title="Форма для твердого сиру">
+    Форма для твердого сиру
+  </a>
+  <div class="product-card__bottom-row">
+    <div class="product-card__price">
+      <p class="product-card__actual-price">
+        <span class="product-card__actual-price-num">
+          700₴
+        </span>
+        <span class="product-card__actual-price-info">
+          / 1 шт.
+        </span>
+      </p>
+      <p class="product-card__last-price">
+        <span class="product-card__last-price-num">
+          900
+        </span>
+        ₴
+      </p>
+    </div>
+    <buttom class="product-card__add-button main-btn">
+      Додати
+    </buttom>
+  </div>
+</article>
+                      <article class="product-tabs__product product-card">
+  <div class="product-card__img-block">
+    <img src="img/temp/product-card/product-6.jpg" alt="" class="product-card__img">
+  </div>
+  <a href="#" class="product-card__name js-two-lines" title="Запашний перець горошком (100гр)">
+    Запашний перець горошком (100гр)
+  </a>
+  <div class="product-card__bottom-row">
+    <div class="product-card__price">
+      <p class="product-card__actual-price">
+        <span class="product-card__actual-price-num">
+          700₴
+        </span>
+        <span class="product-card__actual-price-info">
+          / 1 шт.
+        </span>
+      </p>
+      <p class="product-card__last-price">
+        <span class="product-card__last-price-num">
+          900
+        </span>
+        ₴
+      </p>
+    </div>
+    <buttom class="product-card__add-button main-btn">
+      Додати
+    </buttom>
+  </div>
+</article>
+                      <article class="product-tabs__product product-card">
+  <div class="product-card__img-block">
+    <img src="img/temp/product-card/product-7.jpg" alt="" class="product-card__img">
+  </div>
+  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
+    Мезофільна закваска Danisco CHOOZIT MM 101
+  </a>
+  <div class="product-card__bottom-row">
+    <div class="product-card__price">
+      <p class="product-card__actual-price">
+        <span class="product-card__actual-price-num">
+          700₴
+        </span>
+        <span class="product-card__actual-price-info">
+          / 1 шт.
+        </span>
+      </p>
+      <p class="product-card__last-price">
+        <span class="product-card__last-price-num">
+          900
+        </span>
+        ₴
+      </p>
+    </div>
+    <buttom class="product-card__add-button main-btn">
+      Додати
+    </buttom>
+  </div>
+</article>
+                      <article class="product-tabs__product product-card">
+  <div class="product-card__img-block">
+    <img src="img/temp/product-card/product-8.jpg" alt="" class="product-card__img">
+  </div>
+  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
+    Мезофільна закваска Danisco CHOOZIT MM 101
+  </a>
+  <div class="product-card__bottom-row">
+    <div class="product-card__price">
+      <p class="product-card__actual-price">
+        <span class="product-card__actual-price-num">
+          700₴
+        </span>
+        <span class="product-card__actual-price-info">
+          / 1 шт.
+        </span>
+      </p>
+      <p class="product-card__last-price">
+        <span class="product-card__last-price-num">
+          900
+        </span>
+        ₴
+      </p>
+    </div>
+    <buttom class="product-card__add-button main-btn">
+      Додати
+    </buttom>
+  </div>
+</article>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </section>
-
-    <section class="advantages">
-      <div class="advantages__bg-circle"></div>
-      <div class="advantages__bg-circle"></div>
-      <div class="advantages__bg-circle"></div>
-      <div class="large-container">
-        <div class="advantages__wrapper">
-          <div class="container">
-            <div class="advantages__inner">
-              <h2 class="advantages__title">
-                Наші переваги
-              </h2>
-              <p class="advantages__descr">
-                Ми особисто відповідаємо за якість товару і завжди
-                з радістю допоможемо Вам із вибором
-              </p>
-              <div class="advantages__block">
-                <ul class="advantages__block-list">
-                  <li class="advantages__block-item">
-                    <div class="advantages__block-point">
-                      <div class="advantages__block-point-inner"></div>
-                    </div>
-                    <div class="advantages__block-info advantages__block-info--left-angle">
-                      <p class="advantages__block-text">
-                        Прийом замовлень цілодобово
-                      </p>
-                    </div>
-                  </li>
-                  <li class="advantages__block-item">
-                    <div class="advantages__block-point">
-                      <div class="advantages__block-point-inner"></div>
-                    </div>
-                    <div class="advantages__block-info advantages__block-info--right-angle">
-                      <p class="advantages__block-text">
-                        Найвища якість продукції
-                      </p>
-                    </div>
-                  </li>
-                  <li class="advantages__block-item">
-                    <div class="advantages__block-point">
-                      <div class="advantages__block-point-inner"></div>
-                    </div>
-                    <div class="advantages__block-info advantages__block-info--left-angle">
-                      <p class="advantages__block-text">
-                        Вигідні ціни та умови
-                      </p>
-                    </div>
-                  </li>
-                  <li class="advantages__block-item">
-                    <div class="advantages__block-point">
-                      <div class="advantages__block-point-inner"></div>
-                    </div>
-                    <div class="advantages__block-info advantages__block-info--right-angle">
-                      <p class="advantages__block-text">
-                        Вигідні знижки при оплаті
-                      </p>
-                    </div>
-                  </li>
-                  <li class="advantages__block-item">
-                    <div class="advantages__block-point">
-                      <div class="advantages__block-point-inner"></div>
-                    </div>
-                    <div class="advantages__block-info advantages__block-info--left-angle">
-                      <p class="advantages__block-text">
-                        Забезпечуємо високий рівень сервісу
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="proposition">
-      <div class="container">
-        <div class="proposition__inner">
-          <h3 class="proposition__title title-bold">
-            Ми підібрали для вас
-          </h3>
-          <div class="proposition__grid">
-            <section class="proposition__block">
-              <img src="img/index/proposition-bg-1.jpg" alt="" class="proposition__block-bg">
-              <h4 class="proposition__block-title">
-                Більш ніж <br> 1000 кращих рецептів
-              </h4>
-              <p class="proposition__block-descr">
-                Ми зібрали для Васвелику базу рецептів
-              </p>
-              <div class="proposition__block-btn-area">
-                <a href="#" class="proposition__block-link main-btn">Перейти</a>
-              </div>
-            </section>
-            <section class="proposition__block">
-              <img src="img/index/proposition-bg-2.jpg" alt="" class="proposition__block-bg">
-              <h4 class="proposition__block-title proposition__block-title--white">
-                Круті набори <br> для сиру
-              </h4>
-              <p class="proposition__block-descr proposition__block-descr--white">
-                Готові набори зекономлять час, ми все зробили за Вас.
-              </p>
-              <div class="proposition__block-btn-area">
-                <a href="#" class="proposition__block-link main-btn">Перейти</a>
               </div>
             </section>
           </div>
-          <h3 class="proposition__title title-bold">
-            Наше обладнання
-          </h3>
-          <div class="proposition__row proposition-slider swiper-container">
-            <div class="proposition-slider__wrapper swiper-wrapper">
-              <section class="proposition-slider__item swiper-slide">
-                <div class="proposition-slider__item-inner">
-                  <img src="img/index/proposition-slide-bg-1.jpg" alt="" class="proposition-slider__bg-img">
-                  <h4 class="proposition-slider__title addit-title">
-                    Преси для сиру
-                  </h4>
-                  <p class="proposition-slider__text">
-                    Прес може використовуватися для пресування твердих сирів. Він розбирається, і ви можете компактно
-                    його запакувати в коробку.
-                  </p>
-                  <div class="proposition-slider__btn-area">
-                    <a href="#" class="proposition-slider__link main-btn">
-                      Дізнатися більше
-                    </a>
-                  </div>
-                </div>
-              </section>
-              <section class="proposition-slider__item swiper-slide">
-                <div class="proposition-slider__item-inner">
-                  <img src="img/index/proposition-slide-bg-1.jpg" alt="" class="proposition-slider__bg-img">
-                  <h4 class="proposition-slider__title addit-title">
-                    Форми для сиру
-                  </h4>
-                  <p class="proposition-slider__text">
-                    Кожна форма виконана з високоякісного харчового полімеру, необхидна для формування головок сиру
-                    правильної форми. Це стосується як твердих, так і м'яких сортів сиру.
-                  </p>
-                  <div class="proposition-slider__btn-area">
-                    <a href="#" class="proposition-slider__link main-btn">
-                      Дізнатися більше
-                    </a>
-                  </div>
-                </div>
-              </section>
-              <section class="proposition-slider__item swiper-slide">
-                <div class="proposition-slider__item-inner">
-                  <img src="img/index/proposition-slide-bg-1.jpg" alt="" class="proposition-slider__bg-img">
-                  <h4 class="proposition-slider__title addit-title">
-                    Дренажні контейнери
-                  </h4>
-                  <p class="proposition-slider__text">
-                    Дренажні бокси для сироробства вироблені з харчових полімерів, необхідні, наприклад, для розміщення
-                    сформованої головки сиру на паровій бані.
-                  </p>
-                  <div class="proposition-slider__btn-area">
-                    <a href="#" class="proposition-slider__link main-btn">
-                      Дізнатися більше
-                    </a>
-                  </div>
-                </div>
-              </section>
-              <div class="proposition-slider__arrows slider-arrows">
-                <button class="proposition-slider__arrow-prev slider-arrow-prev"></button>
-                <button class="proposition-slider__arrow-next slider-arrow-next"></button>
-              </div>
-              <div class="proposition-slider__pagination">
-                <div class="proposition-slider__progressbar"></div>
-                <div class="proposition-slider__fraction">
-                  <div class="proposition-slider__fraction-current"></div>
-                  <div class="proposition-slider__fraction-separator">/</div>
-                  <div class="proposition-slider__fraction-total"></div>
+        </div>
+      </section>
+
+      <section class="advantages">
+        <div class="advantages__bg-circle"></div>
+        <div class="advantages__bg-circle"></div>
+        <div class="advantages__bg-circle"></div>
+        <div class="large-container">
+          <div class="advantages__wrapper">
+            <div class="container">
+              <div class="advantages__inner">
+                <h2 class="advantages__title">
+                  Наші переваги
+                </h2>
+                <p class="advantages__descr">
+                  Ми особисто відповідаємо за якість товару і завжди
+                  з радістю допоможемо Вам із вибором
+                </p>
+                <div class="advantages__block">
+                  <ul class="advantages__block-list">
+                    <li class="advantages__block-item">
+                      <div class="advantages__block-point">
+                        <div class="advantages__block-point-inner"></div>
+                      </div>
+                      <div class="advantages__block-info advantages__block-info--left-angle">
+                        <p class="advantages__block-text">
+                          Прийом замовлень цілодобово
+                        </p>
+                      </div>
+                    </li>
+                    <li class="advantages__block-item">
+                      <div class="advantages__block-point">
+                        <div class="advantages__block-point-inner"></div>
+                      </div>
+                      <div class="advantages__block-info advantages__block-info--right-angle">
+                        <p class="advantages__block-text">
+                          Найвища якість продукції
+                        </p>
+                      </div>
+                    </li>
+                    <li class="advantages__block-item">
+                      <div class="advantages__block-point">
+                        <div class="advantages__block-point-inner"></div>
+                      </div>
+                      <div class="advantages__block-info advantages__block-info--left-angle">
+                        <p class="advantages__block-text">
+                          Вигідні ціни та умови
+                        </p>
+                      </div>
+                    </li>
+                    <li class="advantages__block-item">
+                      <div class="advantages__block-point">
+                        <div class="advantages__block-point-inner"></div>
+                      </div>
+                      <div class="advantages__block-info advantages__block-info--right-angle">
+                        <p class="advantages__block-text">
+                          Вигідні знижки при оплаті
+                        </p>
+                      </div>
+                    </li>
+                    <li class="advantages__block-item">
+                      <div class="advantages__block-point">
+                        <div class="advantages__block-point-inner"></div>
+                      </div>
+                      <div class="advantages__block-info advantages__block-info--left-angle">
+                        <p class="advantages__block-text">
+                          Забезпечуємо високий рівень сервісу
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="article-announces">
-      <div class="container">
-        <div class="article-announces__inner">
-          <div class="article-announces__item article-announces__info">
-            <h4 class="article-announces__info-title addit-title">
-              Статті про сироробство
-            </h4>
-            <p class="article-announces__info-text">
-              Ми зібрали найцікавіші та найкорисніші новини про акції, скидки у світі сироробства
-            </p>
-            <div class="article-announces__info-btn-block">
-              <a href="#" class="article-announces__info-btn main-btn">
-                Читати всі статті
-              </a>
+      <section class="proposition">
+        <div class="container">
+          <div class="proposition__inner">
+            <h3 class="proposition__title title-bold">
+              Ми підібрали для вас
+            </h3>
+            <div class="proposition__grid">
+              <section class="proposition__block">
+                <img src="img/index/proposition-bg-1.jpg" alt="" class="proposition__block-bg">
+                <h4 class="proposition__block-title">
+                  Більш ніж <br> 1000 кращих рецептів
+                </h4>
+                <p class="proposition__block-descr">
+                  Ми зібрали для Вас велику базу рецептів
+                </p>
+                <div class="proposition__block-btn-area">
+                  <a href="#" class="proposition__block-link main-btn">Перейти</a>
+                </div>
+              </section>
+              <section class="proposition__block">
+                <img src="img/index/proposition-bg-2.jpg" alt="" class="proposition__block-bg">
+                <h4 class="proposition__block-title proposition__block-title--white">
+                  Круті набори <br> для сиру
+                </h4>
+                <p class="proposition__block-descr proposition__block-descr--white">
+                  Готові набори зекономлять час, ми все зробили за Вас.
+                </p>
+                <div class="proposition__block-btn-area">
+                  <a href="#" class="proposition__block-link main-btn">Перейти</a>
+                </div>
+              </section>
+            </div>
+            <h3 class="proposition__title title-bold">
+              Наше обладнання
+            </h3>
+            <div class="proposition__row proposition-slider swiper-container">
+              <div class="proposition-slider__wrapper swiper-wrapper">
+                <section class="proposition-slider__item swiper-slide">
+                  <div class="proposition-slider__item-inner">
+                    <img src="img/index/proposition-slide-bg-1.jpg" alt="" class="proposition-slider__bg-img">
+                    <h4 class="proposition-slider__title addit-title">
+                      Преси для сиру
+                    </h4>
+                    <p class="proposition-slider__text">
+                      Прес може використовуватися для пресування твердих сирів. Він розбирається, і ви можете компактно
+                      його запакувати в коробку.
+                    </p>
+                    <div class="proposition-slider__btn-area">
+                      <a href="#" class="proposition-slider__link main-btn">
+                        Дізнатися більше
+                      </a>
+                    </div>
+                  </div>
+                </section>
+                <section class="proposition-slider__item swiper-slide">
+                  <div class="proposition-slider__item-inner">
+                    <img src="img/index/proposition-slide-bg-1.jpg" alt="" class="proposition-slider__bg-img">
+                    <h4 class="proposition-slider__title addit-title">
+                      Форми для сиру
+                    </h4>
+                    <p class="proposition-slider__text">
+                      Кожна форма виконана з високоякісного харчового полімеру, необхидна для формування головок сиру
+                      правильної форми. Це стосується як твердих, так і м'яких сортів сиру.
+                    </p>
+                    <div class="proposition-slider__btn-area">
+                      <a href="#" class="proposition-slider__link main-btn">
+                        Дізнатися більше
+                      </a>
+                    </div>
+                  </div>
+                </section>
+                <section class="proposition-slider__item swiper-slide">
+                  <div class="proposition-slider__item-inner">
+                    <img src="img/index/proposition-slide-bg-1.jpg" alt="" class="proposition-slider__bg-img">
+                    <h4 class="proposition-slider__title addit-title">
+                      Дренажні контейнери
+                    </h4>
+                    <p class="proposition-slider__text">
+                      Дренажні бокси для сироробства вироблені з харчових полімерів, необхідні, наприклад, для
+                      розміщення
+                      сформованої головки сиру на паровій бані.
+                    </p>
+                    <div class="proposition-slider__btn-area">
+                      <a href="#" class="proposition-slider__link main-btn">
+                        Дізнатися більше
+                      </a>
+                    </div>
+                  </div>
+                </section>
+                <div class="proposition-slider__arrows slider-arrows">
+                  <button class="proposition-slider__arrow-prev slider-arrow-prev"></button>
+                  <button class="proposition-slider__arrow-next slider-arrow-next"></button>
+                </div>
+                <div class="proposition-slider__pagination">
+                  <div class="proposition-slider__progressbar"></div>
+                  <div class="proposition-slider__fraction">
+                    <div class="proposition-slider__fraction-current"></div>
+                    <div class="proposition-slider__fraction-separator">/</div>
+                    <div class="proposition-slider__fraction-total"></div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
-          <article class="article-announces__item article-announce">
+        </div>
+      </section>
+
+      <section class="article-announces">
+        <div class="container">
+          <div class="article-announces__inner">
+            <div class="article-announces__item article-announces__info">
+              <h4 class="article-announces__info-title addit-title">
+                Статті про сироробство
+              </h4>
+              <p class="article-announces__info-text">
+                Ми зібрали найцікавіші та найкорисніші новини про акції, скидки у світі сироробства
+              </p>
+              <div class="article-announces__info-btn-block">
+                <a href="#" class="article-announces__info-btn main-btn">
+                  Читати всі статті
+                </a>
+              </div>
+            </div>
+            <article class="article-announces__item article-announce">
   <div class="article-announce__img-block">
     <img src="img/temp/article-announces/article-announces-1.jpg" alt="" class="article-announce__img">
   </div>
@@ -1838,7 +1854,7 @@
     <a href="#" class="article-announce__info-link">Читати далі</a>
   </div>
 </article>
-          <article class="article-announces__item article-announce">
+            <article class="article-announces__item article-announce">
   <div class="article-announce__img-block">
     <img src="img/temp/article-announces/article-announces-2.jpg" alt="" class="article-announce__img">
   </div>
@@ -1854,7 +1870,7 @@
     <a href="#" class="article-announce__info-link">Читати далі</a>
   </div>
 </article>
-          <article class="article-announces__item article-announce">
+            <article class="article-announces__item article-announce">
   <div class="article-announce__img-block">
     <img src="img/temp/article-announces/article-announces-3.jpg" alt="" class="article-announce__img">
   </div>
@@ -1870,7 +1886,7 @@
     <a href="#" class="article-announce__info-link">Читати далі</a>
   </div>
 </article>
-          <article class="article-announces__item article-announce">
+            <article class="article-announces__item article-announce">
   <div class="article-announce__img-block">
     <img src="img/temp/article-announces/article-announces-4.jpg" alt="" class="article-announce__img">
   </div>
@@ -1886,247 +1902,247 @@
     <a href="#" class="article-announce__info-link">Читати далі</a>
   </div>
 </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="recommendations">
-      <div class="container">
-        <h3 class="recommendations__title title-bold">
-          Переглянуті товари
-        </h3>
-      </div>
-      <div class="recommendations__container">
-        <div class="recommendations__slider recommendations-slider swiper-container">
-          <div class="recommendations-slider__wrapper swiper-wrapper">
-            <div class="recommendations-slider__item swiper-slide">
-              <article class="recommendations-slider__product product-card">
-  <div class="product-card__img-block">
-    <img src="img/temp/product-card/product-2.jpg" alt="" class="product-card__img">
-  </div>
-  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
-    Мезофільна закваска Danisco CHOOZIT MM 101
-  </a>
-  <div class="product-card__bottom-row">
-    <div class="product-card__price">
-      <p class="product-card__actual-price">
-        <span class="product-card__actual-price-num">
-          900₴
-        </span>
-        <span class="product-card__actual-price-info">
-          / 1 шт.
-        </span>
-      </p>
-      <p class="product-card__last-price">
-        <span class="product-card__last-price-num">
-          900
-        </span>
-        ₴
-      </p>
-    </div>
-    <buttom class="product-card__add-button main-btn">
-      Додати
-    </buttom>
-  </div>
-</article>
-            </div>
-            <div class="recommendations-slider__item swiper-slide">
-              <article class="recommendations-slider__product product-card">
-  <div class="product-card__img-block">
-    <img src="img/temp/product-card/product-2.jpg" alt="" class="product-card__img">
-  </div>
-  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
-    Мезофільна закваска Danisco CHOOZIT MM 101
-  </a>
-  <div class="product-card__bottom-row">
-    <div class="product-card__price">
-      <p class="product-card__actual-price">
-        <span class="product-card__actual-price-num">
-          900₴
-        </span>
-        <span class="product-card__actual-price-info">
-          / 1 шт.
-        </span>
-      </p>
-      <p class="product-card__last-price">
-        <span class="product-card__last-price-num">
-          900
-        </span>
-        ₴
-      </p>
-    </div>
-    <buttom class="product-card__add-button main-btn">
-      Додати
-    </buttom>
-  </div>
-</article>
-            </div>
-            <div class="recommendations-slider__item swiper-slide">
-              <article class="recommendations-slider__product product-card">
-  <div class="product-card__img-block">
-    <img src="img/temp/product-card/product-2.jpg" alt="" class="product-card__img">
-  </div>
-  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
-    Мезофільна закваска Danisco CHOOZIT MM 101
-  </a>
-  <div class="product-card__bottom-row">
-    <div class="product-card__price">
-      <p class="product-card__actual-price">
-        <span class="product-card__actual-price-num">
-          900₴
-        </span>
-        <span class="product-card__actual-price-info">
-          / 1 шт.
-        </span>
-      </p>
-      <p class="product-card__last-price">
-        <span class="product-card__last-price-num">
-          900
-        </span>
-        ₴
-      </p>
-    </div>
-    <buttom class="product-card__add-button main-btn">
-      Додати
-    </buttom>
-  </div>
-</article>
-            </div>
-            <div class="recommendations-slider__item swiper-slide">
-              <article class="recommendations-slider__product product-card">
-  <div class="product-card__img-block">
-    <img src="img/temp/product-card/product-2.jpg" alt="" class="product-card__img">
-  </div>
-  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
-    Мезофільна закваска Danisco CHOOZIT MM 101
-  </a>
-  <div class="product-card__bottom-row">
-    <div class="product-card__price">
-      <p class="product-card__actual-price">
-        <span class="product-card__actual-price-num">
-          900₴
-        </span>
-        <span class="product-card__actual-price-info">
-          / 1 шт.
-        </span>
-      </p>
-      <p class="product-card__last-price">
-        <span class="product-card__last-price-num">
-          900
-        </span>
-        ₴
-      </p>
-    </div>
-    <buttom class="product-card__add-button main-btn">
-      Додати
-    </buttom>
-  </div>
-</article>
-            </div>
-            <div class="recommendations-slider__item swiper-slide">
-              <article class="recommendations-slider__product product-card">
-  <div class="product-card__img-block">
-    <img src="img/temp/product-card/product-2.jpg" alt="" class="product-card__img">
-  </div>
-  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
-    Мезофільна закваска Danisco CHOOZIT MM 101
-  </a>
-  <div class="product-card__bottom-row">
-    <div class="product-card__price">
-      <p class="product-card__actual-price">
-        <span class="product-card__actual-price-num">
-          900₴
-        </span>
-        <span class="product-card__actual-price-info">
-          / 1 шт.
-        </span>
-      </p>
-      <p class="product-card__last-price">
-        <span class="product-card__last-price-num">
-          900
-        </span>
-        ₴
-      </p>
-    </div>
-    <buttom class="product-card__add-button main-btn">
-      Додати
-    </buttom>
-  </div>
-</article>
-            </div>
-            <div class="recommendations-slider__item swiper-slide">
-              <article class="recommendations-slider__product product-card">
-  <div class="product-card__img-block">
-    <img src="img/temp/product-card/product-2.jpg" alt="" class="product-card__img">
-  </div>
-  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
-    Мезофільна закваска Danisco CHOOZIT MM 101
-  </a>
-  <div class="product-card__bottom-row">
-    <div class="product-card__price">
-      <p class="product-card__actual-price">
-        <span class="product-card__actual-price-num">
-          900₴
-        </span>
-        <span class="product-card__actual-price-info">
-          / 1 шт.
-        </span>
-      </p>
-      <p class="product-card__last-price">
-        <span class="product-card__last-price-num">
-          900
-        </span>
-        ₴
-      </p>
-    </div>
-    <buttom class="product-card__add-button main-btn">
-      Додати
-    </buttom>
-  </div>
-</article>
-            </div>
-            <div class="recommendations-slider__item swiper-slide">
-              <article class="recommendations-slider__product product-card">
-  <div class="product-card__img-block">
-    <img src="img/temp/product-card/product-2.jpg" alt="" class="product-card__img">
-  </div>
-  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
-    Мезофільна закваска Danisco CHOOZIT MM 101
-  </a>
-  <div class="product-card__bottom-row">
-    <div class="product-card__price">
-      <p class="product-card__actual-price">
-        <span class="product-card__actual-price-num">
-          900₴
-        </span>
-        <span class="product-card__actual-price-info">
-          / 1 шт.
-        </span>
-      </p>
-      <p class="product-card__last-price">
-        <span class="product-card__last-price-num">
-          900
-        </span>
-        ₴
-      </p>
-    </div>
-    <buttom class="product-card__add-button main-btn">
-      Додати
-    </buttom>
-  </div>
-</article>
-            </div>
           </div>
         </div>
-        <div class="recommendations-slider__arrows slider-arrows">
-          <button class="recommendations-slider__arrow-prev slider-arrow-prev"></button>
-          <button class="recommendations-slider__arrow-next slider-arrow-next"></button>
-        </div>
-      </div>
-    </section>
+      </section>
 
-  </main>
-  <footer class="footer">
+      <section class="recommendations">
+        <div class="container">
+          <h3 class="recommendations__title title-bold">
+            Переглянуті товари
+          </h3>
+        </div>
+        <div class="recommendations__container">
+          <div class="recommendations__slider recommendations-slider swiper-container">
+            <div class="recommendations-slider__wrapper swiper-wrapper">
+              <div class="recommendations-slider__item swiper-slide">
+                <article class="recommendations-slider__product product-card">
+  <div class="product-card__img-block">
+    <img src="img/temp/product-card/product-2.jpg" alt="" class="product-card__img">
+  </div>
+  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
+    Мезофільна закваска Danisco CHOOZIT MM 101
+  </a>
+  <div class="product-card__bottom-row">
+    <div class="product-card__price">
+      <p class="product-card__actual-price">
+        <span class="product-card__actual-price-num">
+          900₴
+        </span>
+        <span class="product-card__actual-price-info">
+          / 1 шт.
+        </span>
+      </p>
+      <p class="product-card__last-price">
+        <span class="product-card__last-price-num">
+          900
+        </span>
+        ₴
+      </p>
+    </div>
+    <buttom class="product-card__add-button main-btn">
+      Додати
+    </buttom>
+  </div>
+</article>
+              </div>
+              <div class="recommendations-slider__item swiper-slide">
+                <article class="recommendations-slider__product product-card">
+  <div class="product-card__img-block">
+    <img src="img/temp/product-card/product-2.jpg" alt="" class="product-card__img">
+  </div>
+  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
+    Мезофільна закваска Danisco CHOOZIT MM 101
+  </a>
+  <div class="product-card__bottom-row">
+    <div class="product-card__price">
+      <p class="product-card__actual-price">
+        <span class="product-card__actual-price-num">
+          900₴
+        </span>
+        <span class="product-card__actual-price-info">
+          / 1 шт.
+        </span>
+      </p>
+      <p class="product-card__last-price">
+        <span class="product-card__last-price-num">
+          900
+        </span>
+        ₴
+      </p>
+    </div>
+    <buttom class="product-card__add-button main-btn">
+      Додати
+    </buttom>
+  </div>
+</article>
+              </div>
+              <div class="recommendations-slider__item swiper-slide">
+                <article class="recommendations-slider__product product-card">
+  <div class="product-card__img-block">
+    <img src="img/temp/product-card/product-2.jpg" alt="" class="product-card__img">
+  </div>
+  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
+    Мезофільна закваска Danisco CHOOZIT MM 101
+  </a>
+  <div class="product-card__bottom-row">
+    <div class="product-card__price">
+      <p class="product-card__actual-price">
+        <span class="product-card__actual-price-num">
+          900₴
+        </span>
+        <span class="product-card__actual-price-info">
+          / 1 шт.
+        </span>
+      </p>
+      <p class="product-card__last-price">
+        <span class="product-card__last-price-num">
+          900
+        </span>
+        ₴
+      </p>
+    </div>
+    <buttom class="product-card__add-button main-btn">
+      Додати
+    </buttom>
+  </div>
+</article>
+              </div>
+              <div class="recommendations-slider__item swiper-slide">
+                <article class="recommendations-slider__product product-card">
+  <div class="product-card__img-block">
+    <img src="img/temp/product-card/product-2.jpg" alt="" class="product-card__img">
+  </div>
+  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
+    Мезофільна закваска Danisco CHOOZIT MM 101
+  </a>
+  <div class="product-card__bottom-row">
+    <div class="product-card__price">
+      <p class="product-card__actual-price">
+        <span class="product-card__actual-price-num">
+          900₴
+        </span>
+        <span class="product-card__actual-price-info">
+          / 1 шт.
+        </span>
+      </p>
+      <p class="product-card__last-price">
+        <span class="product-card__last-price-num">
+          900
+        </span>
+        ₴
+      </p>
+    </div>
+    <buttom class="product-card__add-button main-btn">
+      Додати
+    </buttom>
+  </div>
+</article>
+              </div>
+              <div class="recommendations-slider__item swiper-slide">
+                <article class="recommendations-slider__product product-card">
+  <div class="product-card__img-block">
+    <img src="img/temp/product-card/product-2.jpg" alt="" class="product-card__img">
+  </div>
+  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
+    Мезофільна закваска Danisco CHOOZIT MM 101
+  </a>
+  <div class="product-card__bottom-row">
+    <div class="product-card__price">
+      <p class="product-card__actual-price">
+        <span class="product-card__actual-price-num">
+          900₴
+        </span>
+        <span class="product-card__actual-price-info">
+          / 1 шт.
+        </span>
+      </p>
+      <p class="product-card__last-price">
+        <span class="product-card__last-price-num">
+          900
+        </span>
+        ₴
+      </p>
+    </div>
+    <buttom class="product-card__add-button main-btn">
+      Додати
+    </buttom>
+  </div>
+</article>
+              </div>
+              <div class="recommendations-slider__item swiper-slide">
+                <article class="recommendations-slider__product product-card">
+  <div class="product-card__img-block">
+    <img src="img/temp/product-card/product-2.jpg" alt="" class="product-card__img">
+  </div>
+  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
+    Мезофільна закваска Danisco CHOOZIT MM 101
+  </a>
+  <div class="product-card__bottom-row">
+    <div class="product-card__price">
+      <p class="product-card__actual-price">
+        <span class="product-card__actual-price-num">
+          900₴
+        </span>
+        <span class="product-card__actual-price-info">
+          / 1 шт.
+        </span>
+      </p>
+      <p class="product-card__last-price">
+        <span class="product-card__last-price-num">
+          900
+        </span>
+        ₴
+      </p>
+    </div>
+    <buttom class="product-card__add-button main-btn">
+      Додати
+    </buttom>
+  </div>
+</article>
+              </div>
+              <div class="recommendations-slider__item swiper-slide">
+                <article class="recommendations-slider__product product-card">
+  <div class="product-card__img-block">
+    <img src="img/temp/product-card/product-2.jpg" alt="" class="product-card__img">
+  </div>
+  <a href="#" class="product-card__name js-two-lines" title="Мезофільна закваска Danisco CHOOZIT MM 101">
+    Мезофільна закваска Danisco CHOOZIT MM 101
+  </a>
+  <div class="product-card__bottom-row">
+    <div class="product-card__price">
+      <p class="product-card__actual-price">
+        <span class="product-card__actual-price-num">
+          900₴
+        </span>
+        <span class="product-card__actual-price-info">
+          / 1 шт.
+        </span>
+      </p>
+      <p class="product-card__last-price">
+        <span class="product-card__last-price-num">
+          900
+        </span>
+        ₴
+      </p>
+    </div>
+    <buttom class="product-card__add-button main-btn">
+      Додати
+    </buttom>
+  </div>
+</article>
+              </div>
+            </div>
+          </div>
+          <div class="recommendations-slider__arrows slider-arrows">
+            <button class="recommendations-slider__arrow-prev slider-arrow-prev"></button>
+            <button class="recommendations-slider__arrow-next slider-arrow-next"></button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <footer class="footer">
   <div class="container">
     <div class="footer__inner">
       <div class="footer__column">
@@ -2196,7 +2212,7 @@
           </li>
           <li class="footer__column-item">
             <a href="#" class="footer__column-link">
-              персональні дані
+              Персональні дані
             </a>
           </li>
       </div>
@@ -2287,6 +2303,8 @@
     </div>
   </div>
 </footer>
+  </div>
+
   <script src="js/app.min.js"></script>
 </body>
 

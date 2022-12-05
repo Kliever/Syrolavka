@@ -5,629 +5,633 @@
 })
 
 <body>
-  @@include('html/header.html', {})
-  <main class="main-block">
+  <div class="main-wrapper">
+    @@include('html/header.html', {})
+    <main class="main-block js-main-block">
 
-    <section class="hero">
-      <div class="container">
-        <div class="hero__inner">
-          <div class="hero__main">
-            <img src="@img/index/hero-1.jpg" alt="" class="hero__img">
-            <h3 class="hero__main-title">
-              Набори для сироробства
-            </h3>
-            <p class="hero__main-descr">
-              Все, що вам потрібно для приготування сиру в домашніх умовах
-            </p>
-            <div class="hero__main-btn-block">
-              <a href="#" class="hero__main-btn main-btn">Дивитись набір</a>
-            </div>
-          </div>
-          <a href="#" class="hero__secondary-link">
-            <img src="@img/index/hero-2.jpg" alt="" class="hero__img">
-            <p class="hero__secondary-pre-title">
-              Рецепти
-            </p>
-            <h3 class="hero__secondary-title">
-              Сири з пліснявою
-            </h3>
-          </a>
-          <a href="#" class="hero__secondary-link">
-            <img src="@img/index/hero-3.jpg" alt="" class="hero__img">
-            <p class="hero__secondary-pre-title">
-              Акції
-            </p>
-            <h3 class="hero__secondary-title">
-              Закуваски для сиру
-            </h3>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="main-section">
-      <div class="container">
-        <div class="main-section__inner">
-          @@include('html/main-menu.html', {
-          "class": "main-section__menu"
-          })
-          <section class="main-section__block product-tabs tabs js-tabs">
-            <div class="product-tabs__btns">
-              <button class="product-tabs__btn tabs__btn js-tabs__btn" data-tab-name="first">Популярні товари</button>
-              <button class="product-tabs__btn tabs__btn js-tabs__btn" data-tab-name="second">Акції</button>
-            </div>
-            <div class="product-tabs__tabs-items tabs__items">
-              <div class="product-tabs__tab-block tabs__item js-tabs__item" data-tab-name="first">
-                <div class="product-tabs__block">
-                  <h4 class="product-tabs__block-title title">
-                    Інгредієнти
-                  </h4>
-                  <div class="product-tabs__block-inner">
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-2.jpg",
-                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
-                    "total-price": "900",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-4.jpg",
-                    "name": "Запашний перець горошком (100гр)",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-1.jpg",
-                    "name": "Червоний перець молотий (100гр)",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-6.jpg",
-                    "name": "Мускатний горіх молотий (100гр)",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-8.jpg",
-                    "name": "Форма для твердого сиру",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-5.jpg",
-                    "name": "Запашний перець горошком (100гр)",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-3.jpg",
-                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-7.jpg",
-                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                  </div>
-                </div>
-                <div class="product-tabs__block">
-                  <h4 class="product-tabs__block-title title">
-                    Обладнання
-                  </h4>
-                  <div class="product-tabs__block-inner">
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-1.jpg",
-                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
-                    "total-price": "900",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-2.jpg",
-                    "name": "Запашний перець горошком (100гр)",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-3.jpg",
-                    "name": "Червоний перець молотий (100гр)",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-4.jpg",
-                    "name": "Мускатний горіх молотий (100гр)",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-5.jpg",
-                    "name": "Форма для твердого сиру",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-6.jpg",
-                    "name": "Запашний перець горошком (100гр)",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-7.jpg",
-                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-8.jpg",
-                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                  </div>
-                </div>
-              </div>
-              <div class="product-tabs__tab-block tabs__item js-tabs__item" data-tab-name="second">
-                <div class="product-tabs__block">
-                  <h4 class="product-tabs__block-title title">
-                    Інгредієнти
-                  </h4>
-                  <div class="product-tabs__block-inner">
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-1.jpg",
-                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
-                    "total-price": "900",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-2.jpg",
-                    "name": "Запашний перець горошком (100гр)",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-3.jpg",
-                    "name": "Червоний перець молотий (100гр)",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-4.jpg",
-                    "name": "Мускатний горіх молотий (100гр)",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-5.jpg",
-                    "name": "Форма для твердого сиру",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-6.jpg",
-                    "name": "Запашний перець горошком (100гр)",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-7.jpg",
-                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-8.jpg",
-                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                  </div>
-                </div>
-                <div class="product-tabs__block">
-                  <h4 class="product-tabs__block-title title">
-                    Обладнання
-                  </h4>
-                  <div class="product-tabs__block-inner">
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-1.jpg",
-                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
-                    "total-price": "900",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-2.jpg",
-                    "name": "Запашний перець горошком (100гр)",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-3.jpg",
-                    "name": "Червоний перець молотий (100гр)",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-4.jpg",
-                    "name": "Мускатний горіх молотий (100гр)",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-5.jpg",
-                    "name": "Форма для твердого сиру",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-6.jpg",
-                    "name": "Запашний перець горошком (100гр)",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-7.jpg",
-                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                    @@include('html/product-card.html', {
-                    "class": "product-tabs__product",
-                    "img": "@img/temp/product-card/product-8.jpg",
-                    "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
-                    "total-price": "700",
-                    "last-price": "900"
-                    })
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </section>
-
-    <section class="advantages">
-      <div class="advantages__bg-circle"></div>
-      <div class="advantages__bg-circle"></div>
-      <div class="advantages__bg-circle"></div>
-      <div class="large-container">
-        <div class="advantages__wrapper">
-          <div class="container">
-            <div class="advantages__inner">
-              <h2 class="advantages__title">
-                Наші переваги
-              </h2>
-              <p class="advantages__descr">
-                Ми особисто відповідаємо за якість товару і завжди
-                з радістю допоможемо Вам із вибором
+      <section class="hero">
+        <div class="container">
+          <div class="hero__inner">
+            <div class="hero__main">
+              <img src="@img/index/hero-1.jpg" alt="" class="hero__img">
+              <h3 class="hero__main-title">
+                Набори для сироробства
+              </h3>
+              <p class="hero__main-descr">
+                Все, що вам потрібно для приготування сиру в домашніх умовах
               </p>
-              <div class="advantages__block">
-                <ul class="advantages__block-list">
-                  <li class="advantages__block-item">
-                    <div class="advantages__block-point">
-                      <div class="advantages__block-point-inner"></div>
-                    </div>
-                    <div class="advantages__block-info advantages__block-info--left-angle">
-                      <p class="advantages__block-text">
-                        Прийом замовлень цілодобово
-                      </p>
-                    </div>
-                  </li>
-                  <li class="advantages__block-item">
-                    <div class="advantages__block-point">
-                      <div class="advantages__block-point-inner"></div>
-                    </div>
-                    <div class="advantages__block-info advantages__block-info--right-angle">
-                      <p class="advantages__block-text">
-                        Найвища якість продукції
-                      </p>
-                    </div>
-                  </li>
-                  <li class="advantages__block-item">
-                    <div class="advantages__block-point">
-                      <div class="advantages__block-point-inner"></div>
-                    </div>
-                    <div class="advantages__block-info advantages__block-info--left-angle">
-                      <p class="advantages__block-text">
-                        Вигідні ціни та умови
-                      </p>
-                    </div>
-                  </li>
-                  <li class="advantages__block-item">
-                    <div class="advantages__block-point">
-                      <div class="advantages__block-point-inner"></div>
-                    </div>
-                    <div class="advantages__block-info advantages__block-info--right-angle">
-                      <p class="advantages__block-text">
-                        Вигідні знижки при оплаті
-                      </p>
-                    </div>
-                  </li>
-                  <li class="advantages__block-item">
-                    <div class="advantages__block-point">
-                      <div class="advantages__block-point-inner"></div>
-                    </div>
-                    <div class="advantages__block-info advantages__block-info--left-angle">
-                      <p class="advantages__block-text">
-                        Забезпечуємо високий рівень сервісу
-                      </p>
-                    </div>
-                  </li>
-                </ul>
+              <div class="hero__main-btn-block">
+                <a href="#" class="hero__main-btn main-btn">Дивитись набір</a>
               </div>
             </div>
+            <a href="#" class="hero__secondary-link">
+              <img src="@img/index/hero-2.jpg" alt="" class="hero__img">
+              <p class="hero__secondary-pre-title">
+                Рецепти
+              </p>
+              <h3 class="hero__secondary-title">
+                Сири з пліснявою
+              </h3>
+            </a>
+            <a href="#" class="hero__secondary-link">
+              <img src="@img/index/hero-3.jpg" alt="" class="hero__img">
+              <p class="hero__secondary-pre-title">
+                Акції
+              </p>
+              <h3 class="hero__secondary-title">
+                Закваски для сиру
+              </h3>
+            </a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="proposition">
-      <div class="container">
-        <div class="proposition__inner">
-          <h3 class="proposition__title title-bold">
-            Ми підібрали для вас
-          </h3>
-          <div class="proposition__grid">
-            <section class="proposition__block">
-              <img src="@img/index/proposition-bg-1.jpg" alt="" class="proposition__block-bg">
-              <h4 class="proposition__block-title">
-                Більш ніж <br> 1000 кращих рецептів
-              </h4>
-              <p class="proposition__block-descr">
-                Ми зібрали для Васвелику базу рецептів
-              </p>
-              <div class="proposition__block-btn-area">
-                <a href="#" class="proposition__block-link main-btn">Перейти</a>
+      <section class="main-section">
+        <div class="container">
+          <div class="main-section__inner">
+            @@include('html/main-menu.html', {
+            "class": "main-section__menu"
+            })
+            <section class="main-section__block product-tabs tabs js-tabs">
+              <div class="product-tabs__btns">
+                <button class="product-tabs__btn tabs__btn js-tabs__btn" data-tab-name="first">Популярні товари</button>
+                <button class="product-tabs__btn tabs__btn js-tabs__btn" data-tab-name="second">Акції</button>
               </div>
-            </section>
-            <section class="proposition__block">
-              <img src="@img/index/proposition-bg-2.jpg" alt="" class="proposition__block-bg">
-              <h4 class="proposition__block-title proposition__block-title--white">
-                Круті набори <br> для сиру
-              </h4>
-              <p class="proposition__block-descr proposition__block-descr--white">
-                Готові набори зекономлять час, ми все зробили за Вас.
-              </p>
-              <div class="proposition__block-btn-area">
-                <a href="#" class="proposition__block-link main-btn">Перейти</a>
+              <div class="product-tabs__tabs-items tabs__items">
+                <div class="product-tabs__tab-block tabs__item js-tabs__item" data-tab-name="first">
+                  <div class="product-tabs__block">
+                    <h4 class="product-tabs__block-title title">
+                      Інгредієнти
+                    </h4>
+                    <div class="product-tabs__block-inner">
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-2.jpg",
+                      "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                      "total-price": "900",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-4.jpg",
+                      "name": "Запашний перець горошком (100гр)",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-1.jpg",
+                      "name": "Червоний перець молотий (100гр)",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-6.jpg",
+                      "name": "Мускатний горіх молотий (100гр)",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-8.jpg",
+                      "name": "Форма для твердого сиру",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-5.jpg",
+                      "name": "Запашний перець горошком (100гр)",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-3.jpg",
+                      "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-7.jpg",
+                      "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                    </div>
+                  </div>
+                  <div class="product-tabs__block">
+                    <h4 class="product-tabs__block-title title">
+                      Обладнання
+                    </h4>
+                    <div class="product-tabs__block-inner">
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-1.jpg",
+                      "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                      "total-price": "900",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-2.jpg",
+                      "name": "Запашний перець горошком (100гр)",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-3.jpg",
+                      "name": "Червоний перець молотий (100гр)",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-4.jpg",
+                      "name": "Мускатний горіх молотий (100гр)",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-5.jpg",
+                      "name": "Форма для твердого сиру",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-6.jpg",
+                      "name": "Запашний перець горошком (100гр)",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-7.jpg",
+                      "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-8.jpg",
+                      "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                    </div>
+                  </div>
+                </div>
+                <div class="product-tabs__tab-block tabs__item js-tabs__item" data-tab-name="second">
+                  <div class="product-tabs__block">
+                    <h4 class="product-tabs__block-title title">
+                      Інгредієнти
+                    </h4>
+                    <div class="product-tabs__block-inner">
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-1.jpg",
+                      "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                      "total-price": "900",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-2.jpg",
+                      "name": "Запашний перець горошком (100гр)",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-3.jpg",
+                      "name": "Червоний перець молотий (100гр)",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-4.jpg",
+                      "name": "Мускатний горіх молотий (100гр)",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-5.jpg",
+                      "name": "Форма для твердого сиру",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-6.jpg",
+                      "name": "Запашний перець горошком (100гр)",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-7.jpg",
+                      "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-8.jpg",
+                      "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                    </div>
+                  </div>
+                  <div class="product-tabs__block">
+                    <h4 class="product-tabs__block-title title">
+                      Обладнання
+                    </h4>
+                    <div class="product-tabs__block-inner">
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-1.jpg",
+                      "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                      "total-price": "900",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-2.jpg",
+                      "name": "Запашний перець горошком (100гр)",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-3.jpg",
+                      "name": "Червоний перець молотий (100гр)",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-4.jpg",
+                      "name": "Мускатний горіх молотий (100гр)",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-5.jpg",
+                      "name": "Форма для твердого сиру",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-6.jpg",
+                      "name": "Запашний перець горошком (100гр)",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-7.jpg",
+                      "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                      @@include('html/product-card.html', {
+                      "class": "product-tabs__product",
+                      "img": "@img/temp/product-card/product-8.jpg",
+                      "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                      "total-price": "700",
+                      "last-price": "900"
+                      })
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
           </div>
-          <h3 class="proposition__title title-bold">
-            Наше обладнання
+        </div>
+      </section>
+
+      <section class="advantages">
+        <div class="advantages__bg-circle"></div>
+        <div class="advantages__bg-circle"></div>
+        <div class="advantages__bg-circle"></div>
+        <div class="large-container">
+          <div class="advantages__wrapper">
+            <div class="container">
+              <div class="advantages__inner">
+                <h2 class="advantages__title">
+                  Наші переваги
+                </h2>
+                <p class="advantages__descr">
+                  Ми особисто відповідаємо за якість товару і завжди
+                  з радістю допоможемо Вам із вибором
+                </p>
+                <div class="advantages__block">
+                  <ul class="advantages__block-list">
+                    <li class="advantages__block-item">
+                      <div class="advantages__block-point">
+                        <div class="advantages__block-point-inner"></div>
+                      </div>
+                      <div class="advantages__block-info advantages__block-info--left-angle">
+                        <p class="advantages__block-text">
+                          Прийом замовлень цілодобово
+                        </p>
+                      </div>
+                    </li>
+                    <li class="advantages__block-item">
+                      <div class="advantages__block-point">
+                        <div class="advantages__block-point-inner"></div>
+                      </div>
+                      <div class="advantages__block-info advantages__block-info--right-angle">
+                        <p class="advantages__block-text">
+                          Найвища якість продукції
+                        </p>
+                      </div>
+                    </li>
+                    <li class="advantages__block-item">
+                      <div class="advantages__block-point">
+                        <div class="advantages__block-point-inner"></div>
+                      </div>
+                      <div class="advantages__block-info advantages__block-info--left-angle">
+                        <p class="advantages__block-text">
+                          Вигідні ціни та умови
+                        </p>
+                      </div>
+                    </li>
+                    <li class="advantages__block-item">
+                      <div class="advantages__block-point">
+                        <div class="advantages__block-point-inner"></div>
+                      </div>
+                      <div class="advantages__block-info advantages__block-info--right-angle">
+                        <p class="advantages__block-text">
+                          Вигідні знижки при оплаті
+                        </p>
+                      </div>
+                    </li>
+                    <li class="advantages__block-item">
+                      <div class="advantages__block-point">
+                        <div class="advantages__block-point-inner"></div>
+                      </div>
+                      <div class="advantages__block-info advantages__block-info--left-angle">
+                        <p class="advantages__block-text">
+                          Забезпечуємо високий рівень сервісу
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="proposition">
+        <div class="container">
+          <div class="proposition__inner">
+            <h3 class="proposition__title title-bold">
+              Ми підібрали для вас
+            </h3>
+            <div class="proposition__grid">
+              <section class="proposition__block">
+                <img src="@img/index/proposition-bg-1.jpg" alt="" class="proposition__block-bg">
+                <h4 class="proposition__block-title">
+                  Більш ніж <br> 1000 кращих рецептів
+                </h4>
+                <p class="proposition__block-descr">
+                  Ми зібрали для Вас велику базу рецептів
+                </p>
+                <div class="proposition__block-btn-area">
+                  <a href="#" class="proposition__block-link main-btn">Перейти</a>
+                </div>
+              </section>
+              <section class="proposition__block">
+                <img src="@img/index/proposition-bg-2.jpg" alt="" class="proposition__block-bg">
+                <h4 class="proposition__block-title proposition__block-title--white">
+                  Круті набори <br> для сиру
+                </h4>
+                <p class="proposition__block-descr proposition__block-descr--white">
+                  Готові набори зекономлять час, ми все зробили за Вас.
+                </p>
+                <div class="proposition__block-btn-area">
+                  <a href="#" class="proposition__block-link main-btn">Перейти</a>
+                </div>
+              </section>
+            </div>
+            <h3 class="proposition__title title-bold">
+              Наше обладнання
+            </h3>
+            <div class="proposition__row proposition-slider swiper-container">
+              <div class="proposition-slider__wrapper swiper-wrapper">
+                <section class="proposition-slider__item swiper-slide">
+                  <div class="proposition-slider__item-inner">
+                    <img src="@img/index/proposition-slide-bg-1.jpg" alt="" class="proposition-slider__bg-img">
+                    <h4 class="proposition-slider__title addit-title">
+                      Преси для сиру
+                    </h4>
+                    <p class="proposition-slider__text">
+                      Прес може використовуватися для пресування твердих сирів. Він розбирається, і ви можете компактно
+                      його запакувати в коробку.
+                    </p>
+                    <div class="proposition-slider__btn-area">
+                      <a href="#" class="proposition-slider__link main-btn">
+                        Дізнатися більше
+                      </a>
+                    </div>
+                  </div>
+                </section>
+                <section class="proposition-slider__item swiper-slide">
+                  <div class="proposition-slider__item-inner">
+                    <img src="@img/index/proposition-slide-bg-1.jpg" alt="" class="proposition-slider__bg-img">
+                    <h4 class="proposition-slider__title addit-title">
+                      Форми для сиру
+                    </h4>
+                    <p class="proposition-slider__text">
+                      Кожна форма виконана з високоякісного харчового полімеру, необхидна для формування головок сиру
+                      правильної форми. Це стосується як твердих, так і м'яких сортів сиру.
+                    </p>
+                    <div class="proposition-slider__btn-area">
+                      <a href="#" class="proposition-slider__link main-btn">
+                        Дізнатися більше
+                      </a>
+                    </div>
+                  </div>
+                </section>
+                <section class="proposition-slider__item swiper-slide">
+                  <div class="proposition-slider__item-inner">
+                    <img src="@img/index/proposition-slide-bg-1.jpg" alt="" class="proposition-slider__bg-img">
+                    <h4 class="proposition-slider__title addit-title">
+                      Дренажні контейнери
+                    </h4>
+                    <p class="proposition-slider__text">
+                      Дренажні бокси для сироробства вироблені з харчових полімерів, необхідні, наприклад, для
+                      розміщення
+                      сформованої головки сиру на паровій бані.
+                    </p>
+                    <div class="proposition-slider__btn-area">
+                      <a href="#" class="proposition-slider__link main-btn">
+                        Дізнатися більше
+                      </a>
+                    </div>
+                  </div>
+                </section>
+                <div class="proposition-slider__arrows slider-arrows">
+                  <button class="proposition-slider__arrow-prev slider-arrow-prev"></button>
+                  <button class="proposition-slider__arrow-next slider-arrow-next"></button>
+                </div>
+                <div class="proposition-slider__pagination">
+                  <div class="proposition-slider__progressbar"></div>
+                  <div class="proposition-slider__fraction">
+                    <div class="proposition-slider__fraction-current"></div>
+                    <div class="proposition-slider__fraction-separator">/</div>
+                    <div class="proposition-slider__fraction-total"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="article-announces">
+        <div class="container">
+          <div class="article-announces__inner">
+            <div class="article-announces__item article-announces__info">
+              <h4 class="article-announces__info-title addit-title">
+                Статті про сироробство
+              </h4>
+              <p class="article-announces__info-text">
+                Ми зібрали найцікавіші та найкорисніші новини про акції, скидки у світі сироробства
+              </p>
+              <div class="article-announces__info-btn-block">
+                <a href="#" class="article-announces__info-btn main-btn">
+                  Читати всі статті
+                </a>
+              </div>
+            </div>
+            @@include('html/article-announce.html', {
+            "class": "article-announces__item",
+            "img": "@img/temp/article-announces/article-announces-1.jpg",
+            "title": "Сирна тарілка",
+            "text": "Так називається страва, яка складається з різних сортів сиру",
+            })
+            @@include('html/article-announce.html', {
+            "class": "article-announces__item",
+            "img": "@img/temp/article-announces/article-announces-2.jpg",
+            "title": "Звідки в сирі дірки?",
+            "text": "Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів",
+            })
+            @@include('html/article-announce.html', {
+            "class": "article-announces__item",
+            "img": "@img/temp/article-announces/article-announces-3.jpg",
+            "title": "Сирна дієта",
+            "text": "Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів",
+            })
+            @@include('html/article-announce.html', {
+            "class": "article-announces__item",
+            "img": "@img/temp/article-announces/article-announces-4.jpg",
+            "title": "Посіл сирної головки в домашніх умовах при наявності мінімального обладнання",
+            "text": "Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів",
+            })
+          </div>
+        </div>
+      </section>
+
+      <section class="recommendations">
+        <div class="container">
+          <h3 class="recommendations__title title-bold">
+            Переглянуті товари
           </h3>
-          <div class="proposition__row proposition-slider swiper-container">
-            <div class="proposition-slider__wrapper swiper-wrapper">
-              <section class="proposition-slider__item swiper-slide">
-                <div class="proposition-slider__item-inner">
-                  <img src="@img/index/proposition-slide-bg-1.jpg" alt="" class="proposition-slider__bg-img">
-                  <h4 class="proposition-slider__title addit-title">
-                    Преси для сиру
-                  </h4>
-                  <p class="proposition-slider__text">
-                    Прес може використовуватися для пресування твердих сирів. Він розбирається, і ви можете компактно
-                    його запакувати в коробку.
-                  </p>
-                  <div class="proposition-slider__btn-area">
-                    <a href="#" class="proposition-slider__link main-btn">
-                      Дізнатися більше
-                    </a>
-                  </div>
-                </div>
-              </section>
-              <section class="proposition-slider__item swiper-slide">
-                <div class="proposition-slider__item-inner">
-                  <img src="@img/index/proposition-slide-bg-1.jpg" alt="" class="proposition-slider__bg-img">
-                  <h4 class="proposition-slider__title addit-title">
-                    Форми для сиру
-                  </h4>
-                  <p class="proposition-slider__text">
-                    Кожна форма виконана з високоякісного харчового полімеру, необхидна для формування головок сиру
-                    правильної форми. Це стосується як твердих, так і м'яких сортів сиру.
-                  </p>
-                  <div class="proposition-slider__btn-area">
-                    <a href="#" class="proposition-slider__link main-btn">
-                      Дізнатися більше
-                    </a>
-                  </div>
-                </div>
-              </section>
-              <section class="proposition-slider__item swiper-slide">
-                <div class="proposition-slider__item-inner">
-                  <img src="@img/index/proposition-slide-bg-1.jpg" alt="" class="proposition-slider__bg-img">
-                  <h4 class="proposition-slider__title addit-title">
-                    Дренажні контейнери
-                  </h4>
-                  <p class="proposition-slider__text">
-                    Дренажні бокси для сироробства вироблені з харчових полімерів, необхідні, наприклад, для розміщення
-                    сформованої головки сиру на паровій бані.
-                  </p>
-                  <div class="proposition-slider__btn-area">
-                    <a href="#" class="proposition-slider__link main-btn">
-                      Дізнатися більше
-                    </a>
-                  </div>
-                </div>
-              </section>
-              <div class="proposition-slider__arrows slider-arrows">
-                <button class="proposition-slider__arrow-prev slider-arrow-prev"></button>
-                <button class="proposition-slider__arrow-next slider-arrow-next"></button>
+        </div>
+        <div class="recommendations__container">
+          <div class="recommendations__slider recommendations-slider swiper-container">
+            <div class="recommendations-slider__wrapper swiper-wrapper">
+              <div class="recommendations-slider__item swiper-slide">
+                @@include('html/product-card.html', {
+                "class": "recommendations-slider__product",
+                "img": "@img/temp/product-card/product-2.jpg",
+                "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                "total-price": "900",
+                "last-price": "900"
+                })
               </div>
-              <div class="proposition-slider__pagination">
-                <div class="proposition-slider__progressbar"></div>
-                <div class="proposition-slider__fraction">
-                  <div class="proposition-slider__fraction-current"></div>
-                  <div class="proposition-slider__fraction-separator">/</div>
-                  <div class="proposition-slider__fraction-total"></div>
-                </div>
+              <div class="recommendations-slider__item swiper-slide">
+                @@include('html/product-card.html', {
+                "class": "recommendations-slider__product",
+                "img": "@img/temp/product-card/product-2.jpg",
+                "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                "total-price": "900",
+                "last-price": "900"
+                })
+              </div>
+              <div class="recommendations-slider__item swiper-slide">
+                @@include('html/product-card.html', {
+                "class": "recommendations-slider__product",
+                "img": "@img/temp/product-card/product-2.jpg",
+                "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                "total-price": "900",
+                "last-price": "900"
+                })
+              </div>
+              <div class="recommendations-slider__item swiper-slide">
+                @@include('html/product-card.html', {
+                "class": "recommendations-slider__product",
+                "img": "@img/temp/product-card/product-2.jpg",
+                "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                "total-price": "900",
+                "last-price": "900"
+                })
+              </div>
+              <div class="recommendations-slider__item swiper-slide">
+                @@include('html/product-card.html', {
+                "class": "recommendations-slider__product",
+                "img": "@img/temp/product-card/product-2.jpg",
+                "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                "total-price": "900",
+                "last-price": "900"
+                })
+              </div>
+              <div class="recommendations-slider__item swiper-slide">
+                @@include('html/product-card.html', {
+                "class": "recommendations-slider__product",
+                "img": "@img/temp/product-card/product-2.jpg",
+                "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                "total-price": "900",
+                "last-price": "900"
+                })
+              </div>
+              <div class="recommendations-slider__item swiper-slide">
+                @@include('html/product-card.html', {
+                "class": "recommendations-slider__product",
+                "img": "@img/temp/product-card/product-2.jpg",
+                "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
+                "total-price": "900",
+                "last-price": "900"
+                })
               </div>
             </div>
-
+          </div>
+          <div class="recommendations-slider__arrows slider-arrows">
+            <button class="recommendations-slider__arrow-prev slider-arrow-prev"></button>
+            <button class="recommendations-slider__arrow-next slider-arrow-next"></button>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="article-announces">
-      <div class="container">
-        <div class="article-announces__inner">
-          <div class="article-announces__item article-announces__info">
-            <h4 class="article-announces__info-title addit-title">
-              Статті про сироробство
-            </h4>
-            <p class="article-announces__info-text">
-              Ми зібрали найцікавіші та найкорисніші новини про акції, скидки у світі сироробства
-            </p>
-            <div class="article-announces__info-btn-block">
-              <a href="#" class="article-announces__info-btn main-btn">
-                Читати всі статті
-              </a>
-            </div>
-          </div>
-          @@include('html/article-announce.html', {
-          "class": "article-announces__item",
-          "img": "@img/temp/article-announces/article-announces-1.jpg",
-          "title": "Сирна тарілка",
-          "text": "Так називається страва, яка складається з різних сортів сиру",
-          })
-          @@include('html/article-announce.html', {
-          "class": "article-announces__item",
-          "img": "@img/temp/article-announces/article-announces-2.jpg",
-          "title": "Звідки в сирі дірки?",
-          "text": "Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів",
-          })
-          @@include('html/article-announce.html', {
-          "class": "article-announces__item",
-          "img": "@img/temp/article-announces/article-announces-3.jpg",
-          "title": "Сирна дієта",
-          "text": "Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів",
-          })
-          @@include('html/article-announce.html', {
-          "class": "article-announces__item",
-          "img": "@img/temp/article-announces/article-announces-4.jpg",
-          "title": "Посіл сирної головки в домашніх умовах при наявності мінімального обладнання",
-          "text": "Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів",
-          })
-        </div>
-      </div>
-    </section>
+    </main>
+    @@include('html/footer.html', {})
+  </div>
 
-    <section class="recommendations">
-      <div class="container">
-        <h3 class="recommendations__title title-bold">
-          Переглянуті товари
-        </h3>
-      </div>
-      <div class="recommendations__container">
-        <div class="recommendations__slider recommendations-slider swiper-container">
-          <div class="recommendations-slider__wrapper swiper-wrapper">
-            <div class="recommendations-slider__item swiper-slide">
-              @@include('html/product-card.html', {
-              "class": "recommendations-slider__product",
-              "img": "@img/temp/product-card/product-2.jpg",
-              "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
-              "total-price": "900",
-              "last-price": "900"
-              })
-            </div>
-            <div class="recommendations-slider__item swiper-slide">
-              @@include('html/product-card.html', {
-              "class": "recommendations-slider__product",
-              "img": "@img/temp/product-card/product-2.jpg",
-              "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
-              "total-price": "900",
-              "last-price": "900"
-              })
-            </div>
-            <div class="recommendations-slider__item swiper-slide">
-              @@include('html/product-card.html', {
-              "class": "recommendations-slider__product",
-              "img": "@img/temp/product-card/product-2.jpg",
-              "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
-              "total-price": "900",
-              "last-price": "900"
-              })
-            </div>
-            <div class="recommendations-slider__item swiper-slide">
-              @@include('html/product-card.html', {
-              "class": "recommendations-slider__product",
-              "img": "@img/temp/product-card/product-2.jpg",
-              "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
-              "total-price": "900",
-              "last-price": "900"
-              })
-            </div>
-            <div class="recommendations-slider__item swiper-slide">
-              @@include('html/product-card.html', {
-              "class": "recommendations-slider__product",
-              "img": "@img/temp/product-card/product-2.jpg",
-              "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
-              "total-price": "900",
-              "last-price": "900"
-              })
-            </div>
-            <div class="recommendations-slider__item swiper-slide">
-              @@include('html/product-card.html', {
-              "class": "recommendations-slider__product",
-              "img": "@img/temp/product-card/product-2.jpg",
-              "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
-              "total-price": "900",
-              "last-price": "900"
-              })
-            </div>
-            <div class="recommendations-slider__item swiper-slide">
-              @@include('html/product-card.html', {
-              "class": "recommendations-slider__product",
-              "img": "@img/temp/product-card/product-2.jpg",
-              "name": "Мезофільна закваска Danisco CHOOZIT MM 101",
-              "total-price": "900",
-              "last-price": "900"
-              })
-            </div>
-          </div>
-        </div>
-        <div class="recommendations-slider__arrows slider-arrows">
-          <button class="recommendations-slider__arrow-prev slider-arrow-prev"></button>
-          <button class="recommendations-slider__arrow-next slider-arrow-next"></button>
-        </div>
-      </div>
-    </section>
-
-  </main>
-  @@include('html/footer.html', {})
   <script src="js/app.min.js"></script>
 </body>
 

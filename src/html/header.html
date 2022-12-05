@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header js-header">
   <div class="header__top">
     <div class="container">
       <div class="header__top-inner">
@@ -36,24 +36,27 @@
             <li class="top-nav__item">
               <a href="#" class="top-nav__link">Акційні товари</a>
             </li>
-            <li class="top-nav__item">
-              <a href="#" class="top-nav__link">
-                <svg class="top-nav__link-icon" viewBox="0 0 18 18">
-                  <use xlink:href="@img/icons/icons.svg#user"></use>
-                </svg>
-                <span class="top-nav__link-text">Увійти до облікового запису</span>
-              </a>
-            </li>
           </ul>
         </nav>
+        <div class="header__account">
+          <button type="button" class="header__account-link header__account-link--btn">
+            <svg class="top-nav__link-icon" viewBox="0 0 18 18">
+              <use xlink:href="@img/icons/icons.svg#user"></use>
+            </svg>
+            <span class="header__account-text js-header-account-text">Увійти до облікового запису</span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
   <div class="header__middle">
     <div class="container">
-      <div class="header__middle-inner">
-        <a href="#" class="header__logo logo">
-          <img src="@img/logo.png" alt="Логотип" class="logo__img">
+      <div class="header__middle-inner js-header-middle-inner">
+        <a href="#" class="header__logo logo js-header-logo">
+          <picture>
+            <source srcset="@img/logo-mobile.png" media="(max-width: 850px)">
+            <img src="@img/logo.png" alt="Логотип" class="logo__img">
+          </picture>
         </a>
         <div class="header__middle-info">
           <img src="@img/icons/header/header-icon-delivery.png" alt="" class="header__middle-info-icon"
@@ -95,15 +98,21 @@
             </a>
           </li>
         </ul>
-        <div class="header__call-back">
-          <span class="header__call-back-num">8 (066) 460-19-60</span>
-          <button class="header__call-back-btn icon-btn">
-            <svg class="icon-btn__icon icon-btn__icon--phone" viewBox="0 0 14 14">
+        <div class="header__call-back js-header__call-back">
+          <span class="header__call-back-num js-header-call-back-num">  
+            +38 (066) 460-19-60</span>
+          <button class="header__call-back-btn icon-btn js-header-call-back-btn" type="button">
+            <svg class="icon-btn__icon icon-btn__icon--phone js-header-call-back-icon" viewBox="0 0 14 14">
               <use xlink:href="@img/icons/icons.svg#phone"></use>
             </svg>
             <span class="icon-btn__text">Замовити дзвінок</span>
           </button>
         </div>
+        <button class="header__search-open js-header-search-open" type="button" aria-label="Открыть строку поиска">
+          <svg class="header__search-btn-icon" viewBox="0 0 24 24">
+            <use xlink:href="@img/icons/icons.svg#search"></use>
+          </svg>
+        </button>
         <div class="header-basket js-drop-box">
           <button class="header-basket__btn js-drop-box__btn" aria-label="Корзина">
             <div class="header-basket__btn-info">
@@ -189,13 +198,18 @@
             </button>
           </form>
         </div>
+        <button class="header__menu-btn menu-btn js-menu-btn" type="bytton">
+          <div class="menu-btn__line"></div>
+          <div class="menu-btn__line"></div>
+          <div class="menu-btn__line"></div>
+        </button>
       </div>
     </div>
   </div>
   <div class="header__bottom">
     <div class="container">
-      <div class="header__bottom-inner">
-        <nav class="header__bottom-nav bottom-nav">
+      <div class="header__bottom-inner js-header__bottom-inner">
+        <nav class="header__bottom-nav bottom-nav js-header-bottom-nav">
           <ul class="bottom-nav__list">
             <li class="bottom-nav__item bottom-nav__drop drop">
               Рецепти
@@ -271,13 +285,13 @@
             </li>
           </ul>
         </nav>
-        <form class="header__search">
+        <form class="header__search js-header-search">
           <button class="header__search-btn" type="submit" aria-label="Найти">
             <svg class="header__search-btn-icon" viewBox="0 0 24 24">
               <use xlink:href="@img/icons/icons.svg#search"></use>
             </svg>
           </button>
-          <input type="text" class="header__search-input" placeholder="Введите название товара или артикул">
+          <input type="text" class="header__search-input" placeholder="Введіть назву товару або артикул">
         </form>
       </div>
     </div>

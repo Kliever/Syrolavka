@@ -29,6 +29,7 @@
   object-fit: cover;
   transform: scale(1);
   transition: transform 3s;
+  will-change: transform;
 }
 
 .article-announce__info-title {
@@ -56,6 +57,7 @@
   font-weight: 400;
   color: #000000;
   opacity: 0.6;
+  margin-bottom: 20px;
 }
 
 .article-announce__info-link {
