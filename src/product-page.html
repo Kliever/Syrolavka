@@ -38,7 +38,7 @@
             <section class="main-section__block product-page">
               <article class="product-page__block p-page">
                 <h1 class="p-page__name">
-
+                  Мезофільна закваска Hansen Flora Danica (50U)
                 </h1>
                 <div class="p-page__rating-row">
                   @@include('html/component/star-rating.html', {
@@ -55,7 +55,27 @@
                       <div class="p-page-visual__slider-wrapper">
                         <div class="p-page-visual__slide">
                           <div class="p-page-visual__slide-inner">
-                            <img src="@img/" alt="" class="p-page-visual__img">
+                            <img src="@img/temp/product-page/product-img-1.jpg" alt="" class="p-page-visual__img">
+                          </div>
+                        </div>
+                        <div class="p-page-visual__slide">
+                          <div class="p-page-visual__slide-inner">
+                            <img src="@img/temp/product-page/product-img-1.jpg" alt="" class="p-page-visual__img">
+                          </div>
+                        </div>
+                        <div class="p-page-visual__slide">
+                          <div class="p-page-visual__slide-inner">
+                            <img src="@img/temp/product-page/product-img-1.jpg" alt="" class="p-page-visual__img">
+                          </div>
+                        </div>
+                        <div class="p-page-visual__slide">
+                          <div class="p-page-visual__slide-inner">
+                            <img src="@img/temp/product-page/product-img-1.jpg" alt="" class="p-page-visual__img">
+                          </div>
+                        </div>
+                        <div class="p-page-visual__slide">
+                          <div class="p-page-visual__slide-inner">
+                            <img src="@img/temp/product-page/product-img-1.jpg" alt="" class="p-page-visual__img">
                           </div>
                         </div>
                       </div>
@@ -63,66 +83,205 @@
                     <div class="p-page-visual__miniature">
                       <div class="p-page-visual__miniature-wrapper">
                         <div class="p-page-visual__miniature-slide">
-                          <img src="@img/" alt="" class="p-page-visual__miniature-img">
+                          <img src="@img/temp/product-page/product-img-mini-1.jpg" alt=""
+                            class="p-page-visual__miniature-img">
                         </div>
                         <div class="p-page-visual__miniature-slide">
-                          <img src="@img/" alt="" class="p-page-visual__miniature-img">
+                          <img src="@img/temp/product-page/product-img-mini-2.jpg" alt=""
+                            class="p-page-visual__miniature-img">
                         </div>
                         <div class="p-page-visual__miniature-slide">
-                          <img src="@img/" alt="" class="p-page-visual__miniature-img">
+                          <img src="@img/temp/product-page/product-img-mini-3.jpg" alt=""
+                            class="p-page-visual__miniature-img">
+                        </div>
+                        <div class="p-page-visual__miniature-slide">
+                          <img src="@img/temp/product-page/product-img-mini-1.jpg" alt=""
+                            class="p-page-visual__miniature-img">
+                        </div>
+                        <div class="p-page-visual__miniature-slide">
+                          <img src="@img/temp/product-page/product-img-mini-1.jpg" alt=""
+                            class="p-page-visual__miniature-img">
                         </div>
                       </div>
                     </div>
-                    <button class="p-page-visual__btn"></button>
+                    <button class="p-page-visual__btn">Посмотреть товар в 3D</button>
                   </div>
                   <div class="p-page__block-info p-page-info">
                     <div class="p-page-info__indicator">
-
+                      В наявності
                     </div>
                     <div class="p-page-info__price-row">
                       <div class="p-page-info__price-block">
                         <span class="p-page-info__actual-price">
-                          <span class="p-page-info__actual-price-num"></span>
+                          <span class="p-page-info__actual-price-num">
+                            950
+                          </span>
+                          грн.
                         </span>
                         <span class="p-page-info__last-price">
-                          <span class="p-page-info__last-price-num"></span>
+                          <span class="p-page-info__last-price-num">
+                            1200
+                          </span>
+                          грн.
                         </span>
                       </div>
                       <button class="p-page-info__add-favorites">
                         <svg class="p-page-info__add-favorites-icons">
                           <use xlink:href="@img/icons/icons.svg#favorites"></use>
                         </svg>
-                        <span class="p-page-info__add-favorites-text"></span>
+                        В обране
                       </button>
                     </div>
                     @@include('html/component/bonuses.html', {
                     "class": "p-page__block-bonuses",
                     })
                     <p class="p-page__block-code">
-                      <span class="p-page__block-code-num"></span>
+                      Артикул:
+                      <span class="p-page__block-code-num">23006</span>
                     </p>
                     <p class="p-page__block-manufacturer">
-                      <span class="p-page__block-manufacturer-name"></span>
+                      Виробник:
+                      <span class="p-page__block-manufacturer-name">
+                        Lactofarm ECO, Італия
+                      </span>
                     </p>
                     <form action="#" class="p-page__form p-page-form">
                       <div class="p-page-form__product-num">
 
+                        <div class="p-page-form__product-quantity num-input js-num-input">
+                          <button type="button" class="num-input__btn-down js-num-input-down"></button>
+                          <input type="text" class="num-input__area js-num-input-area" min="1" max="999" value="1">
+                          <button type="button" class="num-input__btn-up js-num-input-up"></button>
+                        </div>
+
                       </div>
-                      <button class="p-page-form__submit"></button>
+                      <button type="button" class="p-page-form__submit">В кошик</button>
                     </form>
                     <div class="p-page-info__region">
-
+                      <p class="p-page-info__region-title">
+                        Виберіть регіон для розрахунку вартості доставки:
+                      </p>
+                      <div class="p-page-info__region-block select-tabs">
+                        <div class="select-tabs__section">
+                          <button type="button" class="select-tabs__main-btn"></button>
+                          <div class="select-tabs__block">
+                            <button type="button" class="select-tabs__btn">Київ</button>
+                            <button type="button" class="select-tabs__btn">Харків</button>
+                            <button type="button" class="select-tabs__btn">Дніпро</button>
+                            <button type="button" class="select-tabs__btn">Львів</button>
+                          </div>
+                        </div>
+                        <div class="select-tabs__area">
+                          <div class="select-tabs__item">
+                            <dl class="select-tabs__item-list">
+                              <dt class="select-tabs__item-title">
+                                <img class="select-tabs__item-title-icon">
+                                Нова пошта
+                              </dt>
+                              <dd class="select-tabs__item-descr">
+                                <span class="select-tabs__item-descr-num">120</span>
+                                грн.
+                              </dd>
+                            </dl>
+                            <dl class="select-tabs__item-list">
+                              <dt class="select-tabs__item-title">
+                                <img class="select-tabs__item-title-icon">
+                                Укрпошта
+                              </dt>
+                              <dd class="select-tabs__item-descr">
+                                <span class="select-tabs__item-descr-num">150</span>
+                                грн.
+                              </dd>
+                            </dl>
+                          </div>
+                          <div class="select-tabs__item">
+                            <dl class="select-tabs__item-list">
+                              <dt class="select-tabs__item-title">
+                                <img class="select-tabs__item-title-icon">
+                                Нова пошта
+                              </dt>
+                              <dd class="select-tabs__item-descr">
+                                <span class="select-tabs__item-descr-num">120</span>
+                                грн.
+                              </dd>
+                            </dl>
+                            <dl class="select-tabs__item-list">
+                              <dt class="select-tabs__item-title">
+                                <img class="select-tabs__item-title-icon">
+                                Укрпошта
+                              </dt>
+                              <dd class="select-tabs__item-descr">
+                                <span class="select-tabs__item-descr-num">150</span>
+                                грн.
+                              </dd>
+                            </dl>
+                          </div>
+                          <div class="select-tabs__item">
+                            <dl class="select-tabs__item-list">
+                              <dt class="select-tabs__item-title">
+                                <img class="select-tabs__item-title-icon">
+                                Нова пошта
+                              </dt>
+                              <dd class="select-tabs__item-descr">
+                                <span class="select-tabs__item-descr-num">120</span>
+                                грн.
+                              </dd>
+                            </dl>
+                            <dl class="select-tabs__item-list">
+                              <dt class="select-tabs__item-title">
+                                <img class="select-tabs__item-title-icon">
+                                Укрпошта
+                              </dt>
+                              <dd class="select-tabs__item-descr">
+                                <span class="select-tabs__item-descr-num">150</span>
+                                грн.
+                              </dd>
+                            </dl>
+                          </div>
+                          <div class="select-tabs__item">
+                            <dl class="select-tabs__item-list">
+                              <dt class="select-tabs__item-title">
+                                <img class="select-tabs__item-title-icon">
+                                Нова пошта
+                              </dt>
+                              <dd class="select-tabs__item-descr">
+                                <span class="select-tabs__item-descr-num">120</span>
+                                грн.
+                              </dd>
+                            </dl>
+                            <dl class="select-tabs__item-list">
+                              <dt class="select-tabs__item-title">
+                                <img class="select-tabs__item-title-icon">
+                                Укрпошта
+                              </dt>
+                              <dd class="select-tabs__item-descr">
+                                <span class="select-tabs__item-descr-num">150</span>
+                                грн.
+                              </dd>
+                            </dl>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="p-page-info__advantages">
                       <ul class="p-page-info__advantages-list">
                         <li class="p-page-info__advantages-item">
-
+                          <svg class="p-page-info__advantages-item-icon">
+                            <use xlink:href="@img/icons/icons.svg#present"></use>
+                          </svg>
+                          Повертаємо 10% бонусами
                         </li>
                         <li class="p-page-info__advantages-item">
-
+                          <svg class="p-page-info__advantages-item-icon">
+                            <use xlink:href="@img/icons/icons.svg#medal"></use>
+                          </svg>
+                          Гарантія якості
                         </li>
                         <li class="p-page-info__advantages-item">
-
+                          <svg class="p-page-info__advantages-item-icon">
+                            <use xlink:href="@img/icons/icons.svg#credit-cards"></use>
+                          </svg>
+                          Зручні способи оплати
                         </li>
                       </ul>
                     </div>
@@ -131,23 +290,63 @@
               </article>
               <section class="product-page__analog">
                 <h3 class="product-page__analog-title">
-
+                  Аналогічні товари
                 </h3>
                 <div class="product-page__analog-slider analog-slider">
                   <div class="analog-slider__wrapper">
                     <article class="analog-slider__slide analog-product">
                       <div class="analog-product__inner">
                         <div class="analog-product__img-block">
-                          <img src="@img/" alt="" class="analog-product__img">
+                          <img src="@img/temp/product-page/analog-product-img-1.jpg" alt="" class="analog-product__img">
                         </div>
                         <p class="analog-product__manufacturer">
-
+                          Chr. Hansen, Данія
                         </p>
                         <a href="#" class="analog-product__name">
-
+                          Мезофільна закваска Hansen Flora Danica (50U)
                         </a>
                         <p class="analog-product__price">
-
+                          600₴
+                        </p>
+                        @@include('html/component/star-rating.html', {
+                        "class": "analog-product__star-rating",
+                        "rating": "4",
+                        })
+                      </div>
+                    </article>
+                    <article class="analog-slider__slide analog-product">
+                      <div class="analog-product__inner">
+                        <div class="analog-product__img-block">
+                          <img src="@img/temp/product-page/analog-product-img-1.jpg" alt="" class="analog-product__img">
+                        </div>
+                        <p class="analog-product__manufacturer">
+                          Chr. Hansen, Данія
+                        </p>
+                        <a href="#" class="analog-product__name">
+                          Мезофільна закваска Hansen Flora Danica (50U)
+                        </a>
+                        <p class="analog-product__price">
+                          600₴
+                        </p>
+                        @@include('html/component/star-rating.html', {
+                        "class": "analog-product__star-rating",
+                        "rating": "4",
+                        })
+                      </div>
+                    </article>
+                    <article class="analog-slider__slide analog-product">
+                      <div class="analog-product__inner">
+                        <div class="analog-product__img-block">
+                          <img src="@img/temp/product-page/analog-product-img-1.jpg" alt="" class="analog-product__img">
+                        </div>
+                        <p class="analog-product__manufacturer">
+                          Chr. Hansen, Данія
+                        </p>
+                        <a href="#" class="analog-product__name">
+                          Мезофільна закваска Hansen Flora Danica (50U)
+                        </a>
+                        <p class="analog-product__price">
+                          600₴
                         </p>
                         @@include('html/component/star-rating.html', {
                         "class": "analog-product__star-rating",
@@ -160,61 +359,102 @@
               </section>
               <section class="product-page__info">
                 <div class="product-page__info-btns-block">
-                  <button class="product-page__info-btn"></button>
-                  <button class="product-page__info-btn"></button>
-                  <button class="product-page__info-btn">
+                  <button class="product-page__info-btn">Опис</button>
+                  <button class="product-page__info-btn">Доставка та оплата</button>
+                  <button class="product-page__info-btn">Відгуки (
                     <span class="product-page__info-btn-num">
-
+                      3
                     </span>
+                    )
                   </button>
                 </div>
                 <div class="product-page__info-areas-block">
                   <section class="product-page__info-descr product-page-descr">
                     <p class="product-page-descr__text">
-
+                      P00802 Ця форма невеликого розміру призначена для виготовлення малих головок сиру Рікотта та інших
+                      м'яких сирів в умовах домашнього або фермерського виробництва. Наявність хорошого дренажу
+                      забезпечує її використання для пресування сирів з пліснявою, у тому числі сорту Французький
+                      необачник. Розмір сирної голівки, яку вдається одержати під час використання цієї форми – до 80 г.
+                      Це акуратний, готовий до подачі шматочок сиру, який не доведеться нарізати. Виготовлено форму зі
+                      спеціального високоякісного харчового пластику, який добре адаптований до агресивного
+                      молочнокислого середовища.
                     </p>
                     <dl class="product-page-descr__list">
                       <div class="product-page-descr__item">
-                        <dt class="product-page-descr__lidt-title">
-
+                        <dt class="product-page-descr__list-title">
+                          Вихід сиру
                         </dt>
-                        <dd class="product-page-descr__lidt-descr">
-
+                        <dd class="product-page-descr__list-descr">
+                          до 5-6 кг
                         </dd>
                       </div>
                       <div class="product-page-descr__item">
-                        <dt class="product-page-descr__lidt-title">
-
+                        <dt class="product-page-descr__list-title">
+                          матеріал
                         </dt>
-                        <dd class="product-page-descr__lidt-descr">
-
+                        <dd class="product-page-descr__list-descr">
+                          високоякісний харчовий пластик
                         </dd>
                       </div>
                       <div class="product-page-descr__item">
-                        <dt class="product-page-descr__lidt-title">
-
+                        <dt class="product-page-descr__list-title">
+                          Наявність дна
                         </dt>
-                        <dd class="product-page-descr__lidt-descr">
-
+                        <dd class="product-page-descr__list-descr">
+                          так
                         </dd>
                       </div>
                       <div class="product-page-descr__item">
-                        <dt class="product-page-descr__lidt-title">
-
+                        <dt class="product-page-descr__list-title">
+                          Наявність ніжок
                         </dt>
-                        <dd class="product-page-descr__lidt-descr">
-
+                        <dd class="product-page-descr__list-descr">
+                          ні
                         </dd>
                       </div>
                       <div class="product-page-descr__item">
-                        <dt class="product-page-descr__lidt-title">
-
+                        <dt class="product-page-descr__list-title">
+                          Розміри
                         </dt>
-                        <dd class="product-page-descr__lidt-descr">
-
+                        <dd class="product-page-descr__list-descr">
+                          высота - 22 см, діаметр по верху - 27 см
                         </dd>
                       </div>
                     </dl>
+                  </section>
+                  <section class="product-page__info-delivery product-page-delivery">
+                    <div class="product-page-delivery-info">
+                      <dl class="product-page-delivery__list">
+                        <div class="product-page-delivery__list-block">
+                          <dt class="product-page-delivery__list-title">
+                            Склад
+                          </dt>
+                          <dd class="product-page-delivery__list-descr">
+                            Допоможе вам приготувати смачний сир у домашніх умовах. У цьому продукті є мінеральні
+                            речовини та білки, які необхідні організму.
+                          </dd>
+                        </div>
+                        <div class="product-page-delivery__list-block">
+                          <dt class="product-page-delivery__list-title">
+                            Транспортування
+                          </dt>
+                          <dd class="product-page-delivery__list-descr">
+                            2 тижні із збереженням температури
+                          </dd>
+                        </div>
+                        <div class="product-page-delivery__list-block">
+                          <dt class="product-page-delivery__list-title">
+                            Розмір упаковки і зберігання
+                          </dt>
+                          <dd class="product-page-delivery__list-descr">
+                            Допоможе вам приготувати смачний сир у домашніх умовах.
+                          </dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </section>
+                  <section class="product-page__info-reviews product-page-reviews">
+                    Місце для відгуків
                   </section>
                 </div>
               </section>
@@ -228,7 +468,34 @@
         </h3>
         <div class="similar-products__block">
           @@include('html/product-card.html', {
-            
+          "img": "@img/temp/product-card/product-1.jpg",
+          "name": "Форма для твердого сиру 1кг",
+          "total-price": "600",
+          "last-price": "700",
+          })
+          @@include('html/product-card.html', {
+          "img": "@img/temp/product-card/product-2.jpg",
+          "name": "Душистий перець горошком (100г)",
+          "total-price": "600",
+          "last-price": "700",
+          })
+          @@include('html/product-card.html', {
+          "img": "@img/temp/product-card/product-3.jpg",
+          "name": "Червоний перець молотий (100г)",
+          "total-price": "600",
+          "last-price": "700",
+          })
+          @@include('html/product-card.html', {
+          "img": "@img/temp/product-card/product-4.jpg",
+          "name": "Мускатний горіх молотий (100г)",
+          "total-price": "600",
+          "last-price": "700",
+          })
+          @@include('html/product-card.html', {
+          "img": "@img/temp/product-card/product-5.jpg",
+          "name": "Форма для твердого сиру 1кг",
+          "total-price": "600",
+          "last-price": "700",
           })
         </div>
       </section>
@@ -238,7 +505,6 @@
   </div>
 
   @@include('html/pop-up/added-to-basket-popup.html', {})
-  @@include('html/pop-up/manufacturer-popup.html', {})
   @@include('html/pop-up/enter-popup.html', {})
   @@include('html/pop-up/registration-popup.html', {})
   @@include('html/pop-up/restore-password-popup.html', {})
