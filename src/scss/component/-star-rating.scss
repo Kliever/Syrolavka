@@ -1,0 +1,15 @@
+.star-rating{
+  text-align: left;
+  display: flex;
+  justify-content: start;
+  flex-wrap: nowrap;
+}
+.star-rating__star{
+  height: 14px;
+  width: 14px;
+  background: url('../img/icons/star-rating/star.svg') center / 100% no-repeat;
+}
+
+.star-rating__star._full-star{
+  background: url('../img/icons/star-rating/full-star.svg') center / 100% no-repeat;
+}

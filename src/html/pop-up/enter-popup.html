@@ -1,0 +1,38 @@
+<div class="enter-popup popup js-popup">
+  <div class="enter-popup-popup__table popup__table">
+    <div class="enter-popup__cell popup__table-cell js-popup-area">
+      <div class="enter-popup__window popup__window">
+        <div class="enter-popup__header popup__header">
+          <h4 class="enter-popup__title popup__title">
+            Вхід до облікового запису
+          </h4>
+          <button class="enter-popup__close popup__close js-popup-close"></button>
+        </div>
+        <div class="enter-popup__content popup__content">
+          <form action="#" class="enter-popup__form">
+            <div class="enter-popup__form-block">
+              <label for="email" class="enter-popup__label">
+                Email адреса:
+              </label>
+              <input type="email" id="email" class="enter-popup__input form-input" placeholder="yourname@mail.com" required>
+            </div>
+            <div class="enter-popup__form-block">
+              <label for="pass" class="enter-popup__label">
+                Пароль:
+              </label>
+              <input type="password" id="pass" class="enter-popup__input form-input" placeholder="Ваш пароль" required>
+            </div>
+            <button type="submit" class="enter-popup__submit main-btn">Увійти</button>
+          </form>
+          <button class="enter-popup__btn enter-popup__btn--center js-open-popup-btn" data-popup-name="restore-pass-popup">Забули пароль?</button>
+          <div class="enter-popup__bottom-row">
+            <span class="enter-popup__bottom-row-text">
+              У вас немає профілю?
+            </span>
+            <button class="enter-popup__btn js-open-popup-btn" data-popup-name="registration-popup">Створіть акаунт</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

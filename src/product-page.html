@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('html/head.html', {
+"title":"Главная страница"
+})
+
+<body>
+  <div class="main-wrapper">
+    @@include('html/header.html', {})
+
+    <main class="main-block js-main-block">
+      <div class="broadcrumbs">
+        <div class="container">
+          <div class="broadcrumbs__inner">
+            <ul class="broadcrumbs__list">
+              <ul class="broadcrumbs__link">
+                <a href="#" class="broadcrumbs__link">Головна</a>
+              </ul>
+              <ul class="broadcrumbs__link">
+                <a href="#" class="broadcrumbs__link">Інгредієнти</a>
+              </ul>
+              <ul class="broadcrumbs__link">
+                <a href="#" class="broadcrumbs__link">Кисломолочні закваски</a>
+              </ul>
+              <ul class="broadcrumbs__link">
+                Мезофільна закваска Hansen Flora Danica (50U)
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <section class="main-section">
+        <div class="container">
+          <div class="main-section__inner js-main-section-inner">
+            @@include('html/main-menu.html', {
+            "class": "main-section__menu"
+            })
+            <section class="main-section__block product-page">
+              <article class="product-page__block p-page">
+                <h1 class="p-page__name">
+
+                </h1>
+                <div class="p-page__rating-row">
+                  @@include('html/component/star-rating.html', {
+                  "class": "p-page__star-rating",
+                  "rating": "4",
+                  })
+                  @@include('html/component/comments-miniature.html', {
+                  "class": "p-page__comments",
+                  })
+                </div>
+                <div class="p-page__block">
+                  <div class="p-page__block-visual p-page-visual">
+                    <div class="p-page-visual__slider">
+                      <div class="p-page-visual__slider-wrapper">
+                        <div class="p-page-visual__slide">
+                          <div class="p-page-visual__slide-inner">
+                            <img src="@img/" alt="" class="p-page-visual__img">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="p-page-visual__miniature">
+                      <div class="p-page-visual__miniature-wrapper">
+                        <div class="p-page-visual__miniature-slide">
+                          <img src="@img/" alt="" class="p-page-visual__miniature-img">
+                        </div>
+                        <div class="p-page-visual__miniature-slide">
+                          <img src="@img/" alt="" class="p-page-visual__miniature-img">
+                        </div>
+                        <div class="p-page-visual__miniature-slide">
+                          <img src="@img/" alt="" class="p-page-visual__miniature-img">
+                        </div>
+                      </div>
+                    </div>
+                    <button class="p-page-visual__btn"></button>
+                  </div>
+                  <div class="p-page__block-info p-page-info">
+                    <div class="p-page-info__indicator">
+
+                    </div>
+                    <div class="p-page-info__price-row">
+                      <div class="p-page-info__price-block">
+                        <span class="p-page-info__actual-price">
+                          <span class="p-page-info__actual-price-num"></span>
+                        </span>
+                        <span class="p-page-info__last-price">
+                          <span class="p-page-info__last-price-num"></span>
+                        </span>
+                      </div>
+                      <button class="p-page-info__add-favorites">
+                        <svg class="p-page-info__add-favorites-icons">
+                          <use xlink:href="@img/icons/icons.svg#favorites"></use>
+                        </svg>
+                        <span class="p-page-info__add-favorites-text"></span>
+                      </button>
+                    </div>
+                    @@include('html/component/bonuses.html', {
+                    "class": "p-page__block-bonuses",
+                    })
+                    <p class="p-page__block-code">
+                      <span class="p-page__block-code-num"></span>
+                    </p>
+                    <p class="p-page__block-manufacturer">
+                      <span class="p-page__block-manufacturer-name"></span>
+                    </p>
+                    <form action="#" class="p-page__form p-page-form">
+                      <div class="p-page-form__product-num">
+
+                      </div>
+                      <button class="p-page-form__submit"></button>
+                    </form>
+                    <div class="p-page-info__region">
+
+                    </div>
+                    <div class="p-page-info__advantages">
+                      <ul class="p-page-info__advantages-list">
+                        <li class="p-page-info__advantages-item">
+
+                        </li>
+                        <li class="p-page-info__advantages-item">
+
+                        </li>
+                        <li class="p-page-info__advantages-item">
+
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <section class="product-page__analog">
+                <h3 class="product-page__analog-title">
+
+                </h3>
+                <div class="product-page__analog-slider analog-slider">
+                  <div class="analog-slider__wrapper">
+                    <article class="analog-slider__slide analog-product">
+                      <div class="analog-product__inner">
+                        <div class="analog-product__img-block">
+                          <img src="@img/" alt="" class="analog-product__img">
+                        </div>
+                        <p class="analog-product__manufacturer">
+
+                        </p>
+                        <a href="#" class="analog-product__name">
+
+                        </a>
+                        <p class="analog-product__price">
+
+                        </p>
+                        @@include('html/component/star-rating.html', {
+                        "class": "analog-product__star-rating",
+                        "rating": "4",
+                        })
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </section>
+              <section class="product-page__info">
+                <div class="product-page__info-btns-block">
+                  <button class="product-page__info-btn"></button>
+                  <button class="product-page__info-btn"></button>
+                  <button class="product-page__info-btn">
+                    <span class="product-page__info-btn-num">
+
+                    </span>
+                  </button>
+                </div>
+                <div class="product-page__info-areas-block">
+                  <section class="product-page__info-descr product-page-descr">
+                    <p class="product-page-descr__text">
+
+                    </p>
+                    <dl class="product-page-descr__list">
+                      <div class="product-page-descr__item">
+                        <dt class="product-page-descr__lidt-title">
+
+                        </dt>
+                        <dd class="product-page-descr__lidt-descr">
+
+                        </dd>
+                      </div>
+                      <div class="product-page-descr__item">
+                        <dt class="product-page-descr__lidt-title">
+
+                        </dt>
+                        <dd class="product-page-descr__lidt-descr">
+
+                        </dd>
+                      </div>
+                      <div class="product-page-descr__item">
+                        <dt class="product-page-descr__lidt-title">
+
+                        </dt>
+                        <dd class="product-page-descr__lidt-descr">
+
+                        </dd>
+                      </div>
+                      <div class="product-page-descr__item">
+                        <dt class="product-page-descr__lidt-title">
+
+                        </dt>
+                        <dd class="product-page-descr__lidt-descr">
+
+                        </dd>
+                      </div>
+                      <div class="product-page-descr__item">
+                        <dt class="product-page-descr__lidt-title">
+
+                        </dt>
+                        <dd class="product-page-descr__lidt-descr">
+
+                        </dd>
+                      </div>
+                    </dl>
+                  </section>
+                </div>
+              </section>
+            </section>
+          </div>
+        </div>
+      </section>
+      <section class="similar-products">
+        <h3 class="similar-products__title">
+
+        </h3>
+        <div class="similar-products__block">
+          @@include('html/product-card.html', {
+            
+          })
+        </div>
+      </section>
+
+    </main>
+    @@include('html/footer.html', {})
+  </div>
+
+  @@include('html/pop-up/added-to-basket-popup.html', {})
+  @@include('html/pop-up/manufacturer-popup.html', {})
+  @@include('html/pop-up/enter-popup.html', {})
+  @@include('html/pop-up/registration-popup.html', {})
+  @@include('html/pop-up/restore-password-popup.html', {})
+
+
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>

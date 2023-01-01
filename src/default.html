@@ -5,30 +5,50 @@
 })
 
 <body>
-  @@include('html/header.html', {})
-  
-  
+  <div class="main-wrapper">
+    @@include('html/header.html', {})
 
-  <main class="main-block">
-    
+    <main class="main-block js-main-block">
+      
+      <div class="broadcrumbs">
+        <div class="container">
+          <div class="broadcrumbs__inner">
+            <ul class="broadcrumbs__list">
+              <ul class="broadcrumbs__link">
+                <a href="#" class="broadcrumbs__link">
 
-    <section class="main-section">
-      <div class="container">
-        <div class="main-section__inner">
-          @@include('html/main-menu.html', {
-          "class": "main-section__menu"
-          })
-          <div class="main-section__block product-tabs">
-
+                </a>
+              </ul>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
 
-  </main>
+      <section class="main-section">
+        <div class="container">
+          <div class="main-section__inner js-main-section-inner">
+            @@include('html/main-menu.html', {
+            "class": "main-section__menu"
+            })
+            <section class="main-section__block">
+              
+            </section>
+          </div>
+        </div>
+      </section>
 
 
-  @@include('html/footer.html', {})
+    </main>
+    @@include('html/footer.html', {})
+  </div>
+
+  @@include('html/pop-up/added-to-basket-popup.html', {})
+  @@include('html/pop-up/manufacturer-popup.html', {})
+  @@include('html/pop-up/enter-popup.html', {})
+  @@include('html/pop-up/registration-popup.html', {})
+  @@include('html/pop-up/restore-password-popup.html', {})
+
+
   <script src="js/app.min.js"></script>
 </body>
 

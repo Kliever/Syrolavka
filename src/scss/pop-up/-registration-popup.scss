@@ -1,0 +1,126 @@
+.registration-popup {}
+
+.registration-popup-popup__table {}
+
+.registration-popup__cell {}
+
+.registration-popup__window {
+  max-width: 410px;
+  width: 100%;
+}
+
+.registration-popup__header {
+  margin-bottom: 30px;
+}
+
+.registration-popup__title {}
+
+.registration-popup__close {}
+
+.registration-popup__content {}
+
+.registration-popup__form {
+  text-align: left;
+}
+
+.registration-popup__form-block {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.registration-popup__label {
+  font-family: 'Circe Rounded';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--main-text);
+}
+
+.registration-popup__input {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.registration-popup__prompt{
+
+}
+
+.registration-popup__prompt--symbol-num{
+  &._active{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.registration-popup__prompt--match{
+  &._active{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.registration-popup__label-checkbox {
+  display: block;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.registration-popup__checkbox {}
+
+.registration-popup__check-box {}
+
+.registration-popup__label-text {}
+
+.registration-popup__label-link {
+  font-family: 'Circe Rounded';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--orange);
+  text-decoration: underline;
+  transition: color .3s;
+  text-decoration: underline;
+  margin: 0 auto 0 30px;
+  display: inline-block;
+  transform: translateY(-12px);
+  &:hover{
+    color: var(--dark-orange);
+  }
+}
+
+.registration-popup__submit {
+  margin-top: 10px;
+  height: 48px;
+  width: 100%;
+  margin-bottom: 47px;
+}
+
+.registration-popup__bottom-row {}
+
+.registration-popup__bottom-row-text {
+  font-family: 'Circe Rounded';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--brown);
+}
+
+.registration-popup__btn {
+  display: inline-block;
+  font-family: 'Circe Rounded';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--orange);
+  transition: color .3s;
+  text-decoration: underline;
+  background: transparent;
+  border: none;
+  &:hover{
+    color: var(--dark-orange);
+  }
+}

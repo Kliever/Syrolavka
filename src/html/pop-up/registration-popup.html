@@ -1,0 +1,72 @@
+<div class="registration-popup popup js-popup">
+  <div class="registration-popup-popup__table popup__table">
+    <div class="registration-popup__cell popup__table-cell js-popup-area">
+      <div class="registration-popup__window popup__window">
+        <div class="registration-popup__header popup__header">
+          <h4 class="registration-popup__title popup__title">
+            Реєстрація
+          </h4>
+          <button class="registration-popup__close popup__close js-popup-close"></button>
+        </div>
+        <div class="registration-popup__content popup__content">
+          <form action="#" class="registration-popup__form js-registration-form">
+            <div class="registration-popup__form-block">
+              <label for="registration-name" class="registration-popup__label">
+                Ваше ім'я та прізвище:
+              </label>
+              <input type="text" id="registration-name" class="registration-popup__input form-input js-registration-form__input"
+                placeholder="Володимир Василенко" required>
+            </div>
+            <div class="registration-popup__form-block">
+              <label for="registration-email" class="registration-popup__label">
+                Email адреса:
+              </label>
+              <input type="email" id="registration-email" class="registration-popup__input form-input js-registration-form__input"
+                placeholder="yourname@mail.com" required>
+            </div>
+            <div class="registration-popup__form-block">
+              <label for="registration-pass" class="registration-popup__label">
+                Ваш пароль для входу:
+              </label>
+              <input type="password" id="registration-pass" class="registration-popup__input form-input js-registration-form__input js-registration-form__target-input" placeholder="Містить 8 і більше символів" required>
+              <div class="registration-popup__prompt registration-popup__prompt--symbol-num main-prompt">
+                Довжина паролю повинна становити більш ніж 8 символів!
+              </div>
+            </div>
+            <div class="registration-popup__form-block">
+              <label for="registration-pass-confirm" class="registration-popup__label">
+                Підтвердження паролю:
+              </label>
+              <input type="password" id="registration-pass-confirm" class="registration-popup__input form-input js-registration-form__input js-registration-form__target-input" placeholder="Підтвердьте ваш пароль" required>
+              <div class="registration-popup__prompt registration-popup__prompt--match main-prompt">
+                Паролі не співпадають!
+              </div>
+            </div>
+            <label class="registration-popup__label-checkbox form-checkbox">
+              <input type="checkbox" class="registration-popup__checkbox form-checkbox__input">
+              <span class="registration-popup__check-box form-checkbox__box"></span>
+              <span class="registration-popup__label-text form-checkbox__text">Отримувати листи з новинами та акціями</span>
+            </label>
+            <label class="registration-popup__label-checkbox form-checkbox">
+              <input type="checkbox" class="registration-popup__checkbox form-checkbox__input" required>
+              <span class="registration-popup__check-box form-checkbox__box"></span>
+              <span class="registration-popup__label-text form-checkbox__text">
+                Я прочитав та погоджуюся з умовами 
+              </span>
+            </label>
+            <a href="#" class="registration-popup__label-link">
+              Політики конфіденційності
+            </a>
+            <button type="submit" class="registration-popup__submit main-btn js-registration-form__submit">Створити акаунт</button>
+            <div class="registration-popup__bottom-row">
+              <span class="registration-popup__bottom-row-text">
+                У вас є профіль?
+              </span>
+              <button type="button" class="registration-popup__btn js-open-popup-btn" data-popup-name="enter-popup">Увійти до акаунту</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -8,16 +8,32 @@
 
 
 @import "modules/-header";
+
 @import "modules/-footer";
 @import "modules/-main-menu";
 @import "modules/-product-card";
 @import "modules/-article-annonce";
 
+@import "component/-star-rating";
+@import "component/-comments-miniature";
+@import "component/-bonuses";
+
+@import "pop-up/-added-to-basket-popup";
+@import "pop-up/-manufacturer-popup";
+@import "pop-up/-enter-popup";
+@import "pop-up/-registration-popup";
+@import "pop-up/-restore-password-popup";
+
+
+
 
 @import "pages/index";
+@import "pages/product-page";
 
 
 
-
+@import "modules/-mobile-menu";
 @import "_media";
 @import "_animation";
+
+

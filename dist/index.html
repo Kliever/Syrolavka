@@ -10,305 +10,343 @@
 
 <body>
   <div class="main-wrapper">
-    <header class="header js-header">
-  <div class="header__top">
-    <div class="container">
-      <div class="header__top-inner">
-        <form action="#" class="header__select-sity select-sity js-custom-select">
-          <button type="button" class="select-sity__btn js-custom-select__button">
-            <svg class="select-sity__btn-icon" viewBox="0 0 14 18">
-              <use xlink:href="img/icons/icons.svg#map-marker"></use>
-            </svg>
-            <span class="select-sity__btn-info">Ваше місто:</span>
-            <span class="select-sity__btn-text js-custom-select__btn-text"></span>
-          </button>
-          <ul class="select-sity__options js-custom-select__options">
-            <li class="select-sity__option js-custom-select__option" data-value="Kyiv">Київ</li>
-            <li class="select-sity__option js-custom-select__option" data-value="Kharkiv" active>Харків</li>
-            <li class="select-sity__option js-custom-select__option" data-value="Dnipro">Дніпро</li>
-            <li class="select-sity__option js-custom-select__option" data-value="Zaporizhzhia">Запоріжжя</li>
-            <li class="select-sity__option js-custom-select__option" data-value="Konotop">Конотоп</li>
-          </ul>
-          <input type="text" class="select-sity__input js-custom-select__input">
-        </form>
-        <div class="header__working-hours">
-          <svg class="header__working-hours-icon" viewBox="0 0 18 18">
-            <use xlink:href="img/icons/icons.svg#watch"></use>
-          </svg>
-          <div class="header__working-hours-text">Пн-Пт 9:00 - 19:00</div>
-        </div>
-        <nav class="header__top-nav top-nav">
-          <ul class="top-nav__list">
-            <li class="top-nav__item">
-              <a href="#" class="top-nav__link">Про компанію</a>
-            </li>
-            <li class="top-nav__item">
-              <a href="#" class="top-nav__link">Переваги</a>
-            </li>
-            <li class="top-nav__item">
-              <a href="#" class="top-nav__link">Акційні товари</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header__account">
-          <button type="button" class="header__account-link header__account-link--btn">
-            <svg class="top-nav__link-icon" viewBox="0 0 18 18">
-              <use xlink:href="img/icons/icons.svg#user"></use>
-            </svg>
-            <span class="header__account-text js-header-account-text">Увійти до облікового запису</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="header__middle">
-    <div class="container">
-      <div class="header__middle-inner js-header-middle-inner">
-        <a href="#" class="header__logo logo js-header-logo">
-          <picture>
-            <source srcset="img/logo-mobile.png" media="(max-width: 850px)">
-            <img src="img/logo.png" alt="Логотип" class="logo__img">
-          </picture>
-        </a>
-        <div class="header__middle-info">
-          <img src="img/icons/header/header-icon-delivery.png" alt="" class="header__middle-info-icon"
-            aria-hidden="true">
-          <span class="header__middle-info-text">Безкоштовна доставка</span>
-          <div class="header__middle-info-prompt main-prompt">
-            Даруємо безкоштовну доставку в межах України при замовленні на суму від 1000 грн.
-          </div>
-        </div>
-        <div class="header__middle-info">
-          <img src="img/icons/header/header-icon-discounts.png" alt="" class="header__middle-info-icon"
-            aria-hidden="true">
-          <span class="header__middle-info-text">Оплата на сайті зі знижкою</span>
-          <div class="header__middle-info-prompt main-prompt">
-            Даруємо безкоштовну доставку в межах України при замовленні на суму від 1000 грн.
-          </div>
-        </div>
-        <div class="header__middle-info">
-          <img src="img/icons/header/header-icon-def.png" alt="" class="header__middle-info-icon" aria-hidden="true">
-          <span class="header__middle-info-text">Захист покупців</span>
-          <div class="header__middle-info-prompt main-prompt">
-            Даруємо безкоштовну доставку в межах України при замовленні на суму від 1000 грн.
-          </div>
-        </div>
-        <ul class="header__social-list">
-          <li class="header__social-item">
-            <a href="#" class="header__social-link" aria-label="Telegram">
-              <img src="img/icons/social/tg.png" alt="Telegram" class="header__social-icon" aria-hidden="true">
-            </a>
-          </li>
-          <li class="header__social-item">
-            <a href="#" class="header__social-link" aria-label="WhatsApp">
-              <img src="img/icons/social/wu.png" alt="WhatsApp" class="header__social-icon" aria-hidden="true">
-            </a>
-          </li>
-          <li class="header__social-item">
-            <a href="#" class="header__social-link" aria-label="Facebook">
-              <img src="img/icons/social/fb.png" alt="Facebook" class="header__social-icon" aria-hidden="true">
-            </a>
-          </li>
-        </ul>
-        <div class="header__call-back js-header__call-back">
-          <span class="header__call-back-num js-header-call-back-num">  
-            +38 (066) 460-19-60</span>
-          <button class="header__call-back-btn icon-btn js-header-call-back-btn" type="button">
-            <svg class="icon-btn__icon icon-btn__icon--phone js-header-call-back-icon" viewBox="0 0 14 14">
-              <use xlink:href="img/icons/icons.svg#phone"></use>
-            </svg>
-            <span class="icon-btn__text">Замовити дзвінок</span>
-          </button>
-        </div>
-        <button class="header__search-open js-header-search-open" type="button" aria-label="Открыть строку поиска">
-          <svg class="header__search-btn-icon" viewBox="0 0 24 24">
-            <use xlink:href="img/icons/icons.svg#search"></use>
-          </svg>
-        </button>
-        <div class="header-basket js-drop-box">
-          <button class="header-basket__btn js-drop-box__btn" aria-label="Корзина">
-            <div class="header-basket__btn-info">
-              <div class="header-basket__btn-text">Ваш кошик</div>
-              <div class="header-basket__btn-sum">
-                <span class="js-header-basket__total-price">
-                  
-                </span>
-                 грн.</div>
-            </div>
-            <div class="header-basket__btn-picture">
-              <svg class="header-basket__btn-icon" viewBox="0 0 40 36">
-                <use xlink:href="img/icons/icons.svg#basket"></use>
+    <header class="header js-header js-scroll-padding">
+  <div class="header__inner">
+    <div class="header__top js-header-top">
+      <div class="container">
+        <div class="header__top-inner">
+          <form action="#" class="header__select-sity select-sity js-custom-select">
+            <button type="button" class="select-sity__btn js-custom-select__button">
+              <svg class="select-sity__btn-icon" viewBox="0 0 14 18">
+                <use xlink:href="img/icons/icons.svg#map-marker"></use>
               </svg>
-              <div class="header-basket__btn-num js-header-basket__quantity"></div>
-            </div>
-          </button>
-          <form class="header-basket__block js-drop-box__open-block js-header-basket">
-            <h3 class="header-basket__block-title">
-              кошик (<span class="js-header-basket__quantity"></span>)
-            </h3>
-            <div class="header-basket__list js-header-basket__products">
-              <article class="header-basket__item header-basket-item js-header-basket__item">
-                <div class="header-basket-item__img-block">
-                  <img src="img/temp/header/product-1.jpg" alt="" class="header-basket-item__img">
-                </div>
-                <a href="#" class="header-basket-item__link">
-                  <h4 class="header-basket-item__title">
-                    Форма для твердого сиру 1 кг - 40 отворів
-                  </h4>
-                </a>
-                <button type="button" class="header-basket-item__delete-btn js-header-basket__item-del-btn"></button>
-                <div class="header-basket-item__quantity num-input">
-                  <button type="button" class="num-input__btn-down js-header-basket__item-btn-down"></button>
-                  <input type="text" class="num-input__area js-header-basket__item-amount" min="5" max="999" value="7">
-                  <button type="button" class="num-input__btn-up js-header-basket__item-btn-up"></button>
-                </div>
-                <div class="header-basket-item__total-price">
-                  <span class="header-basket-item__total-price-num js-header-basket__item-price" data-price="440"></span>
-                  <span>грн.</span>
-                </div>
-              </article>
-              <article class="header-basket__item header-basket-item js-header-basket__item">
-                <div class="header-basket-item__img-block">
-                  <img src="img/temp/header/product-2.jpg" alt="" class="header-basket-item__img">
-                </div>
-                <a href="#" class="header-basket-item__link">
-                  <h4 class="header-basket-item__title">
-                    Універсальний папір, 10 шт
-                  </h4>
-                </a>
-                <button type="button" class="header-basket-item__delete-btn js-header-basket__item-del-btn"></button>
-                <div class="header-basket-item__quantity num-input">
-                  <button type="button" class="num-input__btn-down js-header-basket__item-btn-down"></button>
-                  <input type="text" class="num-input__area js-header-basket__item-amount" min="2" max="999" value="4">
-                  <button type="button" class="num-input__btn-up js-header-basket__item-btn-up"></button>
-                </div>
-                <div class="header-basket-item__total-price">
-                  <span class="header-basket-item__total-price-num js-header-basket__item-price" data-price="310"></span>
-                  <span>грн.</span>
-                </div>
-              </article>
-            </div>
-            <dl class="header-basket__list-info">
-              <div class="header-basket__list-row">
-                <dt class="header-basket__list-title">Товарів у кошику:</dt>
-                <dd class="header-basket__list-descr">
-                  <span class="js-header-basket__quantity">
-                    
-                  </span>
-                   шт.</dd>
-              </div>
-              <div class="header-basket__list-row">
-                <dt class="header-basket__list-title">Загальна вартість:</dt>
-                <dd class="header-basket__list-descr">
-                  <span class="header-basket__list-descr-num js-header-basket__total-price"></span>
-                  <span> грн.</span>
-                </dd>
-              </div>
-            </dl>
-            <button type="submit" class="header-basket__link main-btn js-header-basket__submit">
-              Оформити замовлення
+              <span class="select-sity__btn-info">Ваше місто:</span>
+              <span class="select-sity__btn-text js-custom-select__btn-text"></span>
             </button>
+            <ul class="select-sity__options js-custom-select__options">
+              <li class="select-sity__option js-custom-select__option" data-value="Kyiv">Київ</li>
+              <li class="select-sity__option js-custom-select__option" data-value="Kharkiv" active>Харків</li>
+              <li class="select-sity__option js-custom-select__option" data-value="Dnipro">Дніпро</li>
+              <li class="select-sity__option js-custom-select__option" data-value="Zaporizhzhia">Запоріжжя</li>
+              <li class="select-sity__option js-custom-select__option" data-value="Konotop">Конотоп</li>
+            </ul>
+            <input type="text" class="select-sity__input js-custom-select__input">
           </form>
+          <div class="header__working-hours">
+            <svg class="header__working-hours-icon" viewBox="0 0 18 18">
+              <use xlink:href="img/icons/icons.svg#watch"></use>
+            </svg>
+            <div class="header__working-hours-text">Пн-Пт 9:00 - 19:00</div>
+          </div>
+          <nav class="header__top-nav top-nav js-header-top-nav">
+            <ul class="top-nav__list js-top-nav-list js-mobile-menu-block mobile-menu-block">
+              <li class="top-nav__item">
+                <a href="#" class="top-nav__link">Про компанію</a>
+              </li>
+              <li class="top-nav__item">
+                <a href="#" class="top-nav__link">Переваги</a>
+              </li>
+              <li class="top-nav__item">
+                <a href="#" class="top-nav__link">Акційні товари</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__account">
+            <button type="button" class="header__account-link header__account-link--btn js-open-popup-btn" data-popup-name="enter-popup">
+              <svg class="top-nav__link-icon" viewBox="0 0 18 18">
+                <use xlink:href="img/icons/icons.svg#user"></use>
+              </svg>
+              <span class="header__account-text js-header-account-text">Увійти до облікового запису</span>
+            </button>
+          </div>
         </div>
-        <button class="header__menu-btn menu-btn js-menu-btn" type="bytton">
-          <div class="menu-btn__line"></div>
-          <div class="menu-btn__line"></div>
-          <div class="menu-btn__line"></div>
-        </button>
       </div>
     </div>
-  </div>
-  <div class="header__bottom">
-    <div class="container">
-      <div class="header__bottom-inner js-header__bottom-inner">
-        <nav class="header__bottom-nav bottom-nav js-header-bottom-nav">
-          <ul class="bottom-nav__list">
-            <li class="bottom-nav__item bottom-nav__drop drop">
-              Рецепти
-              <div class="bottom-nav__drop-box drop__item">
-                <ul class="bottom-nav__drop-list">
-                  <li class="bottom-nav__drop-item">
-                    <a href="#" class="bottom-nav__drop-link">
-                      Молоді сири
-                    </a>
-                  </li>
-                  <li class="bottom-nav__drop-item">
-                    <a href="#" class="bottom-nav__drop-link">
-                      Напівтверді сири
-                    </a>
-                  </li>
-                  <li class="bottom-nav__drop-item">
-                    <a href="#" class="bottom-nav__drop-link">
-                      Паста Філата
-                    </a>
-                  </li>
-                  <li class="bottom-nav__drop-item">
-                    <a href="#" class="bottom-nav__drop-link">
-                      Сироваткові сири
-                    </a>
-                  </li>
-                  <li class="bottom-nav__drop-item">
-                    <a href="#" class="bottom-nav__drop-link">
-                      Сири з пліснявою
-                    </a>
-                  </li>
-                  <li class="bottom-nav__drop-item">
-                    <a href="#" class="bottom-nav__drop-link">
-                      Тверді сири
-                    </a>
-                  </li>
-                  <li class="bottom-nav__drop-item">
-                    <a href="#" class="bottom-nav__drop-link">
-                      Кисломолочні продукти
-                    </a>
-                  </li>
-                  <li class="bottom-nav__drop-item">
-                    <a href="#" class="bottom-nav__drop-link">
-                      Всі рецепти
-                    </a>
-                  </li>
-                </ul>
+    <div class="header__middle js-header-middle">
+      <div class="container">
+        <div class="header__middle-inner">
+          <a href="#" class="header__logo logo js-header-logo">
+            <picture>
+              <source srcset="img/logo-mobile.png" media="(max-width: 850px)">
+              <img src="img/logo.png" alt="Логотип" class="logo__img">
+            </picture>
+          </a>
+          <div class="header__middle-info-grid js-header-middle-info-grid">
+            <div class="header__middle-info js-header-middle-info">
+              <img src="img/icons/header/header-icon-delivery.png" alt="" class="header__middle-info-icon"
+                aria-hidden="true">
+              <span class="header__middle-info-text">Безкоштовна доставка</span>
+              <div class="header__middle-info-prompt main-prompt">
+                Даруємо безкоштовну доставку в межах України при замовленні на суму від 1000 грн.
               </div>
-            </li>
-            <li class="bottom-nav__item">
-              <a href="#" class="bottom-nav__link">
-                Доставка та оплата
+            </div>
+            <div class="header__middle-info js-header-middle-info">
+              <img src="img/icons/header/header-icon-discounts.png" alt="" class="header__middle-info-icon"
+                aria-hidden="true">
+              <span class="header__middle-info-text">Оплата на сайті зі знижкою</span>
+              <div class="header__middle-info-prompt main-prompt">
+                Даруємо безкоштовну доставку в межах України при замовленні на суму від 1000 грн.
+              </div>
+            </div>
+            <div class="header__middle-info js-header-middle-info">
+              <img src="img/icons/header/header-icon-def.png" alt="" class="header__middle-info-icon"
+                aria-hidden="true">
+              <span class="header__middle-info-text">Захист покупців</span>
+              <div class="header__middle-info-prompt main-prompt">
+                Даруємо безкоштовну доставку в межах України при замовленні на суму від 1000 грн.
+              </div>
+            </div>
+          </div>
+          <ul class="header__social-list js-header-social-list">
+            <li class="header__social-item">
+              <a href="#" class="header__social-link" aria-label="Telegram">
+                <img src="img/icons/social/tg.png" alt="Telegram" class="header__social-icon" aria-hidden="true">
               </a>
             </li>
-            <li class="bottom-nav__item">
-              <a href="#" class="bottom-nav__link">
-                Калькулятор Сиророба
+            <li class="header__social-item">
+              <a href="#" class="header__social-link" aria-label="WhatsApp">
+                <img src="img/icons/social/wu.png" alt="WhatsApp" class="header__social-icon" aria-hidden="true">
               </a>
             </li>
-            <li class="bottom-nav__item">
-              <a href="#" class="bottom-nav__link">
-                Відгуки
-              </a>
-            </li>
-            <li class="bottom-nav__item">
-              <a href="#" class="bottom-nav__link">
-                Питання та відповіді
-              </a>
-            </li>
-            <li class="bottom-nav__item">
-              <a href="#" class="bottom-nav__link">
-                Контакти
+            <li class="header__social-item">
+              <a href="#" class="header__social-link" aria-label="Facebook">
+                <img src="img/icons/social/fb.png" alt="Facebook" class="header__social-icon" aria-hidden="true">
               </a>
             </li>
           </ul>
-        </nav>
-        <form class="header__search js-header-search">
-          <button class="header__search-btn" type="submit" aria-label="Найти">
+          <div class="header__call-back js-header-call-back">
+            <span class="header__call-back-num js-header-call-back-num">
+              +38 (066) 460-19-60</span>
+            <button class="header__call-back-btn icon-btn js-header-call-back-btn" type="button">
+              <svg class="icon-btn__icon icon-btn__icon--phone js-header-call-back-icon" viewBox="0 0 14 14">
+                <use xlink:href="img/icons/icons.svg#phone"></use>
+              </svg>
+              <span class="icon-btn__text">Замовити дзвінок</span>
+            </button>
+          </div>
+          <button class="header__search-open js-header-search-open" type="button" aria-label="Открыть строку поиска">
             <svg class="header__search-btn-icon" viewBox="0 0 24 24">
               <use xlink:href="img/icons/icons.svg#search"></use>
             </svg>
           </button>
-          <input type="text" class="header__search-input" placeholder="Введіть назву товару або артикул">
-        </form>
+          <div class="header-basket js-header-basket js-drop-box">
+            <button class="header-basket__btn js-drop-box__btn" aria-label="Корзина">
+              <div class="header-basket__btn-info">
+                <div class="header-basket__btn-text">Ваш кошик</div>
+                <div class="header-basket__btn-sum">
+                  <span class="js-header-basket__total-price">
+
+                  </span>
+                  грн.
+                </div>
+              </div>
+              <div class="header-basket__btn-picture">
+                <svg class="header-basket__btn-icon" viewBox="0 0 40 36">
+                  <use xlink:href="img/icons/icons.svg#basket"></use>
+                </svg>
+                <div class="header-basket__btn-num js-header-basket__quantity"></div>
+              </div>
+            </button>
+            <form class="header-basket__block js-drop-box__open-block js-header-basket-block">
+              <div class="header-basket__block-inner">
+                <h3 class="header-basket__block-title">
+                  кошик (<span class="js-header-basket__quantity"></span>)
+                </h3>
+                <div class="header-basket__list js-header-basket__products">
+                  <article class="header-basket__item header-basket-item js-header-basket__item">
+                    <div class="header-basket-item__img-block">
+                      <img src="img/temp/header/product-1.jpg" alt="" class="header-basket-item__img">
+                    </div>
+                    <a href="#" class="header-basket-item__link">
+                      <h4 class="header-basket-item__title">
+                        Форма для твердого сиру 1 кг - 40 отворів
+                      </h4>
+                    </a>
+                    <button type="button"
+                      class="header-basket-item__delete-btn js-header-basket__item-del-btn"></button>
+                    <div class="header-basket-item__quantity num-input">
+                      <button type="button" class="num-input__btn-down js-header-basket__item-btn-down"></button>
+                      <input type="text" class="num-input__area js-header-basket__item-amount" min="5" max="999"
+                        value="7">
+                      <button type="button" class="num-input__btn-up js-header-basket__item-btn-up"></button>
+                    </div>
+                    <div class="header-basket-item__total-price">
+                      <span class="header-basket-item__total-price-num js-header-basket__item-price"
+                        data-price="440"></span>
+                      <span>грн.</span>
+                    </div>
+                  </article>
+                  <article class="header-basket__item header-basket-item js-header-basket__item">
+                    <div class="header-basket-item__img-block">
+                      <img src="img/temp/header/product-2.jpg" alt="" class="header-basket-item__img">
+                    </div>
+                    <a href="#" class="header-basket-item__link">
+                      <h4 class="header-basket-item__title">
+                        Універсальний папір, 10 шт
+                      </h4>
+                    </a>
+                    <button type="button"
+                      class="header-basket-item__delete-btn js-header-basket__item-del-btn"></button>
+                    <div class="header-basket-item__quantity num-input">
+                      <button type="button" class="num-input__btn-down js-header-basket__item-btn-down"></button>
+                      <input type="text" class="num-input__area js-header-basket__item-amount" min="2" max="999"
+                        value="4">
+                      <button type="button" class="num-input__btn-up js-header-basket__item-btn-up"></button>
+                    </div>
+                    <div class="header-basket-item__total-price">
+                      <span class="header-basket-item__total-price-num js-header-basket__item-price"
+                        data-price="310"></span>
+                      <span>грн.</span>
+                    </div>
+                  </article>
+                </div>
+                <dl class="header-basket__list-info">
+                  <div class="header-basket__list-row">
+                    <dt class="header-basket__list-title">Товарів у кошику:</dt>
+                    <dd class="header-basket__list-descr">
+                      <span class="js-header-basket__quantity">
+
+                      </span>
+                      шт.
+                    </dd>
+                  </div>
+                  <div class="header-basket__list-row">
+                    <dt class="header-basket__list-title">Загальна вартість:</dt>
+                    <dd class="header-basket__list-descr">
+                      <span class="header-basket__list-descr-num js-header-basket__total-price"></span>
+                      <span> грн.</span>
+                    </dd>
+                  </div>
+                </dl>
+                <button type="submit" class="header-basket__link main-btn js-header-basket__submit">
+                  Оформити замовлення
+                </button>
+              </div>
+            </form>
+          </div>
+          <button class="header__menu-btn menu-btn js-menu-btn" type="button">
+            <div class="menu-btn__line"></div>
+            <div class="menu-btn__line"></div>
+            <div class="menu-btn__line"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="container">
+        <div class="header__bottom-inner js-header-bottom-inner">
+          <nav class="header__bottom-nav bottom-nav js-header-bottom-nav">
+            <ul class="bottom-nav__list js-bottom-nav-list js-mobile-menu-block mobile-menu-block">
+              <li class="bottom-nav__item bottom-nav__drop bottom-nav__drop">
+                <span class="bottom-nav__item-name bottom-nav__name js-mobile-menu-btn">Рецепти</span>
+                <div class="bottom-nav__drop-box bottom-nav__drop-area js-mobile-menu-block mobile-menu-block">
+                  <ul class="bottom-nav__drop-list">
+                    <li class="bottom-nav__drop-item">
+                      <a href="#" class="bottom-nav__drop-link">
+                        Молоді сири
+                      </a>
+                    </li>
+                    <li class="bottom-nav__drop-item">
+                      <a href="#" class="bottom-nav__drop-link">
+                        Напівтверді сири
+                      </a>
+                    </li>
+                    <li class="bottom-nav__drop-item">
+                      <a href="#" class="bottom-nav__drop-link">
+                        Паста Філата
+                      </a>
+                    </li>
+                    <li class="bottom-nav__drop-item">
+                      <a href="#" class="bottom-nav__drop-link">
+                        Сироваткові сири
+                      </a>
+                    </li>
+                    <li class="bottom-nav__drop-item">
+                      <a href="#" class="bottom-nav__drop-link">
+                        Сири з пліснявою
+                      </a>
+                    </li>
+                    <li class="bottom-nav__drop-item">
+                      <a href="#" class="bottom-nav__drop-link">
+                        Тверді сири
+                      </a>
+                    </li>
+                    <li class="bottom-nav__drop-item">
+                      <a href="#" class="bottom-nav__drop-link">
+                        Кисломолочні продукти
+                      </a>
+                    </li>
+                    <li class="bottom-nav__drop-item">
+                      <a href="#" class="bottom-nav__drop-link">
+                        Всі рецепти
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="bottom-nav__item">
+                <a href="#" class="bottom-nav__link bottom-nav__name">
+                  Доставка та оплата
+                </a>
+              </li>
+              <li class="bottom-nav__item">
+                <a href="#" class="bottom-nav__link bottom-nav__name">
+                  Калькулятор Сиророба
+                </a>
+              </li>
+              <li class="bottom-nav__item">
+                <a href="#" class="bottom-nav__link bottom-nav__name">
+                  Відгуки
+                </a>
+              </li>
+              <li class="bottom-nav__item">
+                <a href="#" class="bottom-nav__link bottom-nav__name">
+                  Питання та відповіді
+                </a>
+              </li>
+              <li class="bottom-nav__item">
+                <a href="#" class="bottom-nav__link bottom-nav__name">
+                  Контакти
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <form class="header__search js-header-search">
+            <button class="header__search-btn" type="submit" aria-label="Найти">
+              <svg class="header__search-btn-icon" viewBox="0 0 24 24">
+                <use xlink:href="img/icons/icons.svg#search"></use>
+              </svg>
+            </button>
+            <input type="text" class="header__search-input" placeholder="Введіть назву товару або артикул">
+          </form>
+        </div>
       </div>
     </div>
   </div>
+
 </header>
+
+
+
+<div class="mobile-menu js-mobile-menu">
+  <div class="mobile-menu__table">
+    <div class="mobile-menu__table-cell">
+      <div class="mobile-menu__area">
+        <div class="mobile-menu__area-info">
+          <div class="mobile-menu__top-block">
+            <div class="mobile-menu__back js-mobile-menu-back">
+              <button class="mobile-menu__back-btn js-mobile-menu-back-btn"></button>
+            </div>
+            <div class="mobile-menu__name js-mobile-menu-name"></div>
+          </div>
+          <div class="mobile-menu__bot-block js-mobile-menu-bot-block">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
     <main class="main-block js-main-block">
 
       <section class="hero">
@@ -350,323 +388,223 @@
 
       <section class="main-section">
         <div class="container">
-          <div class="main-section__inner">
-            <nav class="main-section__menu product-menu">
-  <div class="product-menu__block">
-    <h5 class="product-menu__title">
-      <svg class="product-menu__title-icon" viewBox="0 0 22 22">
-        <use xlink:href="img/icons/icons.svg#cheese"></use>
-      </svg>
-      Інгредієнти
-    </h5>
-    <ul class="product-menu__list">
-      <li class="product-menu__item product-menu__drop drop">
-        Закваски для сиру
-        <div class="product-menu__drop-box drop__item">
-          <ul class="product-menu__drop-list product-menu__list">
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+          <div class="main-section__inner js-main-section-inner">
+            <nav class="main-section__menu main-menu js-main-menu">
+  <ul class="main-menu__main-blocks js-mobile-menu-block mobile-menu-block">
+    <li class="main-menu__block">
+      <h5 class="main-menu__block-name js-mobile-menu-btn">
+        <svg class="main-menu__name-icon" viewBox="0 0 22 22">
+          <use xlink:href="img/icons/icons.svg#cheese"></use>
+        </svg>
+        Інгредієнти
+      </h5>
+      <ul class="main-menu__list js-mobile-menu-block mobile-menu-block">
+        <li class="main-menu__list-item main-menu__drop">
+          <span class="main-menu__list-item-name main-menu__name js-mobile-menu-btn">Закваски для сиру</span>
+          <ul class="main-menu__list main-menu__drop-item js-mobile-menu-block mobile-menu-block">
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
+            </li>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
           </ul>
-        </div>
-      </li>
-      <li class="product-menu__item product-menu__drop drop">
-        Фкрменти для сиру
-        <div class="product-menu__drop-box drop__item">
-          <ul class="product-menu__drop-list product-menu__list">
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+        </li>
+        <li class="main-menu__list-item main-menu__drop">
+          <span class="main-menu__list-item-name main-menu__name js-mobile-menu-btn">Ферменти для сиру</span>
+          <ul class="main-menu__list main-menu__drop-item js-mobile-menu-block mobile-menu-block">
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
+            </li>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
           </ul>
-        </div>
-      </li>
-      <li class="product-menu__item">
-        <a href="#" class="product-menu__link">
-          Хлористий кальцій
-        </a>
-      </li>
-      <li class="product-menu__item product-menu__drop drop">
-        Пліснява для сиру
-        <div class="product-menu__drop-box drop__item">
-          <ul class="product-menu__drop-list product-menu__list">
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+        </li>
+        <li class="main-menu__list-item">
+          <a href="#" class="main-menu__list-link main-menu__name">Хлористий кальцій</a>
+        </li>
+        <li class="main-menu__list-item main-menu__drop">
+          <span class="main-menu__list-item-name main-menu__name js-mobile-menu-btn">Пліснява для сиру</span>
+          <ul class="main-menu__list main-menu__drop-item js-mobile-menu-block mobile-menu-block">
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
+            </li>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
           </ul>
-        </div>
-      </li>
-      <li class="product-menu__item product-menu__drop drop">
-        Кисломолочні закваски
-        <div class="product-menu__drop-box drop__item">
-          <ul class="product-menu__drop-list product-menu__list">
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+        </li>
+        <li class="main-menu__list-item main-menu__drop">
+          <span class="main-menu__list-item-name main-menu__name js-mobile-menu-btn">Кисломолочні закваски</span>
+          <ul class="main-menu__list main-menu__drop-item js-mobile-menu-block mobile-menu-block">
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
+            </li>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
           </ul>
-        </div>
-      </li>
-      <li class="product-menu__item">
-        <a href="#" class="product-menu__link">
-          Барвники для сиру
-        </a>
-      </li>
-      <li class="product-menu__item product-menu__drop drop">
-        Спеції для сиру
-        <div class="product-menu__drop-box drop__item">
-          <ul class="product-menu__drop-list product-menu__list">
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+        </li>
+        <li class="main-menu__list-item">
+          <a href="#" class="main-menu__list-link main-menu__name">Фарбники для сиру</a>
+        </li>
+        <li class="main-menu__list-item main-menu__drop">
+          <span class="main-menu__list-item-name main-menu__name js-mobile-menu-btn">Спеції для сиру</span>
+          <ul class="main-menu__list main-menu__drop-item js-mobile-menu-block mobile-menu-block">
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
+            </li>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
           </ul>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div class="product-menu__block">
-    <h5 class="product-menu__title">
-      <svg class="product-menu__title-icon" viewBox="0 0 22 22">
-        <use xlink:href="img/icons/icons.svg#cereal-bowl"></use>
-      </svg>
-      Обладнання
-    </h5>
-    <ul class="product-menu__list">
-      <li class="product-menu__item product-menu__drop drop">
-        Форми для сиру
-        <div class="product-menu__drop-box drop__item">
-          <ul class="product-menu__drop-list product-menu__list">
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+        </li>
+      </ul>
+    </li>
+
+
+    <li class="main-menu__block">
+      <h5 class="main-menu__block-name js-mobile-menu-btn">
+        <svg class="main-menu__name-icon" viewBox="0 0 22 22">
+          <use xlink:href="img/icons/icons.svg#cereal-bowl"></use>
+        </svg>
+        Обладнання
+      </h5>
+      <ul class="main-menu__list js-mobile-menu-block mobile-menu-block">
+        <li class="main-menu__list-item main-menu__drop">
+          <span class="main-menu__list-item-name main-menu__name js-mobile-menu-btn">Форми для сиру</span>
+          <ul class="main-menu__list main-menu__drop-item js-mobile-menu-block mobile-menu-block">
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
-            </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
           </ul>
-        </div>
-      </li>
-      <li class="product-menu__item">
-        <a href="#" class="product-menu__link">
-          Латексне покриття
-        </a>
-      </li>
-      <li class="product-menu__item">
-        <a href="#" class="product-menu__link">
-          Віск для сиру
-        </a>
-      </li>
-      <li class="product-menu__item product-menu__drop drop">
-        Термоусадкові пакети
-        <div class="product-menu__drop-box drop__item">
-          <ul class="product-menu__drop-list product-menu__list">
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+        </li>
+        <li class="main-menu__list-item">
+          <a href="#" class="main-menu__list-link main-menu__name">Латексне покриття</a>
+        </li>
+        <li class="main-menu__list-item">
+          <a href="#" class="main-menu__list-link main-menu__name">Віск для сиру</a>
+        </li>
+        <li class="main-menu__list-item main-menu__drop">
+          <span class="main-menu__list-item-name main-menu__name js-mobile-menu-btn">Термоусадкові пакети</span>
+          <ul class="main-menu__list main-menu__drop-item js-mobile-menu-block mobile-menu-block">
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
-            </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
-            </li>
-            <li class="product-menu__drop-item product-menu__item">
-              <a href="#" class="product-menu__drop-link product-menu__link">
-                Додаткове меню
-              </a>
+            <li class="main-menu__list-item">
+              <a href="#" class="main-menu__list-link main-menu__name">Пункт меню</a>
             </li>
           </ul>
-        </div>
-      </li>
-      <li class="product-menu__item">
-        <a href="#" class="product-menu__link">
-          Дренажні коврики
-        </a>
-      </li>
-      <li class="product-menu__item">
-        <a href="#" class="product-menu__link">
-          Дренажні мішки та салфетки для пресування
-        </a>
-      </li>
-      <li class="product-menu__item">
-        <a href="#" class="product-menu__link">
-          Дренажні контейнери
-        </a>
-      </li>
-    </ul>
-  </div>
+        </li>
+        <li class="main-menu__list-item">
+          <a href="#" class="main-menu__list-link main-menu__name">Дренажні коврики</a>
+        </li>
+        <li class="main-menu__list-item">
+          <a href="#" class="main-menu__list-link main-menu__name">Дренажні мішки і салфетки для пресування</a>
+        </li>
+        <li class="main-menu__list-item">
+          <a href="#" class="main-menu__list-link main-menu__name">Дренажні контейнери</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </nav>
+
+
             <section class="main-section__block product-tabs tabs js-tabs">
               <div class="product-tabs__btns">
                 <button class="product-tabs__btn tabs__btn js-tabs__btn" data-tab-name="first">Популярні товари</button>
@@ -703,9 +641,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -732,9 +670,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -761,9 +699,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -790,9 +728,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -819,9 +757,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -848,9 +786,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -877,9 +815,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -906,9 +844,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                     </div>
@@ -942,9 +880,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -971,9 +909,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1000,9 +938,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1029,9 +967,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1058,9 +996,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1087,9 +1025,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1116,9 +1054,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1145,9 +1083,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                     </div>
@@ -1183,9 +1121,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1212,9 +1150,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1241,9 +1179,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1270,9 +1208,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1299,9 +1237,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1328,9 +1266,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1357,9 +1295,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1386,9 +1324,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                     </div>
@@ -1422,9 +1360,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1451,9 +1389,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1480,9 +1418,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1509,9 +1447,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1538,9 +1476,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1567,9 +1505,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1596,9 +1534,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                       <article class="product-tabs__product product-card">
@@ -1625,9 +1563,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
                     </div>
@@ -1940,9 +1878,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
               </div>
@@ -1971,9 +1909,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
               </div>
@@ -2002,9 +1940,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
               </div>
@@ -2033,9 +1971,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
               </div>
@@ -2064,9 +2002,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
               </div>
@@ -2095,9 +2033,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
               </div>
@@ -2126,9 +2064,9 @@
         ₴
       </p>
     </div>
-    <buttom class="product-card__add-button main-btn">
+    <a href="#" class="product-card__add-button main-btn">
       Додати
-    </buttom>
+    </a>
   </div>
 </article>
               </div>
@@ -2304,6 +2242,477 @@
   </div>
 </footer>
   </div>
+
+  <div class="basket-popup popup js-popup added-to-basket-popup">
+  <div class="basket-popup__table popup__table">
+    <div class="basket-popup__cell popup__table-cell js-popup-area">
+      <div class="basket-popup__window popup__window">
+        <div class="basket-popup__header popup__header">
+          <h4 class="basket-popup__title popup__title">
+            Додано до кошика
+          </h4>
+          <button class="basket-popup__close popup__close js-popup-close"></button>
+        </div>
+        <div class="basket-popup__content popup__content">
+          <article class="basket-popup__product basket-popup-product">
+            <div class="basket-popup-product__img-block">
+              <img src="img/temp/basket-popup-product/product-1.jpg" alt="" class="basket-popup-product__img">
+            </div>
+            <a href="#" class="basket-popup-product__link">
+              <h5 class="basket-popup-product__title">
+                Ароматутворююча закваска Danisсo Choozit Flav 43 LYO (5d)
+              </h5>
+            </a>
+            <p class="basket-popup-product__bonuses bonuses">
+  <span class="bonuses__num">+99</span>
+  бонусних гривень
+  <span class="bonuses__prompt">
+    <span class="bonuses__prompt-block main-prompt">
+      Збирай бонуси та використовуй їх для покупки будь-яких товарів зі знижкою.
+    </span>
+  </span>
+</p>
+            <div class="basket-popup-product__amount">
+              <span class="basket-popup-product__num">2</span>
+              шт.
+            </div>
+          </article>
+          <div class="basket-popup__btns">
+            <button class="basket-popup__btn main-btn main-btn--gray js-popup-close">Продовжити покупки</button>
+            <button class="basket-popup__btn main-btn">Перегляд кошика</button>
+          </div>
+          <div class="basket-popup__bottom">
+            <h6 class="basket-popup__bottom-title">
+              Спеціальні пропозиції
+            </h6>
+            <div class="basket-popup__slider-block">
+              <div class="basket-popup__slider swiper-container">
+                <div class="basket-popup__slider-wrapper swiper-wrapper">
+                  <article class="basket-popup__slide basket-popup-slide swiper-slide">
+                    <div class="basket-popup-slide__inner">
+                      <div class="basket-popup-slide__img-block">
+                        <img src="img/temp/basket-popup-product/slider-product-1.jpg" alt=""
+                          class="basket-popup-slide__img">
+                      </div>
+                      <a href="#" class="basket-popup-slide__link">
+                        Паприка зелена сушена
+                      </a>
+                      <div class="basket-popup-slide__prices">
+                        <p class="basket-popup-slide__actual-price">
+                          <span class="basket-popup-slide__actual-price-num">
+                            960
+                          </span>
+                          ₴
+                        </p>
+                        <p class="basket-popup-slide__last-price">
+                          <span class="basket-popup-slide__last-price-num">
+                            1240
+                          </span>
+                          ₴
+                        </p>
+                      </div>
+                      <div class="star-rating basket-popup-slide__rating js-star-rating" data-rating="4">
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+</div>
+                    </div>
+                  </article>
+                  <article class="basket-popup__slide basket-popup-slide swiper-slide">
+                    <div class="basket-popup-slide__inner">
+                      <div class="basket-popup-slide__img-block">
+                        <img src="img/temp/basket-popup-product/slider-product-2.jpg" alt=""
+                          class="basket-popup-slide__img">
+                      </div>
+                      <a href="#" class="basket-popup-slide__link">
+                        Мускатний горіх цілісний
+                      </a>
+                      <div class="basket-popup-slide__prices">
+                        <p class="basket-popup-slide__actual-price">
+                          <span class="basket-popup-slide__actual-price-num">
+                            960
+                          </span>
+                          ₴
+                        </p>
+                        <p class="basket-popup-slide__last-price">
+                          <span class="basket-popup-slide__last-price-num">
+                            1240
+                          </span>
+                          ₴
+                        </p>
+                      </div>
+                      <div class="star-rating basket-popup-slide__rating js-star-rating" data-rating="4">
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+</div>
+                    </div>
+                  </article>
+                  <article class="basket-popup__slide basket-popup-slide swiper-slide">
+                    <div class="basket-popup-slide__inner">
+                      <div class="basket-popup-slide__img-block">
+                        <img src="img/temp/basket-popup-product/slider-product-3.jpg" alt=""
+                          class="basket-popup-slide__img">
+                      </div>
+                      <a href="#" class="basket-popup-slide__link">
+                        Червоний перець молотий
+                      </a>
+                      <div class="basket-popup-slide__prices">
+                        <p class="basket-popup-slide__actual-price">
+                          <span class="basket-popup-slide__actual-price-num">
+                            960
+                          </span>
+                          ₴
+                        </p>
+                        <p class="basket-popup-slide__last-price">
+                          <span class="basket-popup-slide__last-price-num">
+                            1240
+                          </span>
+                          ₴
+                        </p>
+                      </div>
+                      <div class="star-rating basket-popup-slide__rating js-star-rating" data-rating="4">
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+</div>
+                    </div>
+                  </article>
+                  <article class="basket-popup__slide basket-popup-slide swiper-slide">
+                    <div class="basket-popup-slide__inner">
+                      <div class="basket-popup-slide__img-block">
+                        <img src="img/temp/basket-popup-product/slider-product-1.jpg" alt=""
+                          class="basket-popup-slide__img">
+                      </div>
+                      <a href="#" class="basket-popup-slide__link">
+                        Паприка зелена сушена
+                      </a>
+                      <div class="basket-popup-slide__prices">
+                        <p class="basket-popup-slide__actual-price">
+                          <span class="basket-popup-slide__actual-price-num">
+                            960
+                          </span>
+                          ₴
+                        </p>
+                        <p class="basket-popup-slide__last-price">
+                          <span class="basket-popup-slide__last-price-num">
+                            1240
+                          </span>
+                          ₴
+                        </p>
+                      </div>
+                      <div class="star-rating basket-popup-slide__rating js-star-rating" data-rating="4">
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+</div>
+                    </div>
+                  </article>
+                  <article class="basket-popup__slide basket-popup-slide swiper-slide">
+                    <div class="basket-popup-slide__inner">
+                      <div class="basket-popup-slide__img-block">
+                        <img src="img/temp/basket-popup-product/slider-product-2.jpg" alt=""
+                          class="basket-popup-slide__img">
+                      </div>
+                      <a href="#" class="basket-popup-slide__link">
+                        Мускатний горіх цілісний
+                      </a>
+                      <div class="basket-popup-slide__prices">
+                        <p class="basket-popup-slide__actual-price">
+                          <span class="basket-popup-slide__actual-price-num">
+                            960
+                          </span>
+                          ₴
+                        </p>
+                        <p class="basket-popup-slide__last-price">
+                          <span class="basket-popup-slide__last-price-num">
+                            1240
+                          </span>
+                          ₴
+                        </p>
+                      </div>
+                      <div class="star-rating basket-popup-slide__rating js-star-rating" data-rating="4">
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+</div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <button class="basket-popup__slider-btn-prev"></button>
+              <button class="basket-popup__slider-btn-next"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="manufacturer-popup popup js-popup">
+  <div class="manufacturer-popup-popup__table popup__table">
+    <div class="manufacturer-popup__cell popup__table-cell js-popup-area">
+      <div class="manufacturer-popup__window popup__window">
+        <div class="manufacturer-popup__header popup__header">
+          <h4 class="manufacturer-popup__title popup__title">
+            Виберіть виробника
+          </h4>
+          <button class="manufacturer-popup__close popup__close js-popup-close"></button>
+        </div>
+        <div class="manufacturer-popup__content popup__content">
+          <article class="manufacturer-popup__product product-manufacturer">
+            <div class="product-manufacturer__inner">
+              <div class="product-manufacturer__img-block">
+                <img src="img/temp/manufacturer-popup/product-1.jpg" alt="" class="product-manufacturer__img">
+              </div>
+              <p class="product-manufacturer__manufacturer">
+                Sacco, Італія
+              </p>
+              <div class="star-rating product-manufacturer__star-rating js-star-rating" data-rating="5">
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+</div>
+              <a href="#" class="product-manufacturer__name">
+                Ароматоутворююча закваска LH 100 LYO (10D)
+              </a>
+              <div class="product-manufacturer__price">
+                <span class="product-manufacturer__price-num">
+                  860
+                </span>
+                грн. / 1 шт.
+              </div>
+              <div class="product-manufacturer__link-block">
+                <a href="#" class="product-manufacturer__link main-btn">
+                  В кошик
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="manufacturer-popup__product product-manufacturer">
+            <div class="product-manufacturer__inner">
+              <div class="product-manufacturer__img-block">
+                <img src="img/temp/manufacturer-popup/product-1.jpg" alt="" class="product-manufacturer__img">
+              </div>
+              <p class="product-manufacturer__manufacturer">
+                Chr. Hansen, Данія
+              </p>
+              <div class="star-rating product-manufacturer__star-rating js-star-rating" data-rating="5">
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+</div>
+              <a href="#" class="product-manufacturer__name">
+                Ароматоутворююча закваска LH 100 LYO (10D)
+              </a>
+              <div class="product-manufacturer__price">
+                <span class="product-manufacturer__price-num">
+                  860
+                </span>
+                грн. / 1 шт.
+              </div>
+              <div class="product-manufacturer__link-block">
+                <a href="#" class="product-manufacturer__link main-btn">
+                  В кошик
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="manufacturer-popup__product product-manufacturer">
+            <div class="product-manufacturer__inner">
+              <div class="product-manufacturer__img-block">
+                <img src="img/temp/manufacturer-popup/product-1.jpg" alt="" class="product-manufacturer__img">
+              </div>
+              <p class="product-manufacturer__manufacturer">
+                Зкваска, Україна
+              </p>
+              <div class="star-rating product-manufacturer__star-rating js-star-rating" data-rating="5">
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+  <div class="star-rating__star js-star-rating-star"></div>
+</div>
+              <a href="#" class="product-manufacturer__name">
+                Ароматоутворююча закваска LH 100 LYO (10D)
+              </a>
+              <div class="product-manufacturer__price">
+                <span class="product-manufacturer__price-num">
+                  860
+                </span>
+                грн. / 1 шт.
+              </div>
+              <div class="product-manufacturer__link-block">
+                <a href="#" class="product-manufacturer__link main-btn">
+                  В кошик
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="enter-popup popup js-popup">
+  <div class="enter-popup-popup__table popup__table">
+    <div class="enter-popup__cell popup__table-cell js-popup-area">
+      <div class="enter-popup__window popup__window">
+        <div class="enter-popup__header popup__header">
+          <h4 class="enter-popup__title popup__title">
+            Вхід до облікового запису
+          </h4>
+          <button class="enter-popup__close popup__close js-popup-close"></button>
+        </div>
+        <div class="enter-popup__content popup__content">
+          <form action="#" class="enter-popup__form">
+            <div class="enter-popup__form-block">
+              <label for="email" class="enter-popup__label">
+                Email адреса:
+              </label>
+              <input type="email" id="email" class="enter-popup__input form-input" placeholder="yourname@mail.com" required>
+            </div>
+            <div class="enter-popup__form-block">
+              <label for="pass" class="enter-popup__label">
+                Пароль:
+              </label>
+              <input type="password" id="pass" class="enter-popup__input form-input" placeholder="Ваш пароль" required>
+            </div>
+            <button type="submit" class="enter-popup__submit main-btn">Увійти</button>
+          </form>
+          <button class="enter-popup__btn enter-popup__btn--center js-open-popup-btn" data-popup-name="restore-pass-popup">Забули пароль?</button>
+          <div class="enter-popup__bottom-row">
+            <span class="enter-popup__bottom-row-text">
+              У вас немає профілю?
+            </span>
+            <button class="enter-popup__btn js-open-popup-btn" data-popup-name="registration-popup">Створіть акаунт</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="registration-popup popup js-popup">
+  <div class="registration-popup-popup__table popup__table">
+    <div class="registration-popup__cell popup__table-cell js-popup-area">
+      <div class="registration-popup__window popup__window">
+        <div class="registration-popup__header popup__header">
+          <h4 class="registration-popup__title popup__title">
+            Реєстрація
+          </h4>
+          <button class="registration-popup__close popup__close js-popup-close"></button>
+        </div>
+        <div class="registration-popup__content popup__content">
+          <form action="#" class="registration-popup__form js-registration-form">
+            <div class="registration-popup__form-block">
+              <label for="registration-name" class="registration-popup__label">
+                Ваше ім'я та прізвище:
+              </label>
+              <input type="text" id="registration-name" class="registration-popup__input form-input js-registration-form__input"
+                placeholder="Володимир Василенко" required>
+            </div>
+            <div class="registration-popup__form-block">
+              <label for="registration-email" class="registration-popup__label">
+                Email адреса:
+              </label>
+              <input type="email" id="registration-email" class="registration-popup__input form-input js-registration-form__input"
+                placeholder="yourname@mail.com" required>
+            </div>
+            <div class="registration-popup__form-block">
+              <label for="registration-pass" class="registration-popup__label">
+                Ваш пароль для входу:
+              </label>
+              <input type="password" id="registration-pass" class="registration-popup__input form-input js-registration-form__input js-registration-form__target-input" placeholder="Містить 8 і більше символів" required>
+              <div class="registration-popup__prompt registration-popup__prompt--symbol-num main-prompt">
+                Довжина паролю повинна становити більш ніж 8 символів!
+              </div>
+            </div>
+            <div class="registration-popup__form-block">
+              <label for="registration-pass-confirm" class="registration-popup__label">
+                Підтвердження паролю:
+              </label>
+              <input type="password" id="registration-pass-confirm" class="registration-popup__input form-input js-registration-form__input js-registration-form__target-input" placeholder="Підтвердьте ваш пароль" required>
+              <div class="registration-popup__prompt registration-popup__prompt--match main-prompt">
+                Паролі не співпадають!
+              </div>
+            </div>
+            <label class="registration-popup__label-checkbox form-checkbox">
+              <input type="checkbox" class="registration-popup__checkbox form-checkbox__input">
+              <span class="registration-popup__check-box form-checkbox__box"></span>
+              <span class="registration-popup__label-text form-checkbox__text">Отримувати листи з новинами та акціями</span>
+            </label>
+            <label class="registration-popup__label-checkbox form-checkbox">
+              <input type="checkbox" class="registration-popup__checkbox form-checkbox__input" required>
+              <span class="registration-popup__check-box form-checkbox__box"></span>
+              <span class="registration-popup__label-text form-checkbox__text">
+                Я прочитав та погоджуюся з умовами 
+              </span>
+            </label>
+            <a href="#" class="registration-popup__label-link">
+              Політики конфіденційності
+            </a>
+            <button type="submit" class="registration-popup__submit main-btn js-registration-form__submit">Створити акаунт</button>
+            <div class="registration-popup__bottom-row">
+              <span class="registration-popup__bottom-row-text">
+                У вас є профіль?
+              </span>
+              <button type="button" class="registration-popup__btn js-open-popup-btn" data-popup-name="enter-popup">Увійти до акаунту</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="restore-pass-popup popup js-popup">
+  <div class="restore-pass-popup-popup__table popup__table">
+    <div class="restore-pass-popup__cell popup__table-cell js-popup-area">
+      <div class="restore-pass-popup__window popup__window">
+        <div class="restore-pass-popup__header popup__header">
+          <h4 class="restore-pass-popup__title popup__title">
+            Відновити пароль
+          </h4>
+          <button class="restore-pass-popup__close popup__close js-popup-close"></button>
+        </div>
+        <div class="restore-pass-popup__content popup__content">
+          <p class="restore-pass-popup__text">
+            Введіть адресу електронної пошти Вашого облікового запису. Натисніть кнопку продовжити, щоб отримати пароль електронною поштою.
+          </p>
+          <form action="#" class="restore-pass-popup__form">
+            <label for="restore-pass-email" class="restore-pass-popup__label">
+              Email адресa:
+            </label>
+            <input type="email" id="restore-pass-email" class="restore-pass-popup__input form-input" placeholder="yourname@mail.com" required>
+            <button class="restore-pass-popup__submit main-btn">
+              Продовжити
+            </button>
+          </form>
+          <p class="restore-pass-popup__info">
+            У вас немає профілю? 
+            <button class="restore-pass-popup__info-btn js-open-popup-btn" data-popup-name="registration-popup">
+              Створіть акаунт
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <script src="js/app.min.js"></script>
 </body>

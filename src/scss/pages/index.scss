@@ -428,7 +428,8 @@
 //proposition=================================================================
 
 .proposition {
-  margin-bottom: 60px;
+  padding-bottom: 60px;
+  overflow: hidden;
 }
 
 .proposition__inner {}
@@ -545,6 +546,7 @@
   display: flex;
   flex-direction: column;
   min-height: 440px;
+  height: 100%;
 
 }
 
@@ -573,6 +575,7 @@
   line-height: 24px;
   color: #666666;
   flex: 1 1 auto;
+  margin-bottom: 20px;
 }
 
 .proposition-slider__btn-area {}
@@ -799,10 +802,6 @@
   }
 
   //main-section
-  .main-section__menu {
-    //------------------------------------------------
-    display: none;
-  }
 
   .main-section__inner {
     grid-template-columns: auto;
