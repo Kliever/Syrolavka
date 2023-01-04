@@ -111,8 +111,8 @@ export function isScript() {
       let tabItem = tab.querySelectorAll('.js-tabs__item');
 
       //first active tab
-      tabBtn[0].classList.add('_active');
-      tabItem[0].classList.add('_active');
+      // tabBtn[0].classList.add('_active');
+      // tabItem[0].classList.add('_active');
 
       for (let i = 0; i < tabBtn.length; i++) {
         if (tabBtn[i].classList.contains('_active')) {
@@ -943,7 +943,7 @@ export function isScript() {
             for (let i = 0; i < formTargetInputs.length; i++) {
               formTargetInputs[i].classList.remove('_error');
             }
-          matchBlock.classList.remove('_active');
+            matchBlock.classList.remove('_active');
           }, 3000);
         }
 
@@ -976,9 +976,121 @@ export function isScript() {
   })
 
 
+  //PRODUCT-PAGE============================================================
+
+  //p-page slider------------------------------------------------
+
+  new Swiper('.p-page-visual__slider', {
+    slidesPerView: 1,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+    thumbs: {
+      swiper: {
+        el: '.p-page-visual__miniature',
+        slidesPerView: 3,
+        spaceBetween: 10,
+      }
+    }
+  });
+
+  //favorites button=============================================
+
+  document.querySelectorAll('.js-favorite-btn').forEach((btn) => {
+    btn.querySelector('.js-favorite-btn-icon');
+
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('_active');
+    })
+  })
+
+  // custom input num
+    document.querySelectorAll('.js-num-input').forEach((numInput) => {
+      const btnUp = numInput.querySelector('.js-num-input-up');
+      const btnDown = numInput.querySelector('.js-num-input-down');
+      const input = numInput.querySelector('.js-num-input-area');
+    
+      let inputMaxValue = 999999999999999;
+      if (input.getAttribute('max')) {
+        inputMaxValue = +input.getAttribute('max');
+      }
+      let inputMinValue = 0;
+      if (input.getAttribute('min')) {
+        inputMinValue = +input.getAttribute('min');
+      }
+    
+    
+      btnUp.addEventListener('click', () => {
+        if (+input.value < inputMaxValue) {
+          input.value = +input.value + 1;
+        }
+    
+      })
+    
+      btnDown.addEventListener('click', () => {
+        if (+input.value > inputMinValue) {
+          input.value = +input.value - 1;
+        }
+      })
+    
+      input.addEventListener('input', () => {
+        if (isNaN(input.value)) {
+          input.value = input.value.replace(/\D/g, '');
+        } else if (!isNaN(input.value)) {
+          if (input.value > inputMaxValue) {
+            input.value = inputMaxValue;
+          }
+        }
+    
+      })
+    
+      input.addEventListener('change', () => {
+        if (input.value <= 0) {
+          input.value = inputMinValue;
+        }
+      })
+    });
 
 
+  //analog-slider===========================================================
 
+  new Swiper('.analog-slider', {
+    slidesPerView: 3,
+    spaceBetween: 15,
+    navigation: {
+      nextEl: '.product-page__analog-slider-next',
+      prevEl: '.product-page__analog-slider-prev',
+    },
+    // breakpoints: {
+    //   1200: {
+    //     slidesPerView: 3,
+    //   },
+    // }
+  })
 
+  //REGIO BLOCK=============================================================
+
+  //click for button======
+
+  document.querySelectorAll('.js-select-block').forEach((btnsBlock) => {
+    let selectMainBtn = btnsBlock.querySelector('.js-select-main-btn');
+    let selectBtnsBlock = btnsBlock.querySelector('.js-select-btns-block');
+    let selectBtns = btnsBlock.querySelectorAll('.js-select-btn');
+    
+    selectMainBtn.addEventListener('click', () => {
+      selectMainBtn.classList.toggle('_active');
+      selectBtnsBlock.classList.toggle('_active');
+    })
+
+    for (let i = 0; i < selectBtns.length; i++) {
+      selectBtns[i].addEventListener('click', () => {
+        selectMainBtn.classList.remove('_default');
+        selectMainBtn.textContent = selectBtns[i].textContent;
+        selectMainBtn.classList.remove('_active');
+        selectBtnsBlock.classList.remove('_active');
+      })
+    }
+  })
 
 };

@@ -1,0 +1,20 @@
+.similar-products {
+  margin-bottom: 80px;
+}
+
+.similar-products__inner {}
+
+.similar-products__title {
+  margin-bottom: 20px;
+}
+
+.similar-products__block {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 20px;
+
+  .similar-product__card {
+    max-width: 220px;
+    width: 100%;
+  }
+}

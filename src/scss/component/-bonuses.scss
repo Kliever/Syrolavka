@@ -1,0 +1,45 @@
+.bonuses {
+  font-family: 'Circe Rounded';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.bonuses__num {
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.bonuses__prompt {
+  position: relative;
+  height: 18px;
+  width: 18px;
+  background: rgba(#FD9339, .1);
+  border-radius: 50%;
+  display: inline-block;
+  bottom: -5px;
+  margin-left: 5px;
+  cursor: pointer;
+
+  &::after {
+    content: '?';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--orange);
+    font-size: 14px;
+  }
+
+  &:hover {
+    .bonuses__prompt-block {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.bonuses__prompt-block {
+  //positioning
+}

@@ -725,7 +725,7 @@
 
 .recommendations__title {
   margin-bottom: 20px;
-  padding-right: 100px;
+  padding-right: 170px;
 }
 
 .recommendations__slider {}
@@ -776,7 +776,11 @@
 .recommendations-slider__arrow-next {}
 
 
-
+@media screen and (max-width: 1217px) {
+  .product-tabs__block-inner{
+    gap: 12px;
+  }
+}
 
 @media screen and (max-width: 1200px) {
 
@@ -802,10 +806,6 @@
   }
 
   //main-section
-
-  .main-section__inner {
-    grid-template-columns: auto;
-  }
 
   .product-tabs__product {
     justify-self: center;

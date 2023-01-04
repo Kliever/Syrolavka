@@ -14,6 +14,10 @@ import * as flsScript from "./modules/script.js";
 
 flsScript.isScript();
 
+import * as flsFslightbox from "./modules/fslightbox.js";
+
+flsFslightbox.isFslightbox();
+
 
 
 //clamp js=======================================================

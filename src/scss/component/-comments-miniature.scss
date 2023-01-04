@@ -1,10 +1,35 @@
 .comments {
+  font-family: 'Circe Rounded';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  text-decoration: underline;
+  position: relative;
+  color: rgba(#4E2D2D, 1);
+  transition: color .3s;
+  &:hover{
+    color: rgba(#4E2D2D, .5);
+  }
 }
+
 .comments__icon {
+  fill: transparent;
+  stroke: #4E2D2D;
+  height: 14px;
+  width: 14px;
+  margin-right: 8px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
+
 .comments__info {
+  margin-left: 20px;
 }
+
 .comments__num {
 }
-.comments__text {
-}
+
+.comments__text {}
