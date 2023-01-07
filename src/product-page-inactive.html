@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('html/head.html', {
+"title":"Главная страница"
+})
+
+<body>
+  <div class="main-wrapper">
+    @@include('html/header.html', {})
+
+    <main class="main-block js-main-block">
+      <div class="broadcrumbs">
+        <div class="container">
+          <div class="broadcrumbs__inner">
+            <ul class="broadcrumbs__list">
+              <li class="broadcrumbs__item">
+                <a href="#" class="broadcrumbs__link">Головна</a>
+              </li>
+              <li class="broadcrumbs__item">
+                <a href="#" class="broadcrumbs__link">Інгредієнти</a>
+              </li>
+              <li class="broadcrumbs__item">
+                <a href="#" class="broadcrumbs__link">Кисломолочні закваски</a>
+              </li>
+              <li class="broadcrumbs__item">
+                Мезофільна закваска Hansen Flora Danica (50U)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <section class="main-section main-section__product-page main-section__product-page-inactive">
+        <div class="container">
+          <div class="main-section__inner js-main-section-inner">
+            @@include('html/main-menu.html', {
+            "class": "main-section__menu"
+            })
+            <section class="main-section__block product-page">
+              <article class="product-page__block p-page">
+                <h1 class="p-page__name">
+                  Мезофільна закваска Hansen Flora Danica (50U)
+                </h1>
+                <div class="p-page__rating-row">
+                  @@include('html/component/star-rating.html', {
+                  "class": "p-page__star-rating",
+                  "rating": "4",
+                  })
+                  @@include('html/component/comments-miniature.html', {
+                  "class": "p-page__comments",
+                  })
+                </div>
+                <div class="p-page__block">
+                  <div class="p-page__block-visual p-page-visual">
+                    <div class="p-page-visual__inner">
+                      <div class="p-page-visual__slider swiper-container">
+                        <div class="p-page-visual__slider-wrapper swiper-wrapper">
+                          <div class="p-page-visual__slide swiper-slide">
+                            <a class="p-page-visual__slide-inner" href="img/temp/product-page/product-img-1.jpg"
+                              data-fslightbox="Hansen_Flora_Danica_(50U)">
+                              <img src="@img/temp/product-page/product-img-1.jpg" alt="" class="p-page-visual__img">
+                            </a>
+                          </div>
+                          <div class="p-page-visual__slide swiper-slide">
+                            <a class="p-page-visual__slide-inner" href="img/temp/product-page/product-img-1.jpg"
+                              data-fslightbox="Hansen_Flora_Danica_(50U)">
+                              <img src="@img/temp/product-page/product-img-1.jpg" alt="" class="p-page-visual__img">
+                            </a>
+                          </div>
+                          <div class="p-page-visual__slide swiper-slide">
+                            <a class="p-page-visual__slide-inner" href="img/temp/product-page/product-img-1.jpg"
+                              data-fslightbox="Hansen_Flora_Danica_(50U)">
+                              <img src="@img/temp/product-page/product-img-1.jpg" alt="" class="p-page-visual__img">
+                            </a>
+                          </div>
+                          <div class="p-page-visual__slide swiper-slide">
+                            <a class="p-page-visual__slide-inner" href="img/temp/product-page/product-img-1.jpg"
+                              data-fslightbox="Hansen_Flora_Danica_(50U)">
+                              <img src="@img/temp/product-page/product-img-1.jpg" alt="" class="p-page-visual__img">
+                            </a>
+                          </div>
+                          <div class="p-page-visual__slide swiper-slide">
+                            <a class="p-page-visual__slide-inner" href="img/temp/product-page/product-img-1.jpg"
+                              data-fslightbox="Hansen_Flora_Danica_(50U)">
+                              <img src="@img/temp/product-page/product-img-1.jpg" alt="" class="p-page-visual__img">
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="p-page-visual__miniature swiper-container">
+                        <div class="p-page-visual__miniature-wrapper swiper-wrapper">
+                          <div class="p-page-visual__miniature-slide swiper-slide">
+                            <img src="@img/temp/product-page/product-img-mini-1.jpg" alt=""
+                              class="p-page-visual__miniature-img">
+                          </div>
+                          <div class="p-page-visual__miniature-slide swiper-slide">
+                            <img src="@img/temp/product-page/product-img-mini-2.jpg" alt=""
+                              class="p-page-visual__miniature-img">
+                          </div>
+                          <div class="p-page-visual__miniature-slide swiper-slide">
+                            <img src="@img/temp/product-page/product-img-mini-3.jpg" alt=""
+                              class="p-page-visual__miniature-img">
+                          </div>
+                          <div class="p-page-visual__miniature-slide swiper-slide">
+                            <img src="@img/temp/product-page/product-img-mini-1.jpg" alt=""
+                              class="p-page-visual__miniature-img">
+                          </div>
+                          <div class="p-page-visual__miniature-slide swiper-slide">
+                            <img src="@img/temp/product-page/product-img-mini-1.jpg" alt=""
+                              class="p-page-visual__miniature-img">
+                          </div>
+                        </div>
+                      </div>
+                      <button class="p-page-visual__btn">Подивитися товар в 3D</button>
+                    </div>
+                  </div>
+                  <div class="p-page__block-info p-page-info">
+                    <div class="p-page-info__price-row">
+                      <div class="p-page-info__price-block">
+                        <span class="p-page-info__actual-price">
+                          <span class="p-page-info__actual-price-num">
+                            950
+                          </span>
+                          грн.
+                        </span>
+                        <span class="p-page-info__last-price">
+                          <span class="p-page-info__last-price-num">
+                            1200
+                          </span>
+                          грн.
+                        </span>
+                      </div>
+                      <button class="p-page-info__add-favorites js-favorite-btn">
+                        <svg class="p-page-info__add-favorites-icon js-favorite-btn-icon" viewBox="0 0 16 14">
+                          <use xlink:href="@img/icons/icons.svg#favorites"></use>
+                        </svg>
+                        <span class="p-page-info__add-favorites-text">
+                          В обране
+                        </span>
+                      </button>
+                    </div>
+                    <p class="p-page__block-code">
+                      Артикул:
+                      <span class="p-page__block-code-num">23006</span>
+                    </p>
+                    <p class="p-page__block-manufacturer">
+                      Виробник:
+                      <span class="p-page__block-manufacturer-name">
+                        Lactofarm ECO, Італия
+                      </span>
+                    </p>
+                    <div class="p-page__inactive-text">Товар закінчився</div>
+                  </div>
+                </div>
+              </article>
+
+
+
+              <section class="product-page__mod-analog">
+                <h3 class="product-page__mod-analog-title title">
+                  Аналогічні товари
+                </h3>
+                <div class="product-page__mod-analog-slider mod-analog-slider swiper-container">
+                  <div class="mod-analog-slider__wrapper swiper-wrapper">
+                    <div class="mod-analog-slider__slide swiper-slide">
+                      @@include('html/product-card.html', {
+                        "class": "product-page__mod-analog-slide-inner",
+                        "img": "@img/temp/product-card/product-1.jpg",
+                        "name": "Форма для твердого сыра 1 кг",
+                        "total-price": "500",
+                        "last-price": "650",
+                      })
+                    </div>
+                    <div class="mod-analog-slider__slide swiper-slide">
+                      @@include('html/product-card.html', {
+                        "class": "product-page__mod-analog-slide-inner",
+                        "img": "@img/temp/product-card/product-1.jpg",
+                        "name": "Форма для твердого сыра 1 кг",
+                        "total-price": "500",
+                        "last-price": "650",
+                      })
+                    </div>
+                    <div class="mod-analog-slider__slide swiper-slide">
+                      @@include('html/product-card.html', {
+                        "class": "product-page__mod-analog-slide-inner",
+                        "img": "@img/temp/product-card/product-1.jpg",
+                        "name": "Форма для твердого сыра 1 кг",
+                        "total-price": "500",
+                        "last-price": "650",
+                      })
+                    </div>
+                    <div class="mod-analog-slider__slide swiper-slide">
+                      @@include('html/product-card.html', {
+                        "class": "product-page__mod-analog-slide-inner",
+                        "img": "@img/temp/product-card/product-1.jpg",
+                        "name": "Форма для твердого сыра 1 кг",
+                        "total-price": "500",
+                        "last-price": "650",
+                      })
+                    </div>
+                    <div class="mod-analog-slider__slide swiper-slide">
+                      @@include('html/product-card.html', {
+                        "class": "product-page__mod-analog-slide-inner",
+                        "img": "@img/temp/product-card/product-1.jpg",
+                        "name": "Форма для твердого сыра 1 кг",
+                        "total-price": "500",
+                        "last-price": "650",
+                      })
+                    </div>
+                    <div class="mod-analog-slider__slide swiper-slide">
+                      @@include('html/product-card.html', {
+                        "class": "product-page__mod-analog-slide-inner",
+                        "img": "@img/temp/product-card/product-1.jpg",
+                        "name": "Форма для твердого сыра 1 кг",
+                        "total-price": "500",
+                        "last-price": "650",
+                      })
+                    </div>
+                    <div class="mod-analog-slider__slide swiper-slide">
+                      @@include('html/product-card.html', {
+                        "class": "product-page__mod-analog-slide-inner",
+                        "img": "@img/temp/product-card/product-1.jpg",
+                        "name": "Форма для твердого сыра 1 кг",
+                        "total-price": "500",
+                        "last-price": "650",
+                      })
+                    </div>
+                  </div>
+                </div>
+                <div class="product-page__mod-slider-arrows slider-arrows">
+                  <button class="product-page__mod-slider-prev slider-arrow-prev"></button>
+                  <button class="product-page__mod-slider-next slider-arrow-next"></button>
+                </div>
+                <div class="product-page__mod-slider-pagination">
+                  <div class="product-page__mod-slider-progress-bar"></div>
+                </div>
+
+              </section>
+
+
+
+
+
+              <section class="product-page__info js-tabs">
+                <div class="product-page__info-btns-block">
+                  <button class="product-page__info-btn js-tabs__btn _active" data-tab-name="description">Опис</button>
+                  <button class="product-page__info-btn js-tabs__btn" data-tab-name="delivery">Доставка та
+                    оплата</button>
+                  <button class="product-page__info-btn js-tabs__btn" data-tab-name="reviews">Відгуки (
+                    <span class="product-page__info-btn-num">
+                      3
+                    </span>
+                    )
+                  </button>
+                </div>
+                <div class="product-page__info-areas-block">
+                  <section class="product-page__info-areas-item product-page-descr js-tabs__item"
+                    data-tab-name="description">
+                    <p class="product-page-descr__text">
+                      P00802 Ця форма невеликого розміру призначена для виготовлення малих головок сиру Рікотта та інших
+                      м'яких сирів в умовах домашнього або фермерського виробництва. Наявність хорошого дренажу
+                      забезпечує її використання для пресування сирів з пліснявою, у тому числі сорту Французький
+                      необачник. Розмір сирної голівки, яку вдається одержати під час використання цієї форми – до 80 г.
+                      Це акуратний, готовий до подачі шматочок сиру, який не доведеться нарізати. Виготовлено форму зі
+                      спеціального високоякісного харчового пластику, який добре адаптований до агресивного
+                      молочнокислого середовища.
+                    </p>
+                    <dl class="product-page-descr__list">
+                      <div class="product-page-descr__item">
+                        <dt class="product-page-descr__list-title">
+                          Вихід сиру
+                        </dt>
+                        <dd class="product-page-descr__list-descr">
+                          до 5-6 кг
+                        </dd>
+                      </div>
+                      <div class="product-page-descr__item">
+                        <dt class="product-page-descr__list-title">
+                          матеріал
+                        </dt>
+                        <dd class="product-page-descr__list-descr">
+                          високоякісний харчовий пластик
+                        </dd>
+                      </div>
+                      <div class="product-page-descr__item">
+                        <dt class="product-page-descr__list-title">
+                          Наявність дна
+                        </dt>
+                        <dd class="product-page-descr__list-descr">
+                          так
+                        </dd>
+                      </div>
+                      <div class="product-page-descr__item">
+                        <dt class="product-page-descr__list-title">
+                          Наявність ніжок
+                        </dt>
+                        <dd class="product-page-descr__list-descr">
+                          ні
+                        </dd>
+                      </div>
+                      <div class="product-page-descr__item">
+                        <dt class="product-page-descr__list-title">
+                          Розміри
+                        </dt>
+                        <dd class="product-page-descr__list-descr">
+                          высота - 22 см, діаметр по верху - 27 см
+                        </dd>
+                      </div>
+                    </dl>
+                  </section>
+                  <section class="product-page__info-areas-item product-page-delivery js-tabs__item"
+                    data-tab-name="delivery">
+                    <dl class="product-page-descr__list">
+                      <div class="product-page-descr__item">
+                        <dt class="product-page-descr__list-title">
+                          Склад
+                        </dt>
+                        <dd class="product-page-descr__list-descr">
+                          Допоможе вам приготувати смачний сир у домашніх умовах. У цьому продукті є мінеральні
+                          речовини та білки, які необхідні організму.
+                        </dd>
+                      </div>
+                      <div class="product-page-descr__item">
+                        <dt class="product-page-descr__list-title">
+                          Транспортування
+                        </dt>
+                        <dd class="product-page-descr__list-descr">
+                          2 тижні із збереженням температури
+                        </dd>
+                      </div>
+                      <div class="product-page-descr__item">
+                        <dt class="product-page-descr__list-title">
+                          Розмір упаковки і зберігання
+                        </dt>
+                        <dd class="product-page-descr__list-descr">
+                          Допоможе вам приготувати смачний сир у домашніх умовах.
+                        </dd>
+                      </div>
+                    </dl>
+                  </section>
+                  <section class="product-page__info-areas-item product-page-reviews js-tabs__item"
+                    data-tab-name="reviews">
+                    Місце для відгуків
+                  </section>
+                </div>
+              </section>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      @@include('html/similar-products.html', {})
+
+    </main>
+    @@include('html/footer.html', {})
+  </div>
+
+  @@include('html/pop-up/added-to-basket-popup.html', {})
+  @@include('html/pop-up/enter-popup.html', {})
+  @@include('html/pop-up/registration-popup.html', {})
+  @@include('html/pop-up/restore-password-popup.html', {})
+
+
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>

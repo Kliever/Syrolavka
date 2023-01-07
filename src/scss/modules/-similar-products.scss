@@ -12,9 +12,47 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 20px;
-
   .similar-product__card {
     max-width: 220px;
     width: 100%;
+    margin: 0 auto;
   }
 }
+
+@media screen and (max-width: 1220px) {
+  .similar-products__block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .similar-products__inner {
+    overflow: hidden;
+    margin: 0 -20px;
+  }
+
+  .similar-products__title{
+    margin: 0 20px 20px; 
+  }
+
+  .similar-products__block {
+    overflow: auto;
+    padding: 0 20px 20px;
+  }
+
+  .similar-products__block {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .similar-products {
+    margin-bottom: 20px;
+  }
+}
+
+
+

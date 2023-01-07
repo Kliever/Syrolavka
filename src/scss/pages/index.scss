@@ -104,8 +104,6 @@
 
 //main-section
 
-.main-section__block {}
-
 .product-tabs {}
 
 .product-tabs__btns {
@@ -1121,13 +1119,10 @@
 @media screen and (max-width: 712px) {
 
   //main-section
-  .main-section__block {
-    overflow-x: hidden;
-    margin: 0 -20px;
-  }
 
   .product-tabs__block-inner {
     display: flex;
+    padding-bottom: 20px;
   }
 
   .product-tabs__block-inner {

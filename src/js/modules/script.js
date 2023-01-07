@@ -991,8 +991,17 @@ export function isScript() {
         el: '.p-page-visual__miniature',
         slidesPerView: 3,
         spaceBetween: 10,
-      }
-    }
+        centerInsufficientSlides: true,
+        breakpoints: {
+          801: {
+            slidesPerView: 3,
+          },
+          501: {
+            slidesPerView: 5,
+          },
+        },
+      },
+    },
   });
 
   //favorites button=============================================
@@ -1006,70 +1015,73 @@ export function isScript() {
   })
 
   // custom input num
-    document.querySelectorAll('.js-num-input').forEach((numInput) => {
-      const btnUp = numInput.querySelector('.js-num-input-up');
-      const btnDown = numInput.querySelector('.js-num-input-down');
-      const input = numInput.querySelector('.js-num-input-area');
-    
-      let inputMaxValue = 999999999999999;
-      if (input.getAttribute('max')) {
-        inputMaxValue = +input.getAttribute('max');
+  document.querySelectorAll('.js-num-input').forEach((numInput) => {
+    const btnUp = numInput.querySelector('.js-num-input-up');
+    const btnDown = numInput.querySelector('.js-num-input-down');
+    const input = numInput.querySelector('.js-num-input-area');
+
+    let inputMaxValue = 999999999999999;
+    if (input.getAttribute('max')) {
+      inputMaxValue = +input.getAttribute('max');
+    }
+    let inputMinValue = 0;
+    if (input.getAttribute('min')) {
+      inputMinValue = +input.getAttribute('min');
+    }
+
+
+    btnUp.addEventListener('click', () => {
+      if (+input.value < inputMaxValue) {
+        input.value = +input.value + 1;
       }
-      let inputMinValue = 0;
-      if (input.getAttribute('min')) {
-        inputMinValue = +input.getAttribute('min');
+
+    })
+
+    btnDown.addEventListener('click', () => {
+      if (+input.value > inputMinValue) {
+        input.value = +input.value - 1;
       }
-    
-    
-      btnUp.addEventListener('click', () => {
-        if (+input.value < inputMaxValue) {
-          input.value = +input.value + 1;
+    })
+
+    input.addEventListener('input', () => {
+      if (isNaN(input.value)) {
+        input.value = input.value.replace(/\D/g, '');
+      } else if (!isNaN(input.value)) {
+        if (input.value > inputMaxValue) {
+          input.value = inputMaxValue;
         }
-    
-      })
-    
-      btnDown.addEventListener('click', () => {
-        if (+input.value > inputMinValue) {
-          input.value = +input.value - 1;
-        }
-      })
-    
-      input.addEventListener('input', () => {
-        if (isNaN(input.value)) {
-          input.value = input.value.replace(/\D/g, '');
-        } else if (!isNaN(input.value)) {
-          if (input.value > inputMaxValue) {
-            input.value = inputMaxValue;
-          }
-        }
-    
-      })
-    
-      input.addEventListener('change', () => {
-        if (input.value <= 0) {
-          input.value = inputMinValue;
-        }
-      })
-    });
+      }
+
+    })
+
+    input.addEventListener('change', () => {
+      if (input.value <= 0) {
+        input.value = inputMinValue;
+      }
+    })
+  });
 
 
   //analog-slider===========================================================
 
   new Swiper('.analog-slider', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 15,
     navigation: {
       nextEl: '.product-page__analog-slider-next',
       prevEl: '.product-page__analog-slider-prev',
     },
-    // breakpoints: {
-    //   1200: {
-    //     slidesPerView: 3,
-    //   },
-    // }
+    breakpoints: {
+      900: {
+        slidesPerView: 3,
+      },
+      600: {
+        slidesPerView: 2,
+      },
+    }
   })
 
-  //REGIO BLOCK=============================================================
+  //REGION BLOCK=============================================================
 
   //click for button======
 
@@ -1077,7 +1089,7 @@ export function isScript() {
     let selectMainBtn = btnsBlock.querySelector('.js-select-main-btn');
     let selectBtnsBlock = btnsBlock.querySelector('.js-select-btns-block');
     let selectBtns = btnsBlock.querySelectorAll('.js-select-btn');
-    
+
     selectMainBtn.addEventListener('click', () => {
       selectMainBtn.classList.toggle('_active');
       selectBtnsBlock.classList.toggle('_active');
@@ -1092,5 +1104,48 @@ export function isScript() {
       })
     }
   })
+
+  //product page ADD PRODUCT ============================================================
+
+  //ready block=====  
+
+  document.querySelectorAll('.js-ready-block').forEach((readyBlock) => {
+    const closeBtn = readyBlock.querySelector('.js-ready-block-close');
+
+    closeBtn.addEventListener('click', () => {
+      readyBlock.classList.remove('_active');
+    })
+
+  })
+
+  //PRODUCT PAGE INACTIVE ====================================================
+
+  new Swiper('.mod-analog-slider', {
+    slidesPerView: 1.5,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: '.product-page__mod-slider-next',
+      prevEl: '.product-page__mod-slider-prev',
+    },
+    pagination: {
+      el: '.product-page__mod-slider-progress-bar',
+      type: 'progressbar',
+    },
+    breakpoints: {
+      771: {
+        slidesPerView: 3,
+        spaceBetween: 16,
+      },
+      601: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+      },
+      505: {
+        slidesPerView: 2,
+        spaceBetween: 0,
+      },
+    }
+  });
+
 
 };
