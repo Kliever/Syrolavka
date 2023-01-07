@@ -51,6 +51,17 @@ flsFslightbox.isFslightbox();
     }
   }
 
+  if (document.querySelector('.js-three-lines')) {
+    let threeLines = document.querySelectorAll('.js-three-lines');
+    
+    for (let item of threeLines) {
+      $clamp(item, {
+        clamp: 3,
+        useNativeClamp: true,
+      });
+    }
+  }
+
 
 
 

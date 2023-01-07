@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('html/head.html', {
+"title":"Рецепти"
+})
+
+<body>
+  <div class="main-wrapper">
+    @@include('html/header.html', {})
+
+    <main class="main-block js-main-block">
+
+      <div class="broadcrumbs">
+        <div class="container">
+          <div class="broadcrumbs__inner">
+            <ul class="broadcrumbs__list">
+              <ul class="broadcrumbs__link">
+                <a href="#" class="broadcrumbs__link">
+
+                </a>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <section class="main-section main-section__previews">
+        <div class="container">
+          <div class="main-section__inner js-main-section-inner">
+            @@include('html/main-menu.html', {
+            "class": "main-section__menu"
+            })
+            <section class="main-section__block main-section-previews">
+              <div class="main-section-previews__block previews-block">
+                <h2 class="previews-block__title title-bold">
+                  Рецепти сирів
+                </h2>
+                <div class="previews-block__grid">
+                  <article class="previews-block__grid-item previews-item">
+                    <img src="@img/previews/previews-1.jpg" alt="" class="previews-item__img">
+                    <div class="previews-item__text">
+                      <p class="previews-item__title">Молоді сири</p>
+                      <div class="previews-item__wrapper-link">
+                        <a href="#" class="previews-item__link">Дивитися</a>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="previews-block__grid-item previews-item">
+                    <img src="@img/previews/previews-2.jpg" alt="" class="previews-item__img">
+                    <div class="previews-item__text">
+                      <p class="previews-item__title">Тверді сири</p>
+                      <div class="previews-item__wrapper-link">
+                        <a href="#" class="previews-item__link">Дивитися</a>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="previews-block__grid-item previews-item">
+                    <img src="@img/previews/previews-3.jpg" alt="" class="previews-item__img">
+                    <div class="previews-item__text">
+                      <p class="previews-item__title">Напівтверді сири</p>
+                      <div class="previews-item__wrapper-link">
+                        <a href="#" class="previews-item__link">Дивитися</a>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="previews-block__grid-item previews-item">
+                    <img src="@img/previews/previews-4.jpg" alt="" class="previews-item__img">
+                    <div class="previews-item__text">
+                      <p class="previews-item__title">Паста філата</p>
+                      <div class="previews-item__wrapper-link">
+                        <a href="#" class="previews-item__link">Дивитися</a>
+                      </div> 
+                    </div>
+                  </article>
+                  <article class="previews-block__grid-item previews-item">
+                    <img src="@img/previews/previews-5.jpg" alt="" class="previews-item__img">
+                    <div class="previews-item__text">
+                      <p class="previews-item__title">Кисломолочні сири</p>
+                      <div class="previews-item__wrapper-link">
+                        <a href="#" class="previews-item__link">Дивитися</a>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="previews-block__grid-item previews-item">
+                    <img src="@img/previews/previews-6.jpg" alt="" class="previews-item__img">
+                    <div class="previews-item__text">
+                      <p class="previews-item__title">Розсільні сири</p>
+                      <div class="previews-item__wrapper-link">
+                        <a href="#" class="previews-item__link">Дивитися</a>
+                      </div>
+                  </article>
+                </div>
+              </div>
+              <div class="main-section-previews__block previews-block">
+                <h2 class="previews-block__title title-bold">
+                  Останні додані
+                </h2>
+                <div class="previews-block__grid">
+                  @@include("html/article-announce.html", {
+                  "class": "previews-block__article-announce",
+                  "img": "img/previews/last-added-1.jpg",
+                  "title": "Сирна тарілка",
+                  "classLines": "js-three-lines",
+                  "text": "Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів. Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів",
+                  })
+                  @@include("html/article-announce.html", {
+                  "class": "previews-block__article-announce",
+                  "img": "img/previews/last-added-2.jpg",
+                  "title": "Звідки в сирі дірки?",
+                  "classLines": "js-three-lines",
+                  "text": "Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів. Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів",
+                  })
+                  @@include("html/article-announce.html", {
+                  "class": "previews-block__article-announce",
+                  "img": "img/previews/last-added-3.jpg",
+                  "title": "Сирна дієта",
+                  "classLines": "js-three-lines",
+                  "text": "Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів. Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів",
+                  })
+                  @@include("html/article-announce.html", {
+                  "class": "previews-block__article-announce",
+                  "img": "img/previews/last-added-4.jpg",
+                  "title": "Посіл сирної голівки",
+                  "classLines": "js-three-lines",
+                  "text": "Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів. Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів",
+                  })
+                  @@include("html/article-announce.html", {
+                  "class": "previews-block__article-announce",
+                  "img": "img/previews/last-added-5.jpg",
+                  "title": "Звідки в сирі дірки?",
+                  "classLines": "js-three-lines",
+                  "text": "Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів. Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів",
+                  })
+                  @@include("html/article-announce.html", {
+                  "class": "previews-block__article-announce",
+                  "img": "img/previews/last-added-6.jpg",
+                  "title": "Сирна тарілка",
+                  "classLines": "js-three-lines",
+                  "text": "Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів. Особливо характерна наявність дірочок різних розмірів у структурі швейцарських сортів",
+                  })
+                </div>
+                <button type="button" class="previews-block__more-btn main-btn">Завантажити ще</button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+    @@include('html/footer.html', {})
+  </div>
+
+  @@include('html/pop-up/added-to-basket-popup.html', {})
+  @@include('html/pop-up/manufacturer-popup.html', {})
+  @@include('html/pop-up/enter-popup.html', {})
+  @@include('html/pop-up/registration-popup.html', {})
+  @@include('html/pop-up/restore-password-popup.html', {})
+
+
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>
